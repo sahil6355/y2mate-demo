@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { features, homeFaqs } from "../mock";
 import { Link, navigate } from "gatsby";
 
-const Home = () => {
+const Search = ({ location }) => {
   const [searchText, setSearchText] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    if (!!location?.state?.message) {
+      setSearchText(location?.state?.message);
+      getSuggestion(location?.state?.message);
+      window.history.replaceState({}, document.title);
+    }
+  }, [location?.state?.message]);
 
   const fetchSuggestions = async (query) => {
     if (!query) {
@@ -37,11 +46,32 @@ const Home = () => {
     fetchSuggestions(value);
   };
 
+  const getSuggestion = async (suggestion) => {
+    try {
+      setLoading(true);
+      const response = await fetch(
+        `https://api.flvto.site/@api/search/YouTube/${encodeURIComponent(
+          suggestion
+        )}`
+      );
+      const data = await response.json();
+      setLoading(false);
+      setSearchResults(data?.items || []);
+    } catch (error) {
+      setLoading(false);
+      console.error("Error fetching search results:", error);
+    }
+  };
+
   const handleSuggestionClick = async (suggestion) => {
     setSearchText(suggestion);
     setSuggestions([]);
-    navigate("/search", {
-      state: { message: suggestion },
+    getSuggestion(suggestion);
+  };
+
+  const handleConvert = (contentData) => {
+    navigate("/convert", {
+      state: { message: contentData?.id },
     });
   };
 
@@ -101,6 +131,65 @@ const Home = () => {
               </Link>
             </p>
           </div>
+        </div>
+        <div className="result">
+          {loading ? (
+            <div class="spinner" id="loader">
+              <div class="box-1"></div>
+              <div class="box-2"></div>
+              <div class="box-3"></div>
+              <div class="box-4"></div>
+            </div>
+          ) : (
+            <div
+              className="data_results"
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(3, 1fr)",
+                gap: "16px",
+                paddingTop: "16px",
+              }}
+            >
+              {searchResults.map((result, index) => (
+                <div
+                  key={index}
+                  className="result-item"
+                  style={{
+                    backgroundColor: "#fff",
+                    border: "1px solid #ddd",
+                    borderRadius: "8px",
+                    overflow: "hidden",
+                    textAlign: "center",
+                    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+                    transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                    cursor:"pointer"
+                  }}
+                  onClick={() => {
+                    handleConvert(result);
+                  }}
+                >
+                  <img
+                    src={result?.thumbMedium || result?.thumbDefault}
+                    alt={result.title}
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderBottom: "1px solid #ddd",
+                    }}
+                  />
+                  <h3
+                    style={{
+                      padding: "8px",
+                      fontSize: "16px",
+                      color: "#333",
+                    }}
+                  >
+                    {result?.title}
+                  </h3>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="contain">
@@ -162,4 +251,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Search;

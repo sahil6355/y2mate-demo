@@ -636,7 +636,7 @@ footer p a{
 }
 
 .img {
-	background-image: url(/y2mate/assets/image/image.webp);
+	background-image: url(/src/images/image.webp);
 	background-repeat: no-repeat;
 	background-size: auto;
 }

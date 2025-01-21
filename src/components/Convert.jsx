@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { features, homeFaqs } from "../mock";
 import { Link, navigate } from "gatsby";
 
-const Home = () => {
+const Convert = ({ location }) => {
   const [searchText, setSearchText] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+
+  useEffect(() => {
+    if (!!location?.state?.message) {
+      // getDownLoadContent(location?.state?.message);
+      window.history.replaceState({}, document.title);
+    }
+  }, [location?.state?.message]);
 
   const fetchSuggestions = async (query) => {
     if (!query) {
@@ -102,7 +109,37 @@ const Home = () => {
             </p>
           </div>
         </div>
-
+        <div class="down_wrap">
+          <iframe
+            id="widgetPlusApi"
+            src={`https://ac.insvid.com/widget?url=https://www.youtube.com/watch?v=${location?.state?.message}`}
+            width="100%"
+            height="100%"
+            allowTransparency="true"
+            scrolling="no"
+            style={{ border: "none" }}
+            title="Video Widget"
+          ></iframe>
+          <div class="btn-group">
+            <a
+              target="_blank"
+              href="https://ak.iptogreg.net/4/7733548"
+              class="btn-download"
+            >
+              Download Now
+            </a>
+            <div>
+              <a
+                target="_blank"
+                href="https://ak.iptogreg.net/4/7733548"
+                class="btn-playnow"
+              >
+                Play Now
+              </a>
+              <span>Advertising</span>
+            </div>
+          </div>
+        </div>
         <div className="contain">
           <h2 className="text-center">Download YouTube Video For Free</h2>
           <p>
@@ -162,4 +199,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Convert;
