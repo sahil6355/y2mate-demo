@@ -1,42 +1,11 @@
 import React from "react";
 import { mp3FaqData, mp3Features } from "../mock";
-import { Link } from "gatsby";
+import SeachContainer from "./SeachContainer";
 
 const YoutubeToMp3 = () => {
   return (
     <div className="container">
-      <div className="search">
-        <div className="main_search">
-          <h1>YouTube To MP3 Converter</h1>
-          <p>
-            Convert YouTube video in MP3 format in the highest quality with the
-            y2meta tool.
-          </p>
-          <div className="search_box">
-            <form className="main_seacrh_box" action="./search" method="POST">
-              <div className="img search-icon"></div>
-              <input
-                type="text"
-                name="url"
-                id="url"
-                autocomplete="off"
-                placeholder="https://youtube.com/watch?v=URL"
-                value=""
-              />
-              <button className="submit" id="submit-btn">
-                Start
-              </button>
-            </form>
-            <div id="suggestion_box"></div>
-          </div>
-          <p className="terms">
-            By using our service you are accepting our{" "}
-            <Link to="/" aria-label="terms and conditions">
-              Term and Conditions.
-            </Link>
-          </p>
-        </div>
-      </div>
+      <SeachContainer />
       <div className="contain">
         <h2 className="text-center">Download YouTube Videos to MP3 Online</h2>
         <p>

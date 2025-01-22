@@ -1,3 +1,9 @@
+export const containerTitle = {
+    "/": [{ title: "Y2Meta - YouTube Downloader", desc: "Download YouTube videos seamlessly in 1080p with Y2meta" }],
+    "/youtube-to-mp3/": [{ title: "YouTube To MP3 Converter", desc: "Convert YouTube video in MP3 format in the highest quality with the y2meta tool." }],
+    "/youtube-to-mp4/": [{ title: "YouTube To MP4 Converter", desc: "Convert and download YouTube videos to MP4 format seamlessly in HD up to 4K." }],
+}
+
 export const features = [
     {
         imgClass: 'fast',

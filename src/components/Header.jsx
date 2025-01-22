@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import headerLogo from "../images/favicon.webp";
 import { Link } from "gatsby";
 import Button from "@mui/material/Button";
@@ -9,8 +9,9 @@ import { languageDD } from "../constant";
 import { useLocation } from "@reach/router";
 
 const Header = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [language, setLanguage] = React.useState("English");
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [language, setLanguage] = useState("English");
+  const [toggleNav, setToggleNav] = useState(false);
   const open = Boolean(anchorEl);
   const location = useLocation();
   const pathname = location?.pathname;
@@ -37,7 +38,7 @@ const Header = () => {
           </span>
           <span>y2meta.lol</span>
         </Link>
-        <div className="nav">
+        <div className={`nav ${toggleNav ? "active" : ""}`}>
           <Link to="/" className={`${pathname === "/" && "active"}`}>
             Youtube Downloader
           </Link>
@@ -55,7 +56,7 @@ const Header = () => {
           </Link>
           <div className="language">
             <Button
-              className="languege_selection"
+              className="lang"
               id="basic-button"
               aria-controls={open ? "basic-menu" : undefined}
               aria-haspopup="true"
@@ -93,6 +94,9 @@ const Header = () => {
           className="navbar-toggler"
           id="navbarToggle"
           aria-label="navbar toggle"
+          onClick={() => {
+            setToggleNav(!toggleNav);
+          }}
         >
           <span className="toggle-icon"></span>
           <span className="toggle-icon"></span>
