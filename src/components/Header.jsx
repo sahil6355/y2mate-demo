@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import headerLogo from "../images/favicon.webp";
 import { Link } from "gatsby";
 import Button from "@mui/material/Button";
@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import { languageDD } from "../constant";
 import { useLocation } from "@reach/router";
 
-const Header = () => {
+const Header = React.memo(() => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [language, setLanguage] = useState("English");
   const [toggleNav, setToggleNav] = useState(false);
@@ -16,6 +16,22 @@ const Header = () => {
   const location = useLocation();
   const pathname = location?.pathname;
   const { i18n } = useTranslation();
+
+  useEffect(() => {
+    setTimeout(() => {
+      const storedLanguage = localStorage.getItem("language");
+      if (storedLanguage) {
+        const getLang = languageDD?.find(
+          (lang) => lang?.code === storedLanguage
+        );
+        if (getLang) {
+          setLanguage(getLang?.name);
+          i18n.changeLanguage(storedLanguage);
+        }
+      }
+    }, 0);
+  }, [i18n]);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -26,6 +42,7 @@ const Header = () => {
   const changeLang = (d, name) => {
     i18n.changeLanguage(d);
     setLanguage(name);
+    localStorage.setItem("language", d);
     handleClose();
   };
 
@@ -105,6 +122,6 @@ const Header = () => {
       </div>
     </header>
   );
-};
+});
 
 export default Header;

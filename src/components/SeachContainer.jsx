@@ -1,17 +1,20 @@
 import { Link, navigate } from "gatsby";
 import React, { useEffect, useState } from "react";
 import { useLocation } from "@reach/router";
-import { containerTitle } from "../mock";
+import { useTranslation } from "react-i18next";
 
 const SeachContainer = ({ searchLocation, convertLocation }) => {
+  const { t } = useTranslation();
   const location = useLocation();
   const [searchText, setSearchText] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const getTitle = containerTitle?.[location?.pathname];
-
+  const containerTitle = t(`containerTitle.${location?.pathname}`, {
+    returnObjects: true,
+  });
+  
   const urls = ["/", "/youtube-to-mp3/", "/youtube-to-mp4/"];
 
   useEffect(() => {
@@ -20,7 +23,9 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
       (location?.pathname === "/search/" || location?.pathname === "/convert/")
     ) {
       setSearchText(searchLocation?.state?.message);
-      getSuggestion(searchLocation?.state?.message || convertLocation?.state?.message);
+      getSuggestion(
+        searchLocation?.state?.message || convertLocation?.state?.message
+      );
       window.history.replaceState({}, document.title);
     }
   }, [
@@ -103,8 +108,8 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
     <>
       <div className="search">
         <div className="main_search">
-          <h1>{getTitle?.[0]?.title}</h1>
-          <p>{getTitle?.[0]?.desc}</p>
+          <h1>{containerTitle?.title}</h1>
+          <p>{containerTitle?.desc}</p>
           <div className="search_box">
             <form
               className="main_seacrh_box"
@@ -121,12 +126,12 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
                 name="url"
                 id="url"
                 autoComplete="off"
-                placeholder="Search or paste YouTube link here"
+                placeholder={t("search.placeholder")}
                 value={searchText}
                 onChange={handleInputChange}
               />
               <button className="submit" id="submit-btn">
-                Start
+                {t("search.startButton")}
               </button>
             </form>
           </div>
@@ -153,13 +158,14 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
             </div>
           ))}
           <p className="terms">
-            By using our service you are accepting our{" "}
+            {t("search.terms")}{" "}
             <Link to="/" aria-label="terms and conditions">
-              Term and Conditions.
+              {t("search.termsLink")}
             </Link>
           </p>
         </div>
       </div>
+
       {location?.pathname === "/search/" ? (
         <div className="result">
           {loading ? (
@@ -221,6 +227,7 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
           )}
         </div>
       ) : null}
+
       {location?.pathname === "/convert/" ? (
         <div className="result second_section">
           <div class="down_wrap">
@@ -239,7 +246,7 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
                 href="https://ak.iptogreg.net/4/7733548"
                 class="btn-download"
               >
-                Download Now
+                {t("search.downloadNow")}
               </a>
               <div>
                 <a
@@ -247,9 +254,9 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
                   href="https://ak.iptogreg.net/4/7733548"
                   class="btn-playnow"
                 >
-                  Play Now
+                  {t("search.playNow")}
                 </a>
-                <span>Advertising</span>
+                <span>{t("search.advertising")}</span>
               </div>
             </div>
           </div>
