@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "images/favicon.webp",
+        icon: "static/images/favicon.webp",
       },
     },
     {
