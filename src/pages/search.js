@@ -36,7 +36,7 @@ export const Head = () => (
         content="Y2Meta is a popular online YouTube Downloader that lets you save videos in HD, 4K, and 8K quality without any registration. Fast, easy, and free to use!"
       />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="YOUR_URL" />
+      <meta property="og:url" content="https://yt1s-psi.vercel.app/search" />
       <meta property="og:site_name" content="Y2Mate" />
       <link
         rel="preload"

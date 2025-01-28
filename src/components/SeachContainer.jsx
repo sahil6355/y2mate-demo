@@ -10,11 +10,12 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
   const [suggestions, setSuggestions] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(-1);
 
   const containerTitle = t(`containerTitle.${location?.pathname}`, {
     returnObjects: true,
   });
-  
+
   const urls = ["/", "/youtube-to-mp3/", "/youtube-to-mp4/"];
 
   useEffect(() => {
@@ -63,6 +64,7 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
     const value = e.target.value;
     setSearchText(value);
     fetchSuggestions(value);
+    setActiveIndex(-1);
   };
 
   const getSuggestion = async (suggestion) => {
@@ -79,6 +81,20 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
     } catch (error) {
       setLoading(false);
       console.error("Error fetching search results:", error);
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (suggestions.length) {
+      if (e.key === "ArrowDown") {
+        setActiveIndex((prevIndex) => (prevIndex + 1) % suggestions?.length);
+      } else if (e.key === "ArrowUp") {
+        setActiveIndex((prevIndex) =>
+          prevIndex === 0 ? suggestions?.length - 1 : prevIndex - 1
+        );
+      } else if (e.key === "Enter" && activeIndex >= 0) {
+        handleSuggestionClick(suggestions?.[activeIndex]);
+      }
     }
   };
 
@@ -118,6 +134,7 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
                 navigate("/search/", {
                   state: { message: searchText },
                 });
+                setSuggestions([])
               }}
             >
               <div className="img search-icon"></div>
@@ -129,6 +146,7 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
                 placeholder={t("search.placeholder")}
                 value={searchText}
                 onChange={handleInputChange}
+                onKeyDown={handleKeyDown}
               />
               <button className="submit" id="submit-btn">
                 {t("search.startButton")}
@@ -144,7 +162,7 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
                 padding: "8px",
                 cursor: "pointer",
                 borderBottom: "1px solid #eee",
-                backgroundColor: "#fff",
+                backgroundColor: index === activeIndex ? "#f0f0f0" : "#fff",
                 color: "#333",
               }}
               onMouseEnter={(e) =>
@@ -169,60 +187,83 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
       {location?.pathname === "/search/" ? (
         <div className="result">
           {loading ? (
-            <div class="spinner" id="loader">
-              <div class="box-1"></div>
-              <div class="box-2"></div>
-              <div class="box-3"></div>
-              <div class="box-4"></div>
+            <div className="spinner" id="loader">
+              <div className="box-1"></div>
+              <div className="box-2"></div>
+              <div className="box-3"></div>
+              <div className="box-4"></div>
             </div>
           ) : (
             <div
               className="data_results"
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(3, 1fr)",
+                gridTemplateColumns: searchResults?.length
+                  ? "repeat(3, 1fr)"
+                  : "none",
                 gap: "16px",
                 paddingTop: "16px",
+                justifyContent: searchResults?.length ? "start" : "center",
+                alignItems: searchResults?.length ? "start" : "center",
+                minHeight: "150px",
               }}
             >
-              {searchResults.map((result, index) => (
-                <div
-                  key={index}
-                  className="result-item"
-                  style={{
-                    backgroundColor: "#fff",
-                    border: "1px solid #ddd",
-                    borderRadius: "8px",
-                    overflow: "hidden",
-                    textAlign: "center",
-                    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-                    transition: "transform 0.2s ease, box-shadow 0.2s ease",
-                    cursor: "pointer",
-                  }}
-                  onClick={() => {
-                    handleConvert(result);
-                  }}
-                >
-                  <img
-                    src={result?.thumbMedium || result?.thumbDefault}
-                    alt={result.title}
+              {searchResults?.length ? (
+                searchResults?.map?.((result, index) => (
+                  <div
+                    key={index}
+                    className="result-item"
                     style={{
-                      width: "100%",
-                      height: "auto",
-                      borderBottom: "1px solid #ddd",
+                      backgroundColor: "#fff",
+                      border: "1px solid #ddd",
+                      borderRadius: "8px",
+                      overflow: "hidden",
+                      textAlign: "center",
+                      boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+                      transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                      cursor: "pointer",
                     }}
-                  />
-                  <h3
-                    style={{
-                      padding: "8px",
-                      fontSize: "16px",
-                      color: "#333",
+                    onClick={() => {
+                      handleConvert(result);
                     }}
                   >
-                    {result?.title}
-                  </h3>
+                    <img
+                      src={result?.thumbMedium || result?.thumbDefault}
+                      alt={result.title}
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                        borderBottom: "1px solid #ddd",
+                      }}
+                    />
+                    <h3
+                      style={{
+                        padding: "8px",
+                        fontSize: "16px",
+                        color: "#333",
+                      }}
+                    >
+                      {result?.title}
+                    </h3>
+                  </div>
+                ))
+              ) : (
+                <div
+                  className="not-found"
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "100%",
+                    width: "100%",
+                    textAlign: "center",
+                    color: "#999",
+                    fontSize: "18px",
+                  }}
+                >
+                  Not found
                 </div>
-              ))}
+              )}
             </div>
           )}
         </div>
@@ -230,7 +271,7 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
 
       {location?.pathname === "/convert/" ? (
         <div className="result second_section">
-          <div class="down_wrap">
+          <div className="down_wrap">
             <iframe
               id="widgetPlusApi"
               src={`https://ac.insvid.com/widget?url=https://www.youtube.com/watch?v=${convertLocation?.state?.message}`}
@@ -240,11 +281,11 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
               style={{ border: "none" }}
               title="Video Widget"
             ></iframe>
-            <div class="btn-group">
+            <div className="btn-group">
               <a
                 target="_blank"
                 href="https://ak.iptogreg.net/4/7733548"
-                class="btn-download"
+                className="btn-download"
               >
                 {t("search.downloadNow")}
               </a>
@@ -252,7 +293,7 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
                 <a
                   target="_blank"
                   href="https://ak.iptogreg.net/4/7733548"
-                  class="btn-playnow"
+                  className="btn-playnow"
                 >
                   {t("search.playNow")}
                 </a>

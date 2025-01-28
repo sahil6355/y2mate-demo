@@ -36,7 +36,7 @@ export const Head = () => (
         content="Convert YouTube videos to MP3 for free and in high quality with Y2Meta. Download MP3s quickly without signup using the Y2Meta YouTube To MP3 converter tool."
       />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="YOUR_URL" />
+      <meta property="og:url" content="https://yt1s-psi.vercel.app/youtube-to-mp3" />
       <meta property="og:site_name" content="Y2Mate" />
       <link
         rel="preload"

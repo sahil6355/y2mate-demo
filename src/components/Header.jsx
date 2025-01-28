@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import headerLogo from "../images/favicon.webp";
+import headerLogo from "../../static/images/favicon.webp";
 import { Link } from "gatsby";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";

@@ -4,14 +4,14 @@ import React from "react";
 const Footer = () => {
   return (
     <footer>
-      <div class="sub-footer">
+      <div className="sub-footer">
         <p>
           @2024{" "}
           <Link to="/" aria-label="footer link">
             y2meta.lol
           </Link>
         </p>
-        <div class="footer-link">
+        <div className="footer-link">
           <Link to="#">About</Link>
           <Link to="#">Contact</Link>
           <Link to="#">Terms of Service</Link>

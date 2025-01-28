@@ -10,7 +10,7 @@ module.exports = {
         languages: ["en", "fr"],
         defaultLanguage: "en",
         path: `${__dirname}/locales`,
-        siteUrl: "https://example.com/",
+        siteUrl: "https://yt1s-psi.vercel.app/",
         i18nextOptions: {
           interpolation: {
             escapeValue: false,
@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/favicon.webp",
+        icon: "images/favicon.webp",
       },
     },
     {

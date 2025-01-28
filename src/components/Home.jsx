@@ -16,15 +16,19 @@ const Home = ({ searchProps, convertProps }) => {
           convertLocation={convertProps}
         />
         <div className="contain">
-          <h2 className="text-center">{t("headTitle")}</h2>
-          <p>{t("introParagraph")}</p>
-          <h2 className="text-center mt-48">{t("howToDownload")}</h2>
-          <p>{t("howToDownloadStepsIntro")}</p>
-          <ol>
-            <li>{t("step1")}</li>
-            <li>{t("step2")}</li>
-            <li>{t("step3")}</li>
-          </ol>
+          {!searchProps && !convertProps ? (
+            <>
+              <h2 className="text-center">{t("headTitle")}</h2>
+              <p>{t("introParagraph")}</p>
+              <h2 className="text-center mt-48">{t("howToDownload")}</h2>
+              <p>{t("howToDownloadStepsIntro")}</p>
+              <ol>
+                <li>{t("step1")}</li>
+                <li>{t("step2")}</li>
+                <li>{t("step3")}</li>
+              </ol>
+            </>
+          ) : null}
           <h2 className="text-center mt-48">{t("featuresHeading")}</h2>
           <div className="box">
             {features?.map?.((feature, index) => (

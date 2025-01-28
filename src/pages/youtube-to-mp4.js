@@ -36,7 +36,7 @@ export const Head = () => (
         content=" Convert and download YouTube videos to MP4 format quickly and securely with Y2Meta. Choose from multiple video qualities, including 720p, 1080p, 2K, and up to 4K."
       />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="YOUR_URL" />
+      <meta property="og:url" content="https://yt1s-psi.vercel.app/youtube-to-mp4" />
       <meta property="og:site_name" content="Y2Mate" />
       <link
         rel="preload"
