@@ -136,7 +136,7 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
     setLoadingQuality(quality);
 
     try {
-      const downloadUrl = `${backendUrl}/download?url=${encodeURIComponent(
+      const downloadUrl = `/api/download?url=${encodeURIComponent(
         url
       )}&format=${format}&quality=${quality}`;
       const response = await fetch(downloadUrl);

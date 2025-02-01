@@ -1,0 +1,79 @@
+import ytdl from "ytdl-core";
+
+const allowedQualities = {
+  mp3: ["highestaudio", "lowestaudio", "320kbps", "256kbps", "192kbps", "128kbps"],
+  mp4: ["highestvideo", "lowestvideo", "1080p", "720p", "480p", "360p", "240p", "144p"],
+};
+
+export default async function handler(req, res) {
+  if (req.method !== "GET") {
+    return res.status(405).json({ success: false, message: "Method Not Allowed" });
+  }
+
+  const videoUrl = req.query.url;
+  const format = req.query.format || "mp4";
+  let quality = req.query.quality || (format === "mp4" ? "highestvideo" : "highestaudio");
+
+  if (!videoUrl || !ytdl.validateURL(videoUrl)) {
+    return res.status(400).json({ success: false, message: "Invalid YouTube URL" });
+  }
+
+  if (!["mp3", "mp4"].includes(format)) {
+    return res.status(400).json({ success: false, message: "Invalid format, choose mp3 or mp4" });
+  }
+
+  if (!allowedQualities[format].includes(quality)) {
+    return res.status(400).json({
+      success: false,
+      message: `Invalid quality for ${format}. Allowed values: ${allowedQualities[format].join(", ")}`,
+    });
+  }
+
+  try {
+    const info = await ytdl.getInfo(videoUrl);
+    res.setHeader("Content-Disposition", `attachment; filename="download.${format}"`);
+
+    if (format === "mp4") {
+      let availableFormats = ytdl.filterFormats(info.formats, (f) => f.container === "mp4" && f.hasVideo && f.hasAudio);
+      let selectedFormat = availableFormats.find((f) => f.qualityLabel === quality);
+
+      if (!selectedFormat) {
+        const availableQualities = [...new Set(availableFormats?.map?.((f) => f?.qualityLabel))]?.join(", ");
+        return res.status(400).json({
+          success: false,
+          message: `Requested quality ${quality} not available. Available: ${availableQualities}`,
+        });
+      }
+
+      res.setHeader("Content-Disposition", `attachment; filename="video-${quality}.mp4"`);
+      ytdl(videoUrl, { quality: selectedFormat.itag }).pipe(res);
+    } else if (format === "mp3") {
+      const audioFormats = ytdl.filterFormats(info.formats, (f) => f.mimeType.includes("audio"));
+      audioFormats.sort((a, b) => b.bitrate - a.bitrate);
+
+      let selectedFormat;
+      if (quality === "320kbps") {
+        selectedFormat = audioFormats.find((f) => f.bitrate >= 256000) || audioFormats[0];
+      } else if (quality === "256kbps") {
+        selectedFormat = audioFormats.find((f) => f.bitrate >= 192000 && f.bitrate < 256000) || audioFormats[0];
+      } else if (quality === "192kbps") {
+        selectedFormat = audioFormats.find((f) => f.bitrate >= 128000 && f.bitrate < 192000) || audioFormats[0];
+      } else if (quality === "128kbps") {
+        selectedFormat = audioFormats.find((f) => f.bitrate < 128000) || audioFormats[audioFormats.length - 1];
+      } else if (quality === "highestaudio") {
+        selectedFormat = audioFormats[0];
+      } else {
+        selectedFormat = audioFormats[audioFormats.length - 1];
+      }
+
+      if (!selectedFormat) {
+        return res.status(400).json({ success: false, message: `Requested audio quality ${quality} not available.` });
+      }
+
+      ytdl(videoUrl, { quality: selectedFormat.itag }).pipe(res);
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    res.status(500).json({ success: false, message: "Failed to process the video download" });
+  }
+}
