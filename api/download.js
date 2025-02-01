@@ -6,7 +6,7 @@ const allowedQualities = {
     mp4: ["highestvideo", "lowestvideo", "1080p", "720p", "480p", "360p", "240p", "144p"]
 };
 
-module.exports = async (req, res) => {
+const downloadHandler = async (req, res) => {
     cors()(req, res, async () => {
         const videoUrl = req.query.url;
         const format = req.query.format || 'mp4';
@@ -80,3 +80,5 @@ module.exports = async (req, res) => {
         }
     });
 };
+
+export default downloadHandler;
