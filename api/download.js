@@ -69,6 +69,12 @@ module.exports = async (req, res) => {
       }
 
     } catch (error) {
+      if (error.message.includes('UnrecoverableError')) {
+        return res.status(400).json({
+          success: false,
+          message: 'Failed to process the video download due to bot detection. Please try again later.'
+        });
+      }
       console.error('Error:', error);
       res.status(500).send('Failed to process the video download');
     }
