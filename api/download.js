@@ -1,5 +1,5 @@
-const ytdl = require('ytdl-core');
-const cors = require('cors');
+import ytdl from 'ytdl-core';
+import cors from 'cors';
 
 const allowedQualities = {
     mp3: ["highestaudio", "lowestaudio", "320kbps", "256kbps", "192kbps", "128kbps"],
