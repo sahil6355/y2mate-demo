@@ -11,7 +11,13 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
+  const [activeTab, setActiveTab] = useState("mp3");
+  const [isLoadingForDwl, setIsLoadingForDwl] = useState(false);
+  const [loadingQuality, setLoadingQuality] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
+  const backendUrl = process.env.GATSBY_BACKEND_URL;
+  
   const containerTitle = t(`containerTitle.${location?.pathname}`, {
     returnObjects: true,
   });
@@ -120,6 +126,45 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
     });
   };
 
+  const handleDownload = async (format, quality) => {
+    const url = `https://www.youtube.com/watch?v=${convertLocation?.state?.message}`;
+    if (!url) {
+      alert("Please enter a valid YouTube URL");
+      return;
+    }
+    setIsLoadingForDwl(true);
+    setLoadingQuality(quality);
+
+    try {
+      const downloadUrl = `${backendUrl}/download?url=${encodeURIComponent(
+        url
+      )}&format=${format}&quality=${quality}`;
+      const response = await fetch(downloadUrl);
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        setErrorMessage(errorData.message || "Error downloading the video");
+        setTimeout(() => setErrorMessage(""), 10000);
+        return;
+      }
+
+      const fileBlob = await response.blob();
+      const fileURL = URL.createObjectURL(fileBlob);
+      const a = document.createElement("a");
+      a.href = fileURL;
+      a.download =
+        format === "mp3"
+          ? `${searchResults?.[0]?.title}.mp3`
+          : `${searchResults?.[0]?.title}.mp4`;
+      a.click();
+    } catch (error) {
+      setErrorMessage("Failed to download the video");
+      setTimeout(() => setErrorMessage(""), 10000);
+    } finally {
+      setIsLoadingForDwl(false);
+      setLoadingQuality("");
+    }
+  };
   return (
     <>
       <div className="search">
@@ -134,7 +179,7 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
                 navigate("/search/", {
                   state: { message: searchText },
                 });
-                setSuggestions([])
+                setSuggestions([]);
               }}
             >
               <div className="img search-icon"></div>
@@ -269,35 +314,133 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
         </div>
       ) : null}
 
-      {location?.pathname === "/convert/" ? (
+      {location?.pathname === "/convert/" && convertLocation?.state?.message ? (
         <div className="result second_section">
           <div className="down_wrap">
-            <iframe
-              id="widgetPlusApi"
-              src={`https://ac.insvid.com/widget?url=https://www.youtube.com/watch?v=${convertLocation?.state?.message}`}
-              width="100%"
-              height="100%"
-              allowTransparency="true"
-              style={{ border: "none" }}
-              title="Video Widget"
-            ></iframe>
-            <div className="btn-group">
-              <a
-                target="_blank"
-                href="https://ak.iptogreg.net/4/7733548"
-                className="btn-download"
-              >
-                {t("search.downloadNow")}
-              </a>
-              <div>
-                <a
-                  target="_blank"
-                  href="https://ak.iptogreg.net/4/7733548"
-                  className="btn-playnow"
+            {errorMessage ? (
+              <div className="error-message">{errorMessage}</div>
+            ) : null}
+            <h2>Video Download</h2>
+            <div className="main_data">
+              <ul className="tabs">
+                <li
+                  className={`tab-link MP3 ${
+                    activeTab === "mp3" ? "current" : ""
+                  }`}
+                  onClick={() => setActiveTab("mp3")}
                 >
-                  {t("search.playNow")}
-                </a>
-                <span>{t("search.advertising")}</span>
+                  <span>MP3</span>
+                </li>
+                <li
+                  className={`tab-link MP4 ${
+                    activeTab === "mp4" ? "current" : ""
+                  }`}
+                  onClick={() => setActiveTab("mp4")}
+                >
+                  <span>MP4</span>
+                </li>
+              </ul>
+              <div className="inside_data">
+                {/* MP3 Section */}
+                {activeTab === "mp3" && (
+                  <div id="mp3" className="tab-content current formatMP3">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>QUALITY</th>
+                          <th>FORMAT</th>
+                          <th className="fsize" style={{ display: "none" }}>
+                            SIZE
+                          </th>
+                          <th>ACTION</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {["320kbps", "256kbps", "192kbps", "128kbps"].map(
+                          (quality) => (
+                            <tr key={quality}>
+                              <th>
+                                <p>{quality}</p>
+                              </th>
+                              <td>MP3</td>
+                              <td
+                                className="fsize fsize2"
+                                style={{ display: "none" }}
+                              ></td>
+                              <td>
+                                <div className="convert_btn">
+                                  <div
+                                    className="convert_btn_img"
+                                    onClick={() => {
+                                      handleDownload("mp3", quality);
+                                    }}
+                                  >
+                                    {isLoadingForDwl &&
+                                    loadingQuality === quality
+                                      ? "Processing..."
+                                      : "Download"}
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          )
+                        )}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+
+                {/* MP4 Section */}
+                {activeTab === "mp4" && (
+                  <div id="mp4" className="tab-content formatMP4">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>QUALITY</th>
+                          <th>FORMAT</th>
+                          <th className="fsize" style={{ display: "none" }}>
+                            SIZE
+                          </th>
+                          <th>ACTION</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {["1080p", "720p", "480p", "360p", "240p", "144p"].map(
+                          (quality, index) => (
+                            <tr key={index}>
+                              <th>
+                                <p>{quality}</p>
+                              </th>
+                              <td>MP4</td>
+                              <td
+                                className="fsize fsize2"
+                                style={{ display: "none" }}
+                              ></td>
+                              <td>
+                                <div
+                                  className="convert_btn"
+                                  data-id={`convert_btn_${index}`}
+                                >
+                                  <div
+                                    className="convert_btn_img"
+                                    onClick={() => {
+                                      handleDownload("mp4", quality);
+                                    }}
+                                  >
+                                    {isLoadingForDwl &&
+                                    loadingQuality === quality
+                                      ? "Processing..."
+                                      : "Download"}
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          )
+                        )}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
               </div>
             </div>
           </div>
