@@ -1,6 +1,8 @@
 const ytdl = require('ytdl-core');
 const cors = require('cors');
+const fs = require('fs');
 
+const cookies = fs.readFileSync('cookies.txt', 'utf8');
 const allowedQualities = {
   mp3: ["highestaudio", "lowestaudio", "320kbps", "256kbps", "192kbps", "128kbps"],
   mp4: ["highestvideo", "lowestvideo", "1080p", "720p", "480p", "360p", "240p", "144p"]
@@ -64,8 +66,17 @@ module.exports = async (req, res) => {
         if (!selectedFormat) {
           return res.status(400).send(`Requested audio quality ${quality} not available.`);
         }
+        const options = {
+          quality: selectedFormat.itag,
+          requestOptions: {
+            headers: {
+              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+              'Cookie': cookies
+            }
+          }
+        };
 
-        ytdl(videoUrl, { quality: selectedFormat.itag }).pipe(res);
+        ytdl(videoUrl, options).pipe(res);
       }
 
     } catch (error) {
