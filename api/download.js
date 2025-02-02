@@ -1,6 +1,6 @@
 import ytdl from 'ytdl-core';
 import fs from 'fs';
-const path = require('path');
+import path from 'path';
 
 // Delay function to introduce a pause between requests
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
