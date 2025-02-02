@@ -136,7 +136,7 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
     setLoadingQuality(quality);
 
     try {
-      const downloadUrl = `yts-backend-production.up.railway.app/api/download?url=${encodeURIComponent(
+      const downloadUrl = `https://yt1s-psi.vercel.app/api/download?url=${encodeURIComponent(
         url
       )}&format=${format}&quality=${quality}`;
       const response = await fetch(downloadUrl);
