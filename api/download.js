@@ -1,6 +1,4 @@
 import ytdl from 'ytdl-core';
-import fs from 'fs';
-import path from 'path';
 
 // Delay function to introduce a pause between requests
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -35,17 +33,12 @@ export default async function handler(req, res) {
     }
 
     try {
-        // Load cookies from the file (make sure you have a valid cookies.txt file)
-        const __dirname = path.dirname(new URL(import.meta.url).pathname);
-        const cookieFilePath = path.join(__dirname, 'cookie.txt');
 
-        const cookies = fs.readFileSync(cookieFilePath, 'utf-8');
 
         // Fake headers to bypass bot detection
         const headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
             'Accept-Language': 'en-US,en;q=0.9',
-            'Cookie': cookies,  // Use the updated cookie format here
         };
 
         // Introduce a delay to avoid bot detection
