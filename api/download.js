@@ -1,84 +1,61 @@
 import ytdl from 'ytdl-core';
-import cors from 'cors';
+import puppeteer from 'puppeteer';
 
-const allowedQualities = {
-    mp3: ["highestaudio", "lowestaudio", "320kbps", "256kbps", "192kbps", "128kbps"],
-    mp4: ["highestvideo", "lowestvideo", "1080p", "720p", "480p", "360p", "240p", "144p"]
-};
+export default async function handler(req, res) {
+    if (req.method !== 'GET') {
+        return res.status(405).json({ success: false, message: 'Only GET method is allowed' });
+    }
 
-const downloadHandler = async (req, res) => {
-    cors()(req, res, async () => {
-        const videoUrl = req.query.url;
-        const format = req.query.format || 'mp4';
-        let quality = req.query.quality || (format === 'mp4' ? 'highestvideo' : 'highestaudio');
+    const videoUrl = req.query.url;
+    const format = req.query.format || 'mp4';
+    let quality = req.query.quality || (format === 'mp4' ? 'highestvideo' : 'highestaudio');
 
-        if (!videoUrl || !ytdl.validateURL(videoUrl)) {
-            return res.status(400).send('Invalid YouTube URL');
+    if (!videoUrl || !ytdl.validateURL(videoUrl)) {
+        return res.status(400).json({ success: false, message: 'Invalid YouTube URL' });
+    }
+
+    const allowedQualities = {
+        mp3: ["highestaudio", "lowestaudio", "320kbps", "256kbps", "192kbps", "128kbps"],
+        mp4: ["highestvideo", "lowestvideo", "1080p", "720p", "480p", "360p", "240p", "144p"]
+    };
+
+    if (!['mp3', 'mp4'].includes(format)) {
+        return res.status(400).json({ success: false, message: 'Invalid format, choose mp3 or mp4' });
+    }
+
+    if (!allowedQualities[format].includes(quality)) {
+        return res.status(400).json({
+            success: false,
+            message: `Invalid quality for ${format}. Allowed: ${allowedQualities[format].join(', ')}`
+        });
+    }
+
+    try {
+        // **Use Puppeteer to bypass YouTube bot detection**
+        const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
+        const page = await browser.newPage();
+        await page.goto(videoUrl, { waitUntil: 'networkidle2' });
+
+        const videoTitle = await page.title();
+        await browser.close();
+
+        res.setHeader('Content-Disposition', `attachment; filename="${videoTitle}.${format}"`);
+
+        if (format === 'mp4') {
+            const stream = ytdl(videoUrl, { quality: quality });
+            res.setHeader('Content-Type', 'video/mp4');
+            stream.pipe(res);
+        } else if (format === 'mp3') {
+            const stream = ytdl(videoUrl, { filter: 'audioonly', quality: 'highestaudio' });
+            res.setHeader('Content-Type', 'audio/mpeg');
+            stream.pipe(res);
         }
 
-        if (!['mp3', 'mp4'].includes(format)) {
-            return res.status(400).send('Invalid format, choose mp3 or mp4');
+    } catch (error) {
+        console.error('Error:', error);
+        if (error.message.includes('UnrecoverableError')) {
+            return res.status(400).json({ success: false, message: 'YouTube detected bot activity. Try again later.' });
         }
-
-        if (!allowedQualities[format].includes(quality)) {
-            return res.status(400).send(`Invalid quality for ${format}. Allowed values: ${allowedQualities[format].join(', ')}`);
-        }
-
-        try {
-            const info = await ytdl.getInfo(videoUrl);
-            res.header('Content-Disposition', `attachment; filename="download.${format}"`);
-
-            if (format === 'mp4') {
-                let availableFormats = ytdl.filterFormats(info.formats, f => f.container === 'mp4' && f.hasVideo && f.hasAudio);
-                let selectedFormat = availableFormats.find(f => f.qualityLabel === quality);
-
-                if (!selectedFormat) {
-                    const availableQualities = [...new Set(availableFormats.map(f => f.qualityLabel))].join(', ');
-                    return res.status(400).json({
-                        success: false,
-                        message: `Requested quality ${quality} not available. Available: ${availableQualities}`
-                    });
-                }
-
-                res.header('Content-Disposition', `attachment; filename="video-${quality}.mp4"`);
-                ytdl(videoUrl, { quality: selectedFormat.itag }).pipe(res);
-            } else if (format === 'mp3') {
-                const audioFormats = ytdl.filterFormats(info.formats, f => f.mimeType.includes('audio'));
-                audioFormats.sort((a, b) => b.bitrate - a.bitrate);
-
-                let selectedFormat;
-                if (quality === "320kbps") {
-                    selectedFormat = audioFormats.find(f => f.bitrate >= 256000) || audioFormats[0];
-                } else if (quality === "256kbps") {
-                    selectedFormat = audioFormats.find(f => f.bitrate >= 192000 && f.bitrate < 256000) || audioFormats[0];
-                } else if (quality === "192kbps") {
-                    selectedFormat = audioFormats.find(f => f.bitrate >= 128000 && f.bitrate < 192000) || audioFormats[0];
-                } else if (quality === "128kbps") {
-                    selectedFormat = audioFormats.find(f => f.bitrate < 128000) || audioFormats[audioFormats.length - 1];
-                } else if (quality === "highestaudio") {
-                    selectedFormat = audioFormats[0];
-                } else {
-                    selectedFormat = audioFormats[audioFormats.length - 1];
-                }
-
-                if (!selectedFormat) {
-                    return res.status(400).send(`Requested audio quality ${quality} not available.`);
-                }
-
-                ytdl(videoUrl, { quality: selectedFormat.itag }).pipe(res);
-            }
-
-        } catch (error) {
-            if (error.message.includes('UnrecoverableError')) {
-                return res.status(400).json({
-                    success: false,
-                    message: 'Failed to process the video download due to bot detection. Please try again later.'
-                });
-            }
-            console.error('Error:', error);
-            res.status(500).send('Failed to process the video download');
-        }
-    });
-};
-
-export default downloadHandler;
+        res.status(500).json({ success: false, message: 'Failed to process the video download.' });
+    }
+}
