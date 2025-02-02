@@ -7,7 +7,6 @@
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "fs": "^0.0.1-security",
-    "puppeteer": "^24.1.1",
     "ytdl-core": "npm:@distube/ytdl-core@^4.15.9"
   }
 }
