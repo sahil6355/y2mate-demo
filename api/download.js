@@ -36,6 +36,7 @@ export default async function handler(req, res) {
 
     try {
         // Load cookies from the file (make sure you have a valid cookies.txt file)
+        const __dirname = path.dirname(new URL(import.meta.url).pathname);
         const cookieFilePath = path.join(__dirname, 'cookie.txt');
 
         const cookies = fs.readFileSync(cookieFilePath, 'utf-8');
