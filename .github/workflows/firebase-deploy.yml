@@ -16,7 +16,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20  # Use your Gatsby project's Node.js version
+          node-version: 20  # Use Node.js version 20 (same as local)
 
       - name: Install Firebase Tools
         run: npm install -g firebase-tools  # Ensure Firebase tools are installed
@@ -29,6 +29,15 @@ jobs:
 
       - name: Check Firebase Tools Version
         run: firebase --version  # Verify if Firebase CLI is installed
+
+      - name: Verify Firebase Token
+        run: echo ${{ secrets.FIREBASE_TOKEN }}  # Check token format
+
+      - name: Firebase Login Using Token
+        run: echo "$FIREBASE_TOKEN" | firebase login:ci --token  # Explicit login with token
+
+      - name: Select Firebase Project
+        run: firebase use --token "$FIREBASE_TOKEN"  # Ensure the correct Firebase project is selected
 
       - name: Deploy to Firebase
         run: |
