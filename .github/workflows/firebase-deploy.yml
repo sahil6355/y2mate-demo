@@ -1,0 +1,30 @@
+name: Deploy Gatsby to Firebase
+
+on:
+  push:
+    branches:
+      - main  # Change this if your main branch is named differently
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18  # Use your Gatsby project's Node.js version
+
+      - name: Install Dependencies
+        run: npm install  # Or yarn install if using Yarn
+
+      - name: Build Gatsby
+        run: npm run build  # Or yarn build
+
+      - name: Deploy to Firebase
+        run: |
+          npm install -g firebase-tools
+          firebase deploy --token "$FIREBASE_TOKEN"
