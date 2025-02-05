@@ -24,7 +24,7 @@ export const Head = () => (
       <meta name="robots" content="noindex, nofollow" />
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Y2Meta - Free YouTube Downloader (1080pp)</title>
+      <title>Y2Meta - Free YouTube Downloader (1080p)</title>
       <meta
         name="description"
         content="Y2Meta is a popular online YouTube Downloader that lets you save videos in HD, 4K, and 8K quality without registration. It's fast, easy, and free to use!"
