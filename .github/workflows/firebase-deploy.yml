@@ -33,12 +33,6 @@ jobs:
       - name: Verify Firebase Token
         run: echo ${{ secrets.FIREBASE_TOKEN }}  # Check token format
 
-      - name: Firebase Login Using Token
-        run: echo "$FIREBASE_TOKEN" | firebase login:ci --token  # Explicit login with token
-
-      - name: Select Firebase Project
-        run: firebase use --token "$FIREBASE_TOKEN"  # Ensure the correct Firebase project is selected
-
       - name: Deploy to Firebase
         run: |
-          firebase deploy --token "$FIREBASE_TOKEN"
+          firebase deploy --token "$FIREBASE_TOKEN"  # Use the token for authentication
