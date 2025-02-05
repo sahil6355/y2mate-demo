@@ -2,8 +2,11 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  siteMetadata: {
+    title: `yt1`,
+    siteUrl: `https://www.yourdomain.tld`,
+  },
   plugins: [
-    `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
@@ -20,12 +23,6 @@ module.exports = {
         },
       },
     },
-  ],
-  siteMetadata: {
-    title: `yt1`,
-    siteUrl: `https://www.yourdomain.tld`,
-  },
-  plugins: [
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
@@ -33,10 +30,6 @@ module.exports = {
         icon: "static/images/favicon.webp",
       },
     },
-    {
-      resolve: "gatsby-plugin-react-helmet",
-      options: {
-      },
-    },
+    "gatsby-plugin-react-helmet",
   ],
 };
