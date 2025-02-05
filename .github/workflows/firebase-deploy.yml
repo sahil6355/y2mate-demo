@@ -16,7 +16,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18  # Use your Gatsby project's Node.js version
+          node-version: 20  # Use your Gatsby project's Node.js version
 
       - name: Install Firebase Tools
         run: npm install -g firebase-tools  # Ensure Firebase tools are installed
