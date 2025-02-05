@@ -24,6 +24,12 @@ jobs:
       - name: Build Gatsby
         run: npm run build  # Or yarn build
 
+      - name: Check Firebase Tools Version
+        run: firebase --version  # Verify if Firebase CLI is installed
+
+      - name: Debug Firebase Token
+        run: echo ${{ secrets.FIREBASE_TOKEN }}  # Debugging step to check the token
+
       - name: Deploy to Firebase
         run: |
           npm install -g firebase-tools
