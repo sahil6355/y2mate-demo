@@ -1,28 +1,26 @@
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
 module.exports = {
   siteMetadata: {
     title: `yt1`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-react-i18next`,
-      options: {
-        languages: ["en", "fr"],
-        defaultLanguage: "en",
-        path: `${__dirname}/locales`,
-        siteUrl: "https://yt1s-psi.vercel.app/",
-        i18nextOptions: {
-          interpolation: {
-            escapeValue: false,
-          },
-          keySeparator: false,
-          nsSeparator: false,
-        },
-      },
-    },
+    // Remove this block
+    // {
+    //   resolve: `gatsby-plugin-react-i18next`,
+    //   options: {
+    //     languages: ["en", "fr"],
+    //     defaultLanguage: "en",
+    //     path: `${__dirname}/locales`,
+    //     siteUrl: "https://yt1s-psi.vercel.app/",
+    //     i18nextOptions: {
+    //       interpolation: {
+    //         escapeValue: false,
+    //       },
+    //       keySeparator: false,
+    //       nsSeparator: false,
+    //     },
+    //   },
+    // },
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
