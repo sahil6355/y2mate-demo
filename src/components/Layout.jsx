@@ -4,10 +4,13 @@ import Header from "./Header";
 
 export const Layout = ({ children }) => {
   return (
-    <div>
+    <>
       <Header />
-      {children}
+      <div className="container">
+        {children}
+        <div className="border-line mt-48"></div>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };

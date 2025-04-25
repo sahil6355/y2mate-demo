@@ -164,6 +164,11 @@ header {
   list-style: none;
 }
 
+li.active {
+  background-color: #f0f0f0;
+  font-weight: 600;
+}
+
 .navbar a {
   font-weight: 400;
   font-size: 14px;
@@ -180,6 +185,7 @@ header {
 .lang-wrap {
   display: flex;
   gap: 3px;
+  width: 50px;
 }
 
 .lang-image {
@@ -219,7 +225,7 @@ header {
   cursor: pointer;
 }
 
-.sub-language li p {
+.sub-language li a {
   display: block;
   font-size: 16px;
   padding: 3px 20px;
@@ -228,7 +234,6 @@ header {
   line-height: 24px;
   color: #333;
   white-space: nowrap;
-  cursor: pointer;
 }
 
 ul.sub-language.lang_menu {

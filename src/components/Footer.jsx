@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
+    /*  <footer>
       <div className="sub-footer">
         <p>
           @2024{" "}
@@ -18,7 +18,27 @@ const Footer = () => {
           <Link to="#">Privacy Policy</Link>
         </div>
       </div>
-    </footer>
+    </footer> */
+
+    <div className="container">
+      <div className="footer">
+        <p className="text-center">@2025 y2meta</p>
+        <ul>
+          <li>
+            <Link to="#">About</Link>
+          </li>
+          <li>
+            <Link to="#">Contact</Link>
+          </li>
+          <li>
+            <Link to="#">Terms of Service</Link>
+          </li>
+          <li>
+            <Link to="#">Privacy Policy</Link>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 };
 

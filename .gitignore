@@ -3,4 +3,5 @@ node_modules/
 public
 .env
 .vercel
-hosting.cHVibGlj.cache
+.firebase/hosting.*.cache
+

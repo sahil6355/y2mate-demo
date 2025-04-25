@@ -1,9 +1,38 @@
 import { Link, navigate } from "gatsby";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "@reach/router";
 import { useTranslation } from "react-i18next";
+import {
+  blockedIds,
+  convertPath,
+  homePath,
+  mp3Path,
+  mp4Path,
+  searchPath,
+} from "../constant";
 
-const SeachContainer = ({ searchLocation, convertLocation }) => {
+const convertTimeToSeconds = (timeStr) => {
+  const timeParts = timeStr?.split?.(":");
+  let totalSeconds = 0;
+
+  if (timeParts?.length === 3) {
+    const hours = parseInt(timeParts?.[0], 10);
+    const minutes = parseInt(timeParts?.[1], 10);
+    totalSeconds = parseInt(timeParts?.[2], 10);
+    totalSeconds += hours * 3600 + minutes * 60;
+  } else if (timeParts?.length === 2) {
+    const minutes = parseInt(timeParts?.[0], 10);
+    totalSeconds = parseInt(timeParts?.[1], 10);
+    totalSeconds += minutes * 60;
+  } else {
+    console.log("Invalid time format. Use HH:MM:SS or MM:SS");
+    return;
+  }
+
+  return totalSeconds;
+};
+
+const SeachContainer = ({ convertLocation }) => {
   const { t } = useTranslation();
   const location = useLocation();
   const [searchText, setSearchText] = useState("");
@@ -11,35 +40,42 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
-  const [activeTab, setActiveTab] = useState("mp3");
-  const [isLoadingForDwl, setIsLoadingForDwl] = useState(false);
-  const [loadingQuality, setLoadingQuality] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const suggestionBoxRef = useRef(null);
 
-  const backendUrl = process.env.GATSBY_BACKEND_URL;
-  
   const containerTitle = t(`containerTitle.${location?.pathname}`, {
     returnObjects: true,
   });
 
-  const urls = ["/", "/youtube-to-mp3/", "/youtube-to-mp4/"];
+  const urls = [homePath, mp3Path, mp4Path];
+
+  const useQuery = () => {
+    return new URLSearchParams(useLocation().search);
+  };
+  const query = useQuery();
+  const searchTxt = query?.get?.("q");
 
   useEffect(() => {
-    if (
-      (!!searchLocation?.state?.message || !!convertLocation?.state?.message) &&
-      (location?.pathname === "/search/" || location?.pathname === "/convert/")
-    ) {
-      setSearchText(searchLocation?.state?.message);
-      getSuggestion(
-        searchLocation?.state?.message || convertLocation?.state?.message
-      );
+    if (!!searchTxt && location?.pathname === `${searchPath}/`) {
+      setSearchText(searchTxt);
+      getSuggestion(searchTxt);
       window.history.replaceState({}, document.title);
     }
-  }, [
-    searchLocation?.state?.message,
-    location?.pathname,
-    convertLocation?.state?.message,
-  ]);
+  }, [searchTxt, location?.pathname]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        suggestionBoxRef.current &&
+        !suggestionBoxRef.current.contains?.(event?.target)
+      ) {
+        setSuggestions([]);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   const fetchSuggestions = async (query) => {
     if (!query) {
@@ -49,7 +85,7 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
 
     const callbackName = "handleData";
     window[callbackName] = (data) => {
-      setSuggestions(data[1]);
+      setSuggestions(data?.[1]);
     };
 
     const script = document.createElement("script");
@@ -94,10 +130,12 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
     if (suggestions.length) {
       if (e.key === "ArrowDown") {
         setActiveIndex((prevIndex) => (prevIndex + 1) % suggestions?.length);
+        setSearchText(suggestions?.[activeIndex + 1]);
       } else if (e.key === "ArrowUp") {
         setActiveIndex((prevIndex) =>
           prevIndex === 0 ? suggestions?.length - 1 : prevIndex - 1
         );
+        setSearchText(suggestions?.[activeIndex - 1]);
       } else if (e.key === "Enter" && activeIndex >= 0) {
         handleSuggestionClick(suggestions?.[activeIndex]);
       }
@@ -108,135 +146,107 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
     setSearchText(suggestion);
     setSuggestions([]);
 
-    if (location?.pathname === "/search/") {
+    if (location?.pathname === `${searchPath}/`) {
       getSuggestion(suggestion);
     }
     if (
       urls?.includes(location?.pathname) ||
-      location?.pathname === "/convert/"
+      location?.pathname === `${convertPath}/`
     ) {
-      navigate("/search/", {
+      navigate(`${searchPath}/`, {
         state: { message: suggestion },
       });
     }
   };
   const handleConvert = (contentData) => {
-    navigate("/convert/", {
-      state: { message: contentData?.id },
+    navigate(`${convertPath}/`, {
+      state: {
+        message: { id: contentData?.id, duration: contentData?.duration },
+      },
     });
   };
 
-  const handleDownload = async (format, quality) => {
-    const url = `https://www.youtube.com/watch?v=${convertLocation?.state?.message}`;
-    if (!url) {
-      alert("Please enter a valid YouTube URL");
-      return;
-    }
-    setIsLoadingForDwl(true);
-    setLoadingQuality(quality);
-
-    try {
-      const downloadUrl = `https://yt1s-psi.vercel.app/api/download?url=${encodeURIComponent(
-        url
-      )}&format=${format}&quality=${quality}`;
-      const response = await fetch(downloadUrl);
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        setErrorMessage(errorData.message || "Error downloading the video");
-        setTimeout(() => setErrorMessage(""), 10000);
-        return;
-      }
-
-      const fileBlob = await response.blob();
-      const fileURL = URL.createObjectURL(fileBlob);
-      const a = document.createElement("a");
-      a.href = fileURL;
-      a.download =
-        format === "mp3"
-          ? `${searchResults?.[0]?.title}.mp3`
-          : `${searchResults?.[0]?.title}.mp4`;
-      a.click();
-    } catch (error) {
-      setErrorMessage("Failed to download the video");
-      setTimeout(() => setErrorMessage(""), 10000);
-    } finally {
-      setIsLoadingForDwl(false);
-      setLoadingQuality("");
-    }
-  };
   return (
     <>
-      <div className="search">
-        <div className="main_search">
+      <div className="banner-box-content">
+        <div className="banner-box">
           <h1>{containerTitle?.title}</h1>
-          <p>{containerTitle?.desc}</p>
-          <div className="search_box">
-            <form
-              className="main_seacrh_box"
-              onSubmit={(e) => {
-                e.preventDefault();
-                navigate("/search/", {
-                  state: { message: searchText },
-                });
-                setSuggestions([]);
-              }}
-            >
-              <div className="img search-icon"></div>
-              <input
-                type="text"
-                name="url"
-                id="url"
-                autoComplete="off"
-                placeholder={t("search.placeholder")}
-                value={searchText}
-                onChange={handleInputChange}
-                onKeyDown={handleKeyDown}
-              />
-              <button className="submit" id="submit-btn">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              navigate(`${searchPath}/?q=${encodeURIComponent(searchText)}`);
+              setSuggestions([]);
+            }}
+          >
+            <div className="search-box">
+              <div className="search-wrap">
+                <input
+                  type="text"
+                  name="url"
+                  id="url"
+                  autoComplete="off"
+                  placeholder={t("search.placeholder")}
+                  value={searchText}
+                  onChange={handleInputChange}
+                  onKeyDown={handleKeyDown}
+                  autoFocus
+                  required
+                />
+              </div>
+              <button
+                name="form_submit"
+                id="form_submit"
+                type="submit"
+                className="primary-btn"
+              >
                 {t("search.startButton")}
               </button>
-            </form>
-          </div>
-          {suggestions?.map?.((suggestion, index) => (
-            <div
-              key={index}
-              className="suggestion-item"
-              onClick={() => handleSuggestionClick(suggestion)}
-              style={{
-                padding: "8px",
-                cursor: "pointer",
-                borderBottom: "1px solid #eee",
-                backgroundColor: index === activeIndex ? "#f0f0f0" : "#fff",
-                color: "#333",
-              }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.backgroundColor = "#f0f0f0")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.backgroundColor = "#fff")
-              }
-            >
-              {suggestion}
+              {suggestions.length > 0 ? (
+                <div
+                  id="suggestion_box"
+                  ref={suggestionBoxRef}
+                  style={{ display: suggestions.length > 0 ? "block" : "none" }}
+                >
+                  <ul id="suggestions">
+                    {suggestions?.map?.((term, index) => (
+                      <li
+                        key={index}
+                        className={`search_result ${
+                          index === activeIndex ? "active" : ""
+                        }`}
+                        style={{
+                          cursor: "pointer",
+                          backgroundColor:
+                            index === activeIndex ? "#f0f0f0" : "#fff",
+                        }}
+                        onClick={() => {
+                          setSearchText(term);
+                          setSuggestions([]);
+                          document.getElementById("form_submit").click();
+                        }}
+                      >
+                        {term}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
             </div>
-          ))}
-          <p className="terms">
-            {t("search.terms")}{" "}
-            <Link to="/" aria-label="terms and conditions">
-              {t("search.termsLink")}
-            </Link>
-          </p>
+          </form>
+          <span>
+            {t("search.terms")}
+            <Link to="#"> {t("search.termsLink")}</Link>
+          </span>
         </div>
       </div>
 
-      {location?.pathname === "/search/" ? (
+      {location?.pathname === `${searchPath}/` ? (
         <div className="result">
           {loading ? (
             <div className="spinner" id="loader">
-              <div className="box-1"></div>
-              <div className="box-2"></div>
-              <div className="box-3"></div>
-              <div className="box-4"></div>
+              {Array.from({ length: 4 })?.map((_, index) => {
+                return <div className={`box-${index + 1}`} key={index}></div>;
+              })}
             </div>
           ) : (
             <div
@@ -264,7 +274,7 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
                       borderRadius: "8px",
                       overflow: "hidden",
                       textAlign: "center",
-                      boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+                      boxShadow: "0 2px 4px rgba(172, 43, 43, 0.1)",
                       transition: "transform 0.2s ease, box-shadow 0.2s ease",
                       cursor: "pointer",
                     }}
@@ -306,7 +316,7 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
                     fontSize: "18px",
                   }}
                 >
-                  Not found
+                  {t("notFound")}
                 </div>
               )}
             </div>
@@ -314,136 +324,65 @@ const SeachContainer = ({ searchLocation, convertLocation }) => {
         </div>
       ) : null}
 
-      {location?.pathname === "/convert/" && convertLocation?.state?.message ? (
-        <div className="result second_section">
-          <div className="down_wrap">
-            {errorMessage ? (
-              <div className="error-message">{errorMessage}</div>
-            ) : null}
-            <h2>Video Download</h2>
-            <div className="main_data">
-              <ul className="tabs">
-                <li
-                  className={`tab-link MP3 ${
-                    activeTab === "mp3" ? "current" : ""
-                  }`}
-                  onClick={() => setActiveTab("mp3")}
-                >
-                  <span>MP3</span>
-                </li>
-                <li
-                  className={`tab-link MP4 ${
-                    activeTab === "mp4" ? "current" : ""
-                  }`}
-                  onClick={() => setActiveTab("mp4")}
-                >
-                  <span>MP4</span>
-                </li>
-              </ul>
-              <div className="inside_data">
-                {/* MP3 Section */}
-                {activeTab === "mp3" && (
-                  <div id="mp3" className="tab-content current formatMP3">
-                    <table>
-                      <thead>
-                        <tr>
-                          <th>QUALITY</th>
-                          <th>FORMAT</th>
-                          <th className="fsize" style={{ display: "none" }}>
-                            SIZE
-                          </th>
-                          <th>ACTION</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {["320kbps", "256kbps", "192kbps", "128kbps"].map(
-                          (quality) => (
-                            <tr key={quality}>
-                              <th>
-                                <p>{quality}</p>
-                              </th>
-                              <td>MP3</td>
-                              <td
-                                className="fsize fsize2"
-                                style={{ display: "none" }}
-                              ></td>
-                              <td>
-                                <div className="convert_btn">
-                                  <div
-                                    className="convert_btn_img"
-                                    onClick={() => {
-                                      handleDownload("mp3", quality);
-                                    }}
-                                  >
-                                    {isLoadingForDwl &&
-                                    loadingQuality === quality
-                                      ? "Processing..."
-                                      : "Download"}
-                                  </div>
-                                </div>
-                              </td>
-                            </tr>
-                          )
-                        )}
-                      </tbody>
-                    </table>
-                  </div>
-                )}
-
-                {/* MP4 Section */}
-                {activeTab === "mp4" && (
-                  <div id="mp4" className="tab-content formatMP4">
-                    <table>
-                      <thead>
-                        <tr>
-                          <th>QUALITY</th>
-                          <th>FORMAT</th>
-                          <th className="fsize" style={{ display: "none" }}>
-                            SIZE
-                          </th>
-                          <th>ACTION</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {["1080p", "720p", "480p", "360p", "240p", "144p"].map(
-                          (quality, index) => (
-                            <tr key={index}>
-                              <th>
-                                <p>{quality}</p>
-                              </th>
-                              <td>MP4</td>
-                              <td
-                                className="fsize fsize2"
-                                style={{ display: "none" }}
-                              ></td>
-                              <td>
-                                <div
-                                  className="convert_btn"
-                                  data-id={`convert_btn_${index}`}
-                                >
-                                  <div
-                                    className="convert_btn_img"
-                                    onClick={() => {
-                                      handleDownload("mp4", quality);
-                                    }}
-                                  >
-                                    {isLoadingForDwl &&
-                                    loadingQuality === quality
-                                      ? "Processing..."
-                                      : "Download"}
-                                  </div>
-                                </div>
-                              </td>
-                            </tr>
-                          )
-                        )}
-                      </tbody>
-                    </table>
-                  </div>
-                )}
-              </div>
+      {location?.pathname === `${convertPath}/` ? (
+        <div className="result mt-48">
+          {!convertLocation?.state?.message?.id ? (
+            <div className="spinner" id="loader">
+              {Array.from({ length: 4 })?.map((_, index) => {
+                return <div className={`box-${index + 1}`} key={index}></div>;
+              })}
             </div>
-          </div>
+          ) : (
+            <div className="data_results mt-48">
+              {blockedIds?.includes?.(convertLocation?.state?.message?.id) ? (
+                <div className="blocked_error bloacked_id_error warning">
+                  <h3>Sorry</h3>
+                  <h3>
+                    At the request of the copyright owner, this video cannot be
+                    downloaded.
+                  </h3>
+                </div>
+              ) : !blockedIds?.includes?.(
+                  convertLocation?.state?.message?.id
+                ) ? (
+                <div className="down_wrap">
+                  <iframe
+                    title="yt-meta"
+                    id="widgetPlusApi"
+                    src={`https://ac.insvid.com/widget?url=https://www.youtube.com/watch?v=${
+                      convertLocation?.state?.message?.id
+                    }&el=${convertTimeToSeconds(
+                      convertLocation?.state?.message?.duration
+                    )}`}
+                    width="100%"
+                    height="100%"
+                    allowtransparency="true"
+                    scrolling="no"
+                    style={{ border: "none" }}
+                  ></iframe>
+                  <div className="btn-group">
+                    <Link
+                      target="_blank"
+                      to="https://ak.iptogreg.net/4/7733548"
+                      className="btn-download"
+                    >
+                      {t("downloadNow")}
+                    </Link>
+                    <div>
+                      <Link
+                        target="_blank"
+                        to="https://ak.iptogreg.net/4/7733548"
+                        className="btn-playnow"
+                      >
+                        {t("playNow")}
+                      </Link>
+                      <span>Advertising</span>
+                    </div>
+                  </div>
+                </div>
+              ) : null}
+            </div>
+          )}
         </div>
       ) : null}
     </>

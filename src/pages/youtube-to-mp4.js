@@ -4,11 +4,12 @@ import { Layout } from "../components/Layout";
 import { I18nextProvider } from "react-i18next";
 import i18n from "../components/i18n";
 import YoutubeToMp4 from "../components/YoutubeToMp4";
-import { Helmet } from "react-helmet";
+import Seo from "../components/Seo";
 
 const Index = () => {
   return (
     <I18nextProvider i18n={i18n}>
+      <Seo />
       <Layout>
         <YoutubeToMp4 />
       </Layout>
@@ -17,35 +18,3 @@ const Index = () => {
 };
 
 export default Index;
-
-export const Head = () => (
-  <>
-    <Helmet>
-      <meta name="robots" content="noindex, nofollow" />
-      <title>YouTube to MP4 Converter | Y2Meta</title>
-      <meta
-        name="description"
-        content=" Convert and download YouTube videos to MP4 format quickly and securely with Y2Meta. Choose from multiple video qualities, including 720p, 1080p, 2K, and up to 4K."
-      />
-      <meta
-        property="og:title"
-        content="YouTube to MP4 Converter | Y2Meta"
-      />
-      <meta
-        property="og:description"
-        content=" Convert and download YouTube videos to MP4 format quickly and securely with Y2Meta. Choose from multiple video qualities, including 720p, 1080p, 2K, and up to 4K."
-      />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://yt1s-psi.vercel.app/youtube-to-mp4" />
-      <meta property="og:site_name" content="Y2Mate" />
-      <link
-        rel="preload"
-        fetchpriority="high"
-        as="image"
-        href="../images/image.webp"
-        type="image/webp"
-      />
-      <link rel="icon" href="../images/favicon.webp" />
-    </Helmet>
-  </>
-);
