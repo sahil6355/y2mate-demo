@@ -146,6 +146,14 @@ header {
   font-size: 24px;
   line-height: 27.6px;
   color: #293a46;
+  display: block;
+  margin: 0;
+  padding: 24px 14px;
+}
+
+.header-box .header-left a:hover {
+      color: #c10841;
+      background-color: #eeeeee;
 }
 
 .header-image {
@@ -156,7 +164,7 @@ header {
 
 .navbar {
   display: flex;
-  gap: 30px;
+  gap: 0;
 }
 
 .navbar li {
@@ -302,7 +310,7 @@ li.search_result {
   width: 100%;
   max-width: 894px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0;
 }
 
 .banner-box p {
