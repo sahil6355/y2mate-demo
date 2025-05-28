@@ -18,8 +18,7 @@ export const languageDD = {
   zhcn: "简体中文",
   zhtw: "繁體中文",
   ar: "العربية",
-  bn: "বাঙালি",
-  "sh-cn": "testing",
+  bn: "বাঙালি"
 };
 
 export const homePath = "/";

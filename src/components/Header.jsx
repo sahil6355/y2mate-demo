@@ -83,14 +83,7 @@ const Header = React.memo(() => {
                   >
                     {languages?.map?.((lng, index) => (
                       <li key={index}>
-                        <p
-                          onClick={() => changeLang(lng)}
-                          onKeyDown={(e) => {
-                            if (e.key === 'Enter' || e.key === ' ') changeLang(lng);
-                          }}
-                          tabIndex={0}
-                          className="lang-option"
-                        >
+                        <p onClick={() => changeLang(lng)}>
                           {languageDD?.[lng]}
                         </p>
                       </li>

@@ -1,5 +1,6 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import SeachContainer from "./SeachContainer";
 
 const Home = ({ searchProps, convertProps }) => {
@@ -7,7 +8,6 @@ const Home = ({ searchProps, convertProps }) => {
 
   const features = t("features", { returnObjects: true });
   const homeFaqs = t("homeFaqs", { returnObjects: true });
-
   return (
     <>
       <SeachContainer

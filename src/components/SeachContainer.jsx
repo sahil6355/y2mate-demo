@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { navigate } from "gatsby";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import {
   blockedIds,
   convertPath,

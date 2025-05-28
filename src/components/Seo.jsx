@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import { useI18next } from "gatsby-plugin-react-i18next";
 
 const Seo = () => {
@@ -62,7 +63,7 @@ const Seo = () => {
           key={k}
           rel="alternate"
           hrefLang={k}
-          href={`/${k}`}
+          href={`/${k}${currentPath}`}
           data-gatsby-head="true"
         />
       ))}

@@ -1,7 +1,8 @@
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
 
-    const languages = ['en', 'de', 'es', 'fr', 'hi', 'id', 'it', 'pt', 'ru', 'th', 'tr', 'vi', 'ja', 'ko', 'ms', 'ph', 'zhcn', 'zhtw', 'ar', 'bn', "sh-cn",];
+    const languages = ['en', 'de', 'es', 'fr', 'hi', 'id', 'it', 'pt', 'ru', 'th', 'tr', 'vi', 'ja', 'ko', 'ms', 'ph', 'zhcn', 'zhtw', 'ar', 'bn'];
+
     languages.forEach(lang => {
         createPage({
             path: `/${lang}/`,
@@ -17,3 +18,4 @@ exports.createPages = async ({ graphql, actions }) => {
             },
         });
     });
+};

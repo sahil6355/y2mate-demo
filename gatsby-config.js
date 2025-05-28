@@ -16,7 +16,9 @@ module.exports = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locales`,
-        languages: ['en', 'de', 'es', 'fr', 'hi', 'id', 'it', 'pt', 'ru', 'th', 'tr', 'vi', 'ja', 'ko', 'ms', 'ph', 'zhcn', 'zhtw', 'ar', 'bn', 'sh-cn',],
+        languages: ['en', 'de', 'es', 'fr', 'hi', 'id', 'it', 'pt', 'ru', 'th', 'tr', 'vi', 'ja', 'ko', 'ms', 'ph', 'zhcn', 'zhtw', 'ar', 'bn'],
+
+
         defaultLanguage: 'en',
         siteUrl: `https://www.yourdomain.tld`,
         redirect: true,
@@ -24,6 +26,9 @@ module.exports = {
         prefixDefaultLanguage: true,
         i18nextOptions: {
           interpolation: { escapeValue: false },
+          ns: ["translation"],
+          defaultNS: "translation",
+          fallbackLng: false
         },
         pages: [
           {
