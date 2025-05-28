@@ -30,7 +30,7 @@ const Seo = () => {
 
             {/* Favicon */}
             <link rel="preload" fetchpriority="high" as="image" href="../images/logo.webp" type="image/webp"/>
-            <link rel="icon" href="../images/favicon.png" />
+            <link rel="icon" href="../images/logo.webp" />
 
             <link rel="canonical" href={`https://yt1s-psi.vercel.app/${currentLang}`}/>
             {languages?.map?.((k) => (
