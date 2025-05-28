@@ -2,6 +2,7 @@
   --white-color: #ffffff;
   --black-color: #293a46;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -146,14 +147,6 @@ header {
   font-size: 24px;
   line-height: 27.6px;
   color: #293a46;
-  display: block;
-  margin: 0;
-  padding: 24px 14px;
-}
-
-.header-box .header-left a:hover {
-      color: #c10841;
-      background-color: #eeeeee;
 }
 
 .header-image {
@@ -177,6 +170,14 @@ header {
   font-size: 14px;
   line-height: 18.4px;
   color: var(--black-color);
+  display: block;
+  margin: 0;
+  padding: 24px 14px;
+}
+
+.navbar a:hover {
+  color: #c10841;
+  background-color: #eeeeee;
 }
 
 .language {
@@ -524,6 +525,7 @@ li.search_result {
   0% {
     height: 15px;
   }
+
   100% {
     height: 60px;
   }
@@ -535,6 +537,7 @@ li.search_result {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
+
 .item_box {
   height: 100%;
   cursor: pointer;
@@ -613,6 +616,7 @@ li.search_result {
   align-items: center;
   justify-content: center;
 }
+
 .btn-download,
 .btn-playnow {
   background: #00a80c;
@@ -636,6 +640,7 @@ a.btn-playnow {
 .btn-group div {
   position: relative;
 }
+
 .btn-playnow {
   background: #c3291a;
 }
@@ -669,10 +674,12 @@ a.btn-playnow {
     visibility: hidden;
     z-index: 100;
   }
+
   .navbar li {
     display: block;
     padding: 10px 15px;
   }
+
   ul.navbar.open_menu {
     display: inline-block;
     opacity: 1;
@@ -751,6 +758,7 @@ a.btn-playnow {
     padding: 20px;
     border-radius: 0;
   }
+
   .search-box input,
   .search-box::placeholder {
     font-size: 14px;
