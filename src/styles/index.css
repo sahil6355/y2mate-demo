@@ -226,7 +226,7 @@ header {
   border: none;
   font-size: 14px;
   cursor: pointer;
-    margin: 0;
+  margin: 0;
   padding: 24px 14px;
 }
 
@@ -256,6 +256,9 @@ ul.sub-language.lang_menu {
 
 .sub-language li:hover {
   background: #f1f1f1;
+}
+
+.sub-language li p {
   color: #c10841;
 }
 
