@@ -1,1 +1,312 @@
-{}
+{
+    "containerTitle": {
+        "/": {
+            "title": "Y2meta - YouTube Video İndirici",
+            "desc": "Y2meta ile YouTube videolarını 1080p'de sorunsuz bir şekilde indirin",
+            "helmetTitle": "Y2meta - YouTube İndirici | Ücretsiz YouTube Videolarını HD Olarak İndirin",
+            "helmetDescription": "Y2meta, YouTube'daki videoları HD, UHD, 1080p, 2K ve 4K olarak dönüştürmenize ve indirmenize olanak tanıyan hızlı ve ücretsiz bir YouTube İndiricisidir."
+        },
+        "/search/": {
+            "title": "Y2meta - YouTube Video İndirici",
+            "desc": "Y2meta ile YouTube videolarını 1080p'de sorunsuz bir şekilde indirin",
+            "helmetTitle": "Y2meta - YouTube İndirici | Ücretsiz YouTube Videolarını HD Olarak İndirin",
+            "helmetDescription": "Y2meta, YouTube'daki videoları HD, UHD, 1080p, 2K ve 4K olarak dönüştürmenize ve indirmenize olanak tanıyan hızlı ve ücretsiz bir YouTube İndiricisidir."
+        },
+        "/convert/": {
+            "title": "Y2meta - YouTube Video İndirici",
+            "desc": "Y2meta ile YouTube videolarını 1080p'de sorunsuz bir şekilde indirin",
+            "helmetTitle": "Y2meta - YouTube İndirici | Ücretsiz YouTube Videolarını HD Olarak İndirin",
+            "helmetDescription": "Y2meta, YouTube'daki videoları HD, UHD, 1080p, 2K ve 4K olarak dönüştürmenize ve indirmenize olanak tanıyan hızlı ve ücretsiz bir YouTube İndiricisidir."
+        },
+        "/youtube-to-mp3/": {
+            "title": "YouTube'dan MP3'e Dönüştürücü",
+            "desc": "Y2meta aracıyla YouTube videolarını en yüksek kalitede MP3 formatına dönüştürün.",
+            "helmetTitle": "Ücretsiz YouTube'dan MP3'e Dönüştürücü - Y2Meta",
+            "helmetDescription": "Y2Meta ile YouTube videolarını ücretsiz ve yüksek kalitede MP3'e dönüştürün. Y2Meta YouTube To MP3 dönüştürücü aracını kullanarak kaydolmadan MP3'leri hızlı bir şekilde indirin."
+        },
+        "/youtube-to-mp4/": {
+            "title": "Y2meta - Ücretsiz YouTube'dan MP4'e Dönüştürücü",
+            "desc": "YouTube videolarını sorunsuz bir şekilde HD'den 4K'ya kadar MP4 formatına dönüştürün ve indirin.",
+            "helmetTitle": "YouTube'dan MP4'e Dönüştürücü | Y2Meta",
+            "helmetDescription": "Y2Meta ile YouTube videolarını MP4 formatına hızlı ve güvenli bir şekilde dönüştürün ve indirin. 720p, 1080p, 2K ve 4K'ya kadar olmak üzere birden fazla video kalitesinden birini seçin."
+        }
+    },
+    "search": {
+        "description": "İndirmeye başlamak için buraya bir YouTube bağlantısı yapıştırın.",
+        "placeholder": "YouTube bağlantısını buraya arayın veya yapıştırın...",
+        "startButton": "Aramak",
+        "terms": "Hizmetimizi kullanarak, bizim şartlarımızı kabul etmiş olursunuz.",
+        "termsLink": "Şartlar ve Koşullar",
+        "advertising": "Reklamcılık",
+        "downloadNow": "Şimdi İndir",
+        "playNow": "Şimdi Oyna"
+    },
+    "suggestions": {
+        "noSuggestions": "Hiçbir öneri mevcut değil"
+    },
+    "headTitle": "En İyi YouTube Video İndiricisi",
+    "introParagraph": "Y2meta, YouTube videolarını 4K'ya kadar yüksek kalitede ücretsiz olarak indirmenize olanak tanıyan en popüler YouTube İndirici platformlarından biridir. Y2meta'yı kullanmak istiyorsanız, videoları cihazınıza kaydetmek için herhangi bir üçüncü taraf yazılımı indirmeniz gerekmez, ancak en sevdiğiniz YouTube Videolarını indirmeye başlamak için güvenilir bir web tarayıcınız ve bir internet bağlantınız olmalıdır. Y2meta, içeriğin HD kalitesinde keyfini çıkarmak için YouTube, Facebook, Youku, Dailymotion, Vimeo ve diğer paylaşım siteleri dahil olmak üzere birden fazla platformdan video indirmeyi destekler. YouTube İndirici, kişisel bilgilerinizi paylaşmadan yüksek kaliteli videolar indirmenizi sağlayan güvenli bir indirme deneyimi sunar.",
+    "introParagraph2": "Ayrıca, MP4, MP3, WEBM, M4V, WMV, FLV, MO ve 3GP gibi birden fazla formatta video ve ses içeriği indirebilirsiniz. 64kbps, 128kbps, 192kbps, 256kbps ve 320kbps gibi çeşitli bit hızlarında MP3 indirmenize olanak tanır. Y2meta YouTube Video İndiricimiz, hızlı ve daha iyi bir kullanıcı deneyimi sağlamak için en son teknolojiyi kullanır ve ayrıca bilgisayarlar, tabletler ve cep telefonları gibi herhangi bir cihazda sorunsuz çalışır. Y2meta, en sevdiğiniz içeriği indirmenin basit bir yolunu sağladığı için çok basit bir YouTube İndiricisidir.",
+    "howToDownload": "Y2meta Kullanarak YouTube'dan Video Nasıl İndirilir?",
+    "step1": "YouTube'u açın ve indirmek istediğiniz videonun bağlantısını kopyalayın.",
+    "step2": " Y2meta YouTube Downloader web sitesine gidin ve arama kutusuna URL'yi yapıştırın ve Enter'a basın veya başlat düğmesine tıklayın.",
+    "step3": "Formatı, video için MP4 veya ses için MP3 olarak seçin.",
+    "step4": "Şimdi videoyu veya sesi cihazınıza kaydetmek için indirme butonuna basın.",
+    "advantages": "Y2meta YouTube İndiricisinin Avantajları",
+    "adStep1": "Sınırsız YouTube videosunu ücretsiz dönüştürün ve indirin.",
+    "adStep2": "Herhangi bir videoyu indirmenin en hızlı ve kolay yolu.",
+    "adStep3": "Bilgisayar, akıllı telefon, tablet gibi tüm cihazlarda çalışır.",
+    "adStep4": "Her zaman ücretsizdir ve kaydolmanıza veya kişisel bilgi vermenize gerek yoktur",
+    "adStep5": "Yüksek kalitede video veya ses indirebilirsiniz.",
+    "featuresHeading": "Y2meta'nın Özellikleri",
+    "features": [
+        {
+            "imgClass": "quick-and-simple-conversion",
+            "title": "Hızlı ve Basit Dönüşüm",
+            "description": "Y2meta, video ve sesi hızlı bir şekilde dönüştüren ve indiren hızlı bir İndiricidir. Sadece videonun URL'sini girin ve indirme düğmesine tıklayın. Dönüştürülen videonuz veya ses dosyanız birkaç dakika içinde hazır."
+        },
+        {
+            "imgClass": "supports-high-quality-downloads",
+            "title": "Yüksek Kaliteli İndirmeleri Destekler",
+            "description": "Our YouTube Video Downloader platform offers multiple high-quality formats, so you can convert YouTube Videos to MP3, MP4, 3GP, WMA, M4A, FLV, MO, and WEBM."
+        },
+        {
+            "imgClass": "secure-and-free",
+            "title": "%100 Güvenli ve Ücretsiz",
+            "description": "Y2meta'yı kullanarak ses ve videoyu ücretsiz indirebilirsiniz. Ayrıca, bu tamamen Malware ve virüslerden güvenlidir."
+        },
+        {
+            "imgClass": "unlimited-download-and-conversion",
+            "title": "Sınırsız İndirme ve Dönüştürme",
+            "description": "Y2meta YouTube Downloader'ı kullandığınızda, youtube video ve ses indirme konusunda hiçbir sınırlama yoktur. Tamamen ücretsizdir ve kaydolma ve oturum açma gereksinimi yoktur."
+        },
+        {
+            "imgClass": "no-software-installation",
+            "title": "Yazılım Kurulumu Yok",
+            "description": "Y2meta web tabanlı bir YouTube Video İndiricisidir, bu nedenle cihazınıza herhangi bir yazılım yüklemenize gerek yoktur; videoları ve sesleri doğrudan YouTube'dan indirebilirsiniz."
+        },
+        {
+            "imgClass": "easy-and-user-friendly-interface",
+            "title": "Kolay ve Kullanıcı Dostu Arayüz",
+            "description": "Y2meta kullanımı kolay bir arayüze sahiptir. Sadece YouTube video URL'sini kopyalayıp arama kutusuna yapıştırın ve indirin."
+        }
+    ],
+    "faqHeading": "SSS",
+    "homeFaqs": [
+        {
+            "question": "Y2Meta Nedir?",
+            "answer": "Y2meta, videoları dönüştürmek ve YouTube'dan cihazınıza hızlı ve ücretsiz olarak kaydetmek için en iyi araçtır. Ayrıca, YouTube'dan bir videoyu sese dönüştürebilirsiniz."
+        },
+        {
+            "question": "YouTube Downloader'ı kullanmak ücretsiz mi?",
+            "answer": "Evet, Y2meta YouTube videolarını kullanmak ve indirmek için tamamen ücretsizdir. Herhangi bir premium abonelik satın almanıza gerek yok, yalnızca cihazınıza indirmek istediğiniz YouTube videosunun URL'sine ihtiyacınız var."
+        },
+        {
+            "question": "Y2meta kullanarak günde kaç video indirebilirim?",
+            "answer": "Y2meta ile sınırsız video dönüştürebilir ve indirebilirsiniz. YouTube Videolarını indirmek için hiçbir sınırlama yoktur."
+        },
+        {
+            "question": "YouTube Downloader tüm cihazlarda destekleniyor mu?",
+            "answer": "Evet, Y2meta iOS, Android, Windows ve Mac dahil tüm cihazları destekler. Ayrıca, bu aracı Google Chrome, Safari, Opera, Firefox, Brave ve daha fazlası gibi birden fazla tarayıcıda kullanabilirsiniz."
+        },
+        {
+            "question": "Y2meta'dan YouTube videolarını indirmek güvenli mi?",
+            "answer": "Y2meta kullanarak YouTube videolarını indirmek güvenli ve emniyetlidir. Herhangi bir kullanıcı içerik indirirse, her zaman telif hakkı yasasına uymalıdır."
+        },
+        {
+            "question": "Ses ve videoda hangi formatlar destekleniyor?",
+            "answer": "Y2meta, 360p, 720p, 1080p, 2K ve 4K kalitesine kadar birçok video formatını destekler. 64kbps, 128kbps, 192kbps, 256kbps ve 320kbps gibi ses bit hızlarında."
+        },
+        {
+            "question": "YouTube Downloader'ı kullanarak uzun videoları indirebilir miyim?",
+            "answer": "Evet, Y2meta'yı kullanarak uzun videolar, kısa videolar ve belgeseller dahil olmak üzere uzun videoları indirebilirsiniz. Aracımız videoların uzunluğunu idare edebilir ve tam videonuzun keyfini çıkarabilirsiniz."
+        },
+        {
+            "question": "YouTube videolarını indirmek için herhangi bir yazılım yüklemem gerekiyor mu?",
+            "answer": "Hayır, YouTube Videolarını İndirmek için herhangi bir yazılım yüklemenize gerek yoktur çünkü Y2meta web tabanlı bir hizmettir."
+        }
+    ],
+    "youtubeToMp3": {
+        "title": "Ücretsiz YouTube'dan MP3'e Dönüştürücü ve İndirici",
+        "description": "Y2meta hızlı ve basit bir YouTube'dan MP3'e dönüştürücüdür. YouTube videolarını hiçbir çaba sarf etmeden MP3'e dönüştürmenize ve indirmenize yardımcı olan kullanıcı dostu bir arayüze sahiptir. Ayrıca, kullanıcılar 64kbps, 128kbps, 192kbps, 256kbps ve 320kbps dahil olmak üzere birden fazla kalitede MP3 dosyalarını dönüştürebilir ve indirebilir.",
+        "description2": "Bu YouTube'dan MP3'e Dönüştürücü iyi bir kullanıcı deneyimi sunar ve herhangi bir mobil, bilgisayar veya tablet cihazda çalışır. Ayrıca, cihazlarınıza herhangi bir yazılım veya uygulama yüklemeden YouTube'u MP3'e hızlı bir şekilde dönüştürebilir ve kolayca indirebilirsiniz. Herhangi bir sınırlama olmadan sınırsız MP3 dosyasını dönüştürebilir ve indirebilirsiniz. Sadece anahtar kelimeleri girin veya bir YouTube URL'si yapıştırın ve başlat düğmesine tıklayın, ardından bir ses biçimi seçin ve ses dosyalarını cihazınıza kaydetmek için indirme düğmesine tıklayın.",
+        "steps": {
+            "title": "Y2meta kullanarak YouTube'u MP3'e Nasıl Dönüştürebilirim?",
+            "step1": "YouTube'u açın ve videonun URL'sini kopyalayın.",
+            "step2": "Daha sonra Y2meta'yı açın, bir YouTube videosunun URL'sini veya anahtar kelimesini yapıştırın ve başlat butonuna tıklayın.",
+            "step3": "MP3 formatını ve ses kalitesini seçip indirme butonuna tıklayın.",
+            "step4": "İndirme işleminiz birkaç adımda başlayacaktır."
+        },
+        "advantages": "Avantajları",
+        "adStep1": "Sınırsız MP3 dosyalarını en yüksek hızda dönüştürün ve indirin.",
+        "adStep2": "YouTube MP3 İndirme için herhangi bir ücret ödemenize gerek yok.",
+        "adStep3": "YouTube'dan MP3'e indirme %100 ücretsiz, güvenli ve sağlamdır.",
+        "adStep4": "Kişisel bilgilerinizi paylaşmanız gerekmez.",
+        "adStep5": "Cihazınıza herhangi bir üçüncü parti yazılım yüklemenize gerek yok.",
+        "adStep6": "Tüm cihaz ve tarayıcılarda desteklenir.",
+        "featuresTitle": "Y2meta'nın Özellikleri",
+        "mp3Features": [
+            {
+                "imageClass": "unlimited-download-and-conversion",
+                "title": "Sınırsız MP3 İndir",
+                "description": "Herhangi bir sınırlama olmaksızın ücretsiz bir YouTube'dan MP3'e dönüştürücüdür. Ayrıca, Y2meta bir tarayıcıda çalışır, bu nedenle cihazınıza herhangi bir yazılım yüklemeniz gerekmez."
+            },
+            {
+                "imageClass": "supports-high-quality-downloads",
+                "title": "Yüksek Kaliteli MP3 (Ses) İndir",
+                "description": "Videolardan MP3'ü 96kbps, 128kbps, 256kbps ve 320kbps'ye kadar çeşitli bit hızlarında dönüştürebilirsiniz. En sevdiğiniz şarkıları dinlemenin tadını çıkarın."
+            },
+            {
+                "imageClass": "secure-and-free",
+                "title": "Güvenli ve Emniyetli",
+                "description": "YouTube'dan MP3'e dönüştürücümüz bir kullanıcı hakkında hiçbir kişisel bilgi toplamaz ve gelişmiş bir SSL sertifikasıyla korunur. Ayrıca, kaydolmanıza veya oturum açmanıza gerek yoktur."
+            },
+            {
+                "imageClass": "quick-and-simple-conversion",
+                "title": "Hızlı ve Basit Dönüşüm",
+                "description": "Y2meta size 10 kat daha hızlı dönüşüm hızı sağlar ve kullanıcıların YouTube'dan MP3'e indirmesine olanak tanır. Sadece YouTube URL'sini girin ve indirme düğmesine tıklayın."
+            },
+            {
+                "imageClass": "easy-and-user-friendly-interface",
+                "title": "Tüm Cihazlarda Desteklenir",
+                "description": "PC, Mobil, Tablet ve iPhone gibi her türlü cihazı destekler. Ayrıca, YouTube Video to MP3 Converter, Chrome, Brave, Safari, Microsoft Bing ve Firefox gibi tüm tarayıcıları destekler."
+            },
+            {
+                "imageClass": "no-software-installation",
+                "title": "Birden Fazla Dosya Formatını Destekler",
+                "description": "Y2meta'yı kullandığınızda MP3, MP4, 3GP, WEBM, M4A, FLV ve MOV gibi pek çok ses dosyasını dönüştürebilirsiniz."
+            }
+        ],
+        "faqTitle": "SSS - YouTube'dan MP3'e Dönüştürücü",
+        "mp3Faqs": [
+            {
+                "question": "Bu YouTube MP3 Dönüştürücüyü kullanmak ücretsiz mi?",
+                "answer": "Evet, YouTube'dan MP3'e indirme için hiçbir kısıtlama veya gizli maliyet olmadığından kullanımı %100 ücretsizdir. YouTube'dan MP3 indirmek için bir sınır yoktur ve bunun için herhangi bir ücret ödemeniz gerekmez."
+            },
+            {
+                "question": "Y2meta ile YouTube MP3'e Nasıl Dönüştürülür?",
+                "answer": "MP3 dönüştürme işlemi çok basittir. Sadece aşağıdaki adımları izleyin.",
+                "steps": [
+                    "Adım 1: YouTube videosunun URL'sini kopyalayın.",
+                    "Step 2: Paste URL or enter a keyword in the search box.",
+                    "Adım 3: MP3 formatını seçin.",
+                    "Adım 4: İndir butonuna tıklayın ve birkaç saniye bekleyin."
+                ],
+                "text": "Done! Your downloading process has started."
+            },
+            {
+                "question": "YouTube to MP3 Converter'ı tüm cihazlarda kullanabilir miyim?",
+                "answer": "Evet, aracımız bilgisayarlar, akıllı telefonlar ve tabletler gibi tüm cihazları destekler. Ayrıca Chrome, Brave, Firefox ve Safari gibi farklı tarayıcıları da destekler."
+            },
+            {
+                "question": "Y2meta birden fazla dosya formatını destekliyor mu?",
+                "answer": "YouTube'dan MP3'e dönüştürücümüz MP3, MP4, AVI, WEBM ve M4A dahil olmak üzere çok çeşitli formatları destekler. Ayrıca, gereksinimlerinize göre formatları seçebilirsiniz."
+            },
+            {
+                "question": "Y2meta'dan YouTube MP3 indirmek yasal mı?",
+                "answer": "YouTube'dan MP3 dönüştürücü, YouTube'dan MP3 indirmek için tamamen yasal bir araçtır. Tüm kanal sahiplerine saygı duyuyoruz, ancak bu sizin ihtiyaçlarınıza bağlıdır."
+            },
+            {
+                "question": "Y2meta YouTube'dan MP3 indirmek için güvenli mi?",
+                "answer": "Evet, YouTube Dönüştürücümüz kötü amaçlı yazılımlara ve virüslere karşı %100 güvenlidir çünkü Y2meta, YouTube'dan MP3 dosyalarının güvenli bir şekilde indirilmesini sağlayan bir SSL sertifikasına sahiptir."
+            },
+            {
+                "question": "Günde kaç adet MP3 dosyası indirebilirim?",
+                "answer": "YouTube videolarından ses dosyalarını dönüştürmek ve indirmek için herhangi bir kısıtlama veya sınırlama olmadığından günde sınırsız sayıda MP3 dosyasını dönüştürebilirsiniz."
+            }
+        ]
+    },
+    "youtubeToMp4": {
+        "title": "Ücretsiz YouTube'dan MP4'e İndirici",
+        "description": "Y2meta, 360p, 480p, 720p HD, 1080p Full HD, 1440p, 2K ve 4K dahil olmak üzere çeşitli MP4 kalitelerinde YouTube videolarını dönüştürebileceğiniz ve indirebileceğiniz en popüler çevrimiçi araçtır. Ayrıca, YouTube'u yüksek hızda ve hiçbir çaba harcamadan MP4'e indirebilirsiniz. %100 güvenli, hızlı ve ücretsiz bir araçtır, bu nedenle YouTube Videolarını hiçbir masraf yapmadan MP4'e indirebilirsiniz.",
+        "description1": "Bu YouTube MP4 Dönüştürücü, YouTube'u MP4'e kolayca dönüştürebilen ve YouTube Videolarını MP3 ve MP4 gibi birden fazla formatta indirebilen en iyi puanlı ve ücretsiz çevrimiçi araçtır. Y2meta'mız kullanıcı dostu bir arayüze ve güçlü özelliklere sahiptir, bu nedenle video dönüştürme için kullanıcılar tarafından en çok tercih edilen YouTube Dönüştürücüsü haline gelmiştir. En sevdiğiniz YouTube videolarını cihazınıza kaydetmek ve bunları herhangi bir cihazda uyumlu bir formatta görüntülemek için bir araç aradığınızda, YouTube to MP4 Converter size güvenilir bir çözüm sunar.",
+        "steps": {
+            "title": "Y2meta Kullanılarak YouTube MP4'e Nasıl Dönüştürülür?",
+            "step1": "YouTube'u açın ve indirmek istediğiniz videonun URL'sini kopyalayın.",
+            "step2": "Şimdi Y2meta'yı açın ve arama kutusuna URL'yi yapıştırın veya anahtar kelimeyi girin.",
+            "step3": "Kaliteli MP4 formatını seçip dönüştür butonuna tıklayın.",
+            "step4": "Tamamdır! Dönüşüm işleminiz başladı.",
+            "step5": "Dönüştürme işlemi tamamlandıktan sonra indirme butonuna tıklayın."
+        },
+        "advantages": "YouTube'dan MP4'e Dönüştürücünün Avantajları",
+        "adStep1": "Y2meta kullanımı kolaydır ve sınırsız video indirme olanağı sağlar.",
+        "adStep2": "Videoları yüksek hızda indirebilir.",
+        "adStep3": "Giriş yapmanıza ve kayıt olmanıza gerek yok.",
+        "adStep4": "Her cihazda, tüm tarayıcılarda rahatlıkla çalışır.",
+        "adStep5": "Birden fazla video kalitesini ve formatını destekler.",
+        "adStep6": "Not required to install any software on your device.",
+        "featuresTitle": "YouTube MP4 Dönüştürücünün Özellikleri",
+        "mp4Features": [
+            {
+                "iconClass": "unlimited-download-and-conversion",
+                "title": "Kullanımı Kolay",
+                "description": "YouTube to MP4 Converter, basit ve kullanıcı dostu bir arayüze sahiptir ve dönüştürme sürecini kullanıcılar için kolaylaştırır. YouTube videolarından MP4 dönüştürmek istiyorsanız, bununla ilgili teknik bilgi edinmeniz gerekmez."
+            },
+            {
+                "iconClass": "supports-high-quality-downloads",
+                "title": "Sınırsız Dönüşümler",
+                "description": "Y2meta'nın en kullanışlı özelliği ise kullanıcıların YouTube'dan istedikleri kadar ve hiçbir kısıtlama olmadan sınırsız video indirebilmelerine olanak tanıyan sınırsız dönüşüm özelliğidir."
+            },
+            {
+                "iconClass": "secure-and-free",
+                "title": "Yüksek Kaliteli İndirmeler",
+                "description": "Y2meta, 360p, 720p, 1080p, 2K ve 4K çözünürlüğe kadar birden fazla kalitede video indirmenize yardımcı olur. Bu nedenle en sevdiğiniz videoların keyfini yüksek kalitede çıkarabilirsiniz."
+            },
+            {
+                "iconClass": "quick-and-simple-conversion",
+                "title": "Tüm Cihazlarla Uyumlu",
+                "description": "MP4 dosyalarını akıllı telefonlar, tabletler ve bilgisayarlar gibi herhangi bir cihaza indirebilirsiniz. Bu YouTube'dan MP4'e Dönüştürücü, tüm cihazlarla uyumlu YouTube'dan videolar indirmenize olanak tanır."
+            },
+            {
+                "iconClass": "easy-and-user-friendly-interface",
+                "title": "Birden Fazla Formatı Destekler",
+                "description": "Y2meta, MP4, MP3, WAV, 3GP, M4A, WEBM ve AVI gibi birçok formattaki videoları indirebilir."
+            },
+            {
+                "iconClass": "no-software-installation",
+                "title": "Yazılım Kurulumu Gerekmez",
+                "description": "Bu YouTube'dan MP4'e Dönüştürücü, bir web tarayıcısında çalışan bir tür web tabanlı araçtır, bu nedenle cihazınıza herhangi bir yazılım indirmenize gerek yoktur. Ayrıca, Y2meta YouTube videolarını dönüştürmek için güvenli ve emniyetli bir araçtır"
+            }
+        ],
+        "faqTitle": "SSS - YouTube MP4 Dönüştürücü",
+        "mp4FaqData": [
+            {
+                "question": "YouTube'dan MP4'e Dönüştürücü Nedir?",
+                "answer": "Y2meta, YouTube videolarını dönüştürebileceğiniz ve yüksek kalitede indirebileceğiniz web tabanlı bir YouTube'dan MP4'e dönüştürücü araçtır."
+            },
+            {
+                "question": "YouTube to MP4 Converter'ı kullanmak ücretsiz mi?",
+                "answer": "Evet, bu araç %100 güvenli ve kullanımı ücretsizdir. Kişisel bilgilerinizi paylaşmadan YouTube'dan video dönüştürmenize ve indirmenize olanak tanır."
+            },
+            {
+                "question": "Y2meta'dan günde kaç video indirebilirim?",
+                "answer": "YouTube videolarını indirme konusunda herhangi bir kısıtlama olmadığından bu araçtan günde sınırsız sayıda videoyu dönüştürebilir ve indirebilirsiniz."
+            },
+            {
+                "question": "Y2meta kullanarak YouTube MP4'ü nasıl indirebilirim?",
+                "answer": "YouTube videolarını dönüştürmek ve indirmek için aşağıdaki adımları izlemeniz yeterli:",
+                "steps": [
+                    "Adım 1: YouTube'u açın ve video URL'sini kopyalayın.",
+                    "Adım 2: URL’yi arama kutusuna yapıştırın ve başlat butonuna tıklayın.",
+                    "Adım 3: Bir video formatı seçin ve video kalitesini belirleyin.",
+                    "Adım 4: Şimdi son adıma geldik, Başlat butonuna tıklayın."
+                ]
+            },
+            {
+                "question": "Y2meta diğer YouTube dönüştürücülerinden nasıl farklıdır?",
+                "answer": "Y2meta, bilgilerinizi paylaşmanızı veya herhangi bir yazılım yüklemenizi gerektirmeden hızlı, yüksek kaliteli dönüştürme ve sınırsız indirme olanağı sunar. Ayrıca, kolay dönüştürmeyi kolaylaştıran kullanıcı dostu bir arayüze sahiptir."
+            },
+            {
+                "question": "Y2mate YouTube MP4 İndirmek için güvenli bir platform mu?",
+                "answer": "Evet, YouTube'dan MP4'e Dönüştürücümüz güvenlik sağlamak için gelişmiş bir teknolojiye sahiptir. Kötü amaçlı yazılımlara ve virüslere karşı ekstra koruma sağlamak için bir SSL sertifikasına sahiptir."
+            },
+            {
+                "question": "Bu YouTube'dan MP4'e dönüştürücü 4K kalitesi sunuyor mu?",
+                "answer": "Evet, Y2meta YouTube videolarını 360p, 480p, 720p, 1080p, 2K ve 4K dahil olmak üzere çeşitli kalitelerde dönüştürebilir."
+            }
+        ]
+    },
+    "notFound": "Bulunamadı",
+    "downloadNow": "Şimdi İndir",
+    "playNow": "Şimdi Oyna"
+}

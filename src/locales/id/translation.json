@@ -1,1 +1,312 @@
-{}
+{
+    "containerTitle": {
+        "/": {
+            "title": "Y2meta - Pengunduh Video YouTube",
+            "desc": "Unduh video YouTube dengan lancar dalam 1080p dengan Y2meta",
+            "helmetTitle": "Y2meta - Pengunduh YouTube | Unduh Video YouTube Gratis dalam HD",
+            "helmetDescription": "Y2meta adalah Pengunduh YouTube yang cepat dan gratis yang memungkinkan Anda mengonversi dan mengunduh Video dari YouTube dalam HD, UHD, 1080p, 2K, dan 4K."
+        },
+        "/search/": {
+            "title": "Y2meta - Pengunduh Video YouTube",
+            "desc": "Unduh video YouTube dengan lancar dalam 1080p dengan Y2meta",
+            "helmetTitle": "Y2meta - Pengunduh YouTube | Unduh Video YouTube Gratis dalam HD",
+            "helmetDescription": "Y2meta adalah Pengunduh YouTube yang cepat dan gratis yang memungkinkan Anda mengonversi dan mengunduh Video dari YouTube dalam HD, UHD, 1080p, 2K, dan 4K."
+        },
+        "/convert/": {
+            "title": "Y2meta - Pengunduh Video YouTube",
+            "desc": "Unduh video YouTube dengan lancar dalam 1080p dengan Y2meta",
+            "helmetTitle": "Y2meta - Pengunduh YouTube | Unduh Video YouTube Gratis dalam HD",
+            "helmetDescription": "Y2meta adalah Pengunduh YouTube yang cepat dan gratis yang memungkinkan Anda mengonversi dan mengunduh Video dari YouTube dalam HD, UHD, 1080p, 2K, dan 4K."
+        },
+        "/youtube-to-mp3/": {
+            "title": "Konverter YouTube ke MP3",
+            "desc": "Convert YouTube video in MP3 format in the highest quality with the y2meta tool.",
+            "helmetTitle": "Konverter YouTube ke MP3 Gratis - Y2Meta",
+            "helmetDescription": "Konversi video YouTube ke MP3 secara gratis dan berkualitas tinggi dengan Y2Meta. Unduh MP3 dengan cepat tanpa perlu mendaftar menggunakan alat konverter Y2Meta YouTube To MP3."
+        },
+        "/youtube-to-mp4/": {
+            "title": "Y2meta - Konverter YouTube ke MP4 Gratis",
+            "desc": "Konversi dan unduh video YouTube ke format MP4 dengan mudah dalam HD hingga 4K.",
+            "helmetTitle": "Konverter YouTube ke MP4 | Y2Meta",
+            "helmetDescription": "Konversi dan unduh video YouTube ke format MP4 dengan cepat dan aman dengan Y2Meta. Pilih dari berbagai kualitas video, termasuk 720p, 1080p, 2K, dan hingga 4K."
+        }
+    },
+    "search": {
+        "description": "Tempel tautan YouTube di sini untuk mulai mengunduh.",
+        "placeholder": "Cari atau tempel tautan YouTube di sini...",
+        "startButton": "Mencari",
+        "terms": "Dengan menggunakan layanan kami, Anda menerima",
+        "termsLink": "Syarat dan Ketentuan",
+        "advertising": "Periklanan",
+        "downloadNow": "Unduh Sekarang",
+        "playNow": "Mainkan Sekarang"
+    },
+    "suggestions": {
+        "noSuggestions": "Tidak ada saran yang tersedia"
+    },
+    "headTitle": "Tidak ada saran yang tersedia",
+    "introParagraph": "Y2meta adalah salah satu platform Pengunduh YouTube paling populer yang memungkinkan Anda mengunduh video YouTube dengan kualitas tinggi hingga 4K secara gratis. Jika Anda ingin menggunakan Y2meta, Anda tidak perlu mengunduh perangkat lunak pihak ketiga apa pun untuk menyimpan video ke perangkat Anda, tetapi Anda harus memiliki peramban web yang andal dan koneksi internet untuk mulai mengunduh Video YouTube favorit Anda. Y2meta mendukung pengunduhan video dari berbagai platform termasuk YouTube, Facebook, Youku, Dailymotion, Vimeo, dan situs berbagi lainnya untuk menikmati konten dalam kualitas HD. Pengunduh YouTube memberi Anda pengalaman pengunduhan yang aman yang menawarkan pengunduhan video berkualitas tinggi tanpa membagikan informasi pribadi Anda.",
+    "introParagraph2": " Anda juga dapat mengunduh konten video dan audio dalam berbagai format seperti MP4, MP3, WEBM, M4V, WMV, FLV, MO, dan 3GP. Aplikasi ini memungkinkan Anda mengunduh MP3 dalam berbagai bit rate, seperti 64kbps, 128kbps, 192kbps, 256kbps, dan 320kbps. Pengunduh Video YouTube Y2meta kami menggunakan teknologi terkini untuk memberikan pengalaman pengguna yang cepat dan lebih baik, dan juga berfungsi dengan lancar di perangkat apa pun seperti komputer, tablet, dan ponsel. Y2meta adalah Pengunduh YouTube yang sangat sederhana karena menyediakan cara mudah untuk mengunduh konten favorit Anda.",
+    "howToDownload": "Bagaimana Cara Mengunduh Video Dari YouTube Menggunakan Y2meta?",
+    "step1": "Buka YouTube dan salin tautan video yang ingin Anda unduh.",
+    "step2": " Kunjungi situs web Y2meta YouTube Downloader dan tempel URL di kotak pencarian lalu tekan Enter atau klik tombol mulai.",
+    "step3": "Pilih format, MP4 untuk video atau MP3 untuk audio.",
+    "step4": "Sekarang tekan tombol unduh untuk menyimpan video atau audio di perangkat Anda.",
+    "advantages": "Keuntungan dari Y2meta YouTube Downloader",
+    "adStep1": "Konversi dan unduh video YouTube tanpa batas dan gratis.",
+    "adStep2": "Cara tercepat dan termudah untuk mengunduh video apa pun.",
+    "adStep3": "Works on all devices such as computers, smartphones, and tablets.",
+    "adStep4": "Selalu gratis dan tidak perlu mendaftar atau memberikan informasi pribadi",
+    "adStep5": "Anda dapat mengunduh video atau audio berkualitas tinggi.",
+    "featuresHeading": "Features of Y2meta",
+    "features": [
+        {
+            "imgClass": "quick-and-simple-conversion",
+            "title": "Konversi Cepat dan Sederhana",
+            "description": "Y2meta is a fast Downloader that converts and downloads video and audio quickly. Just enter the URL of the video and click the download button. Your converted video or audio file is ready in a few moments."
+        },
+        {
+            "imgClass": "supports-high-quality-downloads",
+            "title": "Mendukung Unduhan Berkualitas Tinggi",
+            "description": "Platform Pengunduh Video YouTube kami menawarkan berbagai format berkualitas tinggi, sehingga Anda dapat mengonversi Video YouTube ke MP3, MP4, 3GP, WMA, M4A, FLV, MO, dan WEBM."
+        },
+        {
+            "imgClass": "secure-and-free",
+            "title": "100% Aman dan Gratis",
+            "description": "Dengan menggunakan Y2meta, Anda dapat mengunduh audio dan video secara gratis. Selain itu, ini sepenuhnya aman dari Malware dan virus."
+        },
+        {
+            "imgClass": "unlimited-download-and-conversion",
+            "title": "Unduhan dan Konversi Tanpa Batas",
+            "description": "Saat Anda menggunakan Y2meta YouTube Downloader, tidak ada batasan untuk mengunduh video dan audio YouTube. Pengunduhan ini sepenuhnya gratis dan tidak memerlukan pendaftaran dan login."
+        },
+        {
+            "imgClass": "no-software-installation",
+            "title": "Tidak Ada Instalasi Perangkat Lunak",
+            "description": "Y2meta adalah Pengunduh Video YouTube berbasis web, jadi tidak ada persyaratan untuk menginstal perangkat lunak apa pun di perangkat Anda, Anda dapat langsung mengunduh video dan audio dari YouTube."
+        },
+        {
+            "imgClass": "easy-and-user-friendly-interface",
+            "title": "Antarmuka yang Mudah dan Ramah Pengguna",
+            "description": "Y2meta memiliki antarmuka yang mudah digunakan. Cukup salin dan tempel URL video YouTube ke dalam kotak pencarian dan unduh."
+        }
+    ],
+    "faqHeading": "Tanya Jawab Umum",
+    "homeFaqs": [
+        {
+            "question": "Apa itu Y2Meta?",
+            "answer": "Y2meta adalah alat terbaik untuk mengonversi video dan menyimpannya ke perangkat Anda dari YouTube dengan cepat dan gratis. Anda juga dapat mengonversi video menjadi audio dari YouTube."
+        },
+        {
+            "question": "Apakah YouTube Downloader Gratis untuk Digunakan?",
+            "answer": "Ya, Y2meta sepenuhnya gratis untuk digunakan dan mengunduh video YouTube. Anda tidak perlu membeli langganan premium, Anda hanya perlu URL video YouTube yang ingin Anda unduh di perangkat Anda."
+        },
+        {
+            "question": "Berapa banyak video yang dapat saya unduh dalam sehari menggunakan Y2meta?",
+            "answer": "Anda dapat mengonversi dan mengunduh video tanpa batas dengan Y2meta. Tidak ada batasan untuk mengunduh Video YouTube."
+        },
+        {
+            "question": "Apakah YouTube Downloader didukung di semua perangkat?",
+            "answer": "Ya, Y2meta mendukung semua perangkat termasuk iOS, Android, Windows, dan Mac. Anda juga dapat menggunakan alat ini di beberapa peramban seperti Google Chrome, Safari, Opera, Firefox, Brave, dan lainnya."
+        },
+        {
+            "question": "Apakah aman mengunduh video YouTube dari Y2meta?",
+            "answer": "Mengunduh video YouTube menggunakan Y2meta aman dan terjamin. Jika ada pengguna yang mengunduh konten, konten tersebut harus selalu mematuhi undang-undang hak cipta."
+        },
+        {
+            "question": "Format apa yang didukung dalam audio dan video?",
+            "answer": "Y2meta mendukung banyak format video, termasuk 360p, 720p, 1080p, 2K, dan hingga kualitas 4K. Dalam bit rate audio seperti 64kbps, 128kbps, 192kbps, 256kbps, dan 320kbps."
+        },
+        {
+            "question": "Bisakah saya mengunduh video panjang menggunakan YouTube Downloader?",
+            "answer": "Ya, Anda dapat mengunduh video berdurasi panjang menggunakan Y2meta, termasuk video berdurasi panjang, video berdurasi pendek, dan dokumenter. Alat kami dapat menangani durasi video, dan Anda dapat menikmati video secara penuh."
+        },
+        {
+            "question": "Do I need to install any software to download YouTube Videos?",
+            "answer": "Tidak, Anda tidak perlu menginstal perangkat lunak apa pun untuk Mengunduh Video YouTube karena Y2meta adalah layanan berbasis web."
+        }
+    ],
+    "youtubeToMp3": {
+        "title": "Konverter dan Pengunduh YouTube ke MP3 Gratis",
+        "description": "Y2meta adalah Konverter YouTube ke MP3 yang cepat dan mudah. ​​Antarmukanya mudah digunakan sehingga membantu Anda mengonversi dan mengunduh Video YouTube ke MP3 tanpa perlu bersusah payah. Selain itu, pengguna dapat mengonversi dan mengunduh file MP3 dalam berbagai kualitas, termasuk 64kbps, 128kbps, 192kbps, 256kbps, dan 320kbps.",
+        "description2": "Konverter YouTube ke MP3 ini memberikan pengalaman pengguna yang baik dan berfungsi di perangkat seluler, komputer, atau tablet apa pun. Anda juga dapat mengonversi dan mengunduh YouTube ke MP3 dengan cepat dan mudah tanpa memasang perangkat lunak atau aplikasi apa pun di perangkat Anda. Anda dapat mengonversi dan mengunduh file MP3 tanpa batas tanpa batasan apa pun. Cukup masukkan kata kunci atau tempel URL YouTube dan klik tombol mulai, lalu pilih format audio, dan klik tombol unduh untuk menyimpan file audio ke perangkat Anda.",
+        "steps": {
+            "title": "Bagaimana cara mengonversi YouTube ke MP3 menggunakan Y2meta?",
+            "step1": "Buka YouTube dan salin URL video.",
+            "step2": "Lalu buka Y2meta, tempel URL video YouTube atau kata kunci, dan klik tombol mulai.",
+            "step3": "Pilih format MP3 dan kualitas audio, lalu klik tombol unduh.",
+            "step4": "Proses pengunduhan Anda dimulai dalam beberapa gerakan."
+        },
+        "advantages": "Keuntungan",
+        "adStep1": "Konversi dan unduh file MP3 tanpa batas dengan kecepatan tertinggi.",
+        "adStep2": "Tidak perlu membayar biaya apa pun untuk Unduhan MP3 YouTube.",
+        "adStep3": "Unduhan YouTube ke MP3 100% gratis, aman, dan terjamin.",
+        "adStep4": "Tidak diharuskan untuk membagikan informasi pribadi Anda.",
+        "adStep5": "Tidak perlu menginstal perangkat lunak pihak ketiga apa pun pada perangkat Anda.",
+        "adStep6": "Didukung di semua perangkat dan browser.",
+        "featuresTitle": "Fitur Y2meta",
+        "mp3Features": [
+            {
+                "imageClass": "unlimited-download-and-conversion",
+                "title": "Unduhan MP3 Tanpa Batas",
+                "description": "Ini adalah konverter YouTube ke MP3 gratis tanpa batasan apa pun. Selain itu, Y2meta berfungsi di peramban, jadi Anda tidak perlu memasang perangkat lunak apa pun di perangkat Anda."
+            },
+            {
+                "imageClass": "supports-high-quality-downloads",
+                "title": "Unduhan MP3 (Audio) Berkualitas Tinggi",
+                "description": "Anda dapat mengonversi MP3 dari video dalam berbagai bit rate termasuk 96kbps, 128kbps, 256kbps, dan hingga 320kbps. Nikmati mendengarkan lagu-lagu favorit Anda."
+            },
+            {
+                "imageClass": "secure-and-free",
+                "title": "Aman dan Terjamin",
+                "description": " Konverter YouTube ke MP3 kami tidak mengumpulkan informasi pribadi apa pun tentang pengguna dan dilindungi dengan sertifikat SSL tingkat lanjut. Selain itu, tidak perlu mendaftar atau masuk."
+            },
+            {
+                "imageClass": "quick-and-simple-conversion",
+                "title": "Konversi Cepat dan Sederhana",
+                "description": "Y2meta memberi Anda kecepatan konversi 10X lebih cepat dan memungkinkan pengguna mengunduh YouTube ke MP3. Cukup masukkan URL YouTube dan klik tombol unduh."
+            },
+            {
+                "imageClass": "easy-and-user-friendly-interface",
+                "title": "Didukung di Semua Perangkat",
+                "description": "Mendukung semua jenis perangkat seperti PC, Ponsel, Tablet, dan iPhone. Selain itu, YouTube Video to MP3 Converter mendukung semua browser seperti Chrome, Brave, Safari, Microsoft Bing, dan Firefox."
+            },
+            {
+                "imageClass": "no-software-installation",
+                "title": "Mendukung Banyak Format File",
+                "description": "Saat Anda menggunakan Y2meta, Anda dapat mengonversi banyak jenis berkas audio seperti MP3, MP4, 3GP, WEBM, M4A, FLV, dan MOV."
+            }
+        ],
+        "faqTitle": "Tanya Jawab - Konverter YouTube ke MP3",
+        "mp3Faqs": [
+            {
+                "question": "Apakah YouTube MP3 Converter ini gratis untuk digunakan?",
+                "answer": "Ya, 100% gratis untuk digunakan karena tidak ada batasan atau biaya tersembunyi untuk mengunduh menggunakan YouTube ke MP3 kami. Tidak ada batasan untuk mengunduh MP3 dari YouTube dan Anda tidak perlu membayar sejumlah uang untuk itu."
+            },
+            {
+                "question": "Bagaimana cara mengonversi YouTube ke MP3 dengan Y2meta?",
+                "answer": "Proses konversi MP3 sangat mudah. ​​Cukup ikuti langkah-langkah berikut.",
+                "steps": [
+                    "Langkah 1: Salin URL Video YouTube.",
+                    "Langkah 2: Tempel URL atau masukkan kata kunci di kotak pencarian.",
+                    "Langkah 3: Pilih format MP3.",
+                    "Langkah 4: Klik tombol unduh dan tunggu beberapa detik."
+                ],
+                "text": "Selesai! Proses pengunduhan Anda telah dimulai."
+            },
+            {
+                "question": "Bisakah saya menggunakan YouTube ke MP3 Converter di semua perangkat?",
+                "answer": "Ya, alat kami mendukung semua perangkat seperti komputer, ponsel pintar, dan tablet. Alat ini juga mendukung berbagai peramban seperti Chrome, Brave, Firefox, dan Safari."
+            },
+            {
+                "question": "Apakah Y2meta mendukung berbagai format file?",
+                "answer": "Konverter YouTube ke MP3 kami mendukung berbagai format, termasuk MP3, MP4, AVI, WEBM, dan M4A. Anda juga dapat memilih format sesuai kebutuhan Anda."
+            },
+            {
+                "question": "Apakah legal mengunduh YouTube MP3 dari Y2meta?",
+                "answer": "Konverter YouTube ke MP3 adalah alat yang sepenuhnya legal untuk mengunduh MP3 dari YouTube. Kami menghormati semua pemilik saluran, tetapi itu tergantung pada kebutuhan Anda."
+            },
+            {
+                "question": "Apakah Y2meta aman untuk mengunduh MP3 dari YouTube?",
+                "answer": "Ya, YouTube Converter kami 100% aman dari malware dan virus karena Y2meta memiliki sertifikat SSL yang memastikan pengunduhan file MP3 dari YouTube aman."
+            },
+            {
+                "question": "Berapa banyak file MP3 yang dapat saya unduh per hari?",
+                "answer": "Anda dapat mengonversi file MP3 tanpa batas per hari karena tidak ada batasan atau pembatasan untuk mengonversi dan mengunduh file audio dari video YouTube."
+            }
+        ]
+    },
+    "youtubeToMp4": {
+        "title": "Pengunduh YouTube ke MP4 Gratis",
+        "description": "Y2meta adalah alat daring paling populer tempat Anda dapat mengonversi dan mengunduh video YouTube dalam berbagai kualitas MP4 termasuk 360p, 480p, 720p HD, 1080p Full HD, 1440p, 2K, dan 4K. Anda juga dapat mengunduh YouTube ke MP4 dengan kecepatan tinggi dan tanpa usaha apa pun. Ini adalah alat yang 100% aman, cepat, dan gratis, itulah sebabnya Anda dapat mengunduh Video YouTube ke MP4 tanpa biaya apa pun.",
+        "description1": "YouTube MP4 Converter ini adalah alat daring gratis dan berperingkat teratas yang dapat dengan mudah mengonversi YouTube ke MP4 dan mengunduh Video YouTube dalam berbagai format seperti MP3 dan MP4. Y2meta kami memiliki antarmuka yang ramah pengguna dan fitur-fitur canggih, itulah sebabnya ia menjadi YouTube Converter yang paling disukai pengguna untuk konversi video. Setiap kali Anda mencari alat untuk menyimpan video YouTube favorit Anda di perangkat Anda dan melihatnya dalam format yang kompatibel di perangkat apa pun, YouTube to MP4 Converter memberi Anda solusi yang andal.",
+        "steps": {
+            "title": "Bagaimana Cara Mengonversi YouTube ke MP4 Menggunakan Y2meta?",
+            "step1": "Buka YouTube dan salin URL video yang ingin Anda unduh.",
+            "step2": "Sekarang buka Y2meta dan tempel URL atau masukkan kata kunci di kotak pencarian.",
+            "step3": "Pilih format MP4 dengan kualitas dan klik tombol konversi.",
+            "step4": "Selesai! Proses konversi Anda telah dimulai.",
+            "step5": "Setelah proses konversi selesai, klik tombol unduh."
+        },
+        "advantages": "Keuntungan dari Konverter YouTube ke MP4",
+        "adStep1": "Y2meta mudah digunakan dan menyediakan unduhan video tanpa batas.",
+        "adStep2": "Dapat mengunduh video dengan kecepatan tinggi.",
+        "adStep3": "Tidak perlu masuk dan mendaftar.",
+        "adStep4": "Bekerja dengan mudah di semua browser di perangkat apa pun.",
+        "adStep5": "Mendukung berbagai kualitas dan format video.",
+        "adStep6": "Tidak perlu menginstal perangkat lunak apa pun pada perangkat Anda.",
+        "featuresTitle": "Fitur YouTube MP4 Converter",
+        "mp4Features": [
+            {
+                "iconClass": "unlimited-download-and-conversion",
+                "title": "Mudah digunakan",
+                "description": "YouTube to MP4 Converter has a simple and user-friendly interface and makes the conversion process easy for users. If you want to convert MP4 from YouTube videos, then you do not need to learn technical knowledge about it."
+            },
+            {
+                "iconClass": "supports-high-quality-downloads",
+                "title": "Konversi Tak Terbatas",
+                "description": "Ini adalah fitur Y2meta yang paling berguna, yaitu konversi tak terbatas yang memungkinkan pengguna mengunduh video tak terbatas dari YouTube sesuai kebutuhan dan tanpa batasan apa pun."
+            },
+            {
+                "iconClass": "secure-and-free",
+                "title": "Unduhan Berkualitas Tinggi",
+                "description": "Y2meta membantu Anda mengunduh video dalam berbagai kualitas termasuk resolusi 360p, 720p, 1080p, 2K, dan hingga 4K. Itulah sebabnya Anda dapat menikmati video favorit Anda dalam kualitas tinggi."
+            },
+            {
+                "iconClass": "quick-and-simple-conversion",
+                "title": "Kompatibel dengan Semua Perangkat",
+                "description": "Anda dapat mengunduh berkas MP4 di perangkat apa pun seperti ponsel pintar, tablet, dan komputer. Konverter YouTube ke MP4 ini memungkinkan Anda mengunduh video dari YouTube yang kompatibel dengan semua perangkat."
+            },
+            {
+                "iconClass": "easy-and-user-friendly-interface",
+                "title": "Mendukung Banyak Format",
+                "description": "Y2meta dapat mengunduh video dalam banyak format yaitu MP4, MP3, WAV, 3GP, M4A, WEBM, AVI dll."
+            },
+            {
+                "iconClass": "no-software-installation",
+                "title": "Tidak Memerlukan Instalasi Perangkat Lunak",
+                "description": "Konverter YouTube ke MP4 ini adalah salah satu jenis alat berbasis web yang berjalan di peramban web, jadi tidak perlu mengunduh perangkat lunak apa pun di perangkat Anda. Selain itu, Y2meta adalah alat yang aman dan terjamin untuk mengonversi video YouTube."
+            }
+        ],
+        "faqTitle": "Tanya Jawab - YouTube MP4 Converter",
+        "mp4FaqData": [
+            {
+                "question": "Apa itu YouTube ke MP4 Converter?",
+                "answer": "Y2meta adalah alat konverter YouTube ke MP4 berbasis web tempat Anda dapat mengonversi Video YouTube dan mengunduhnya dalam kualitas tinggi."
+            },
+            {
+                "question": "Apakah YouTube ke MP4 Converter gratis untuk digunakan?",
+                "answer": "Ya, alat ini 100% aman dan gratis untuk digunakan. Alat ini memungkinkan Anda mengonversi dan mengunduh video dari YouTube tanpa membagikan informasi pribadi Anda."
+            },
+            {
+                "question": "Berapa banyak video yang dapat saya unduh dari Y2meta per hari?",
+                "answer": "Anda dapat mengonversi dan mengunduh video tanpa batas dari alat ini setiap hari karena tidak ada batasan dalam mengunduh video YouTube."
+            },
+            {
+                "question": "Bagaimana cara mengunduh YouTube MP4 menggunakan Y2meta?",
+                "answer": "Untuk mengonversi dan mengunduh video YouTube, cukup ikuti langkah-langkah di bawah ini:",
+                "steps": [
+                    "Langkah 1: Buka YouTube dan salin URL video.",
+                    "Langkah 2: Tempel URL di kotak pencarian dan klik tombol mulai.",
+                    "Langkah 3: Pilih format video dan pilih kualitas video.",
+                    "Langkah 4: Sekarang pada langkah terakhir, klik tombol Mulai."
+                ]
+            },
+            {
+                "question": "Apa yang membedakan Y2meta dari konverter YouTube lainnya?",
+                "answer": "Y2meta menawarkan konversi cepat, berkualitas tinggi, dan unduhan tak terbatas tanpa mengharuskan Anda membagikan informasi atau memasang perangkat lunak apa pun. Selain itu, Y2meta memiliki antarmuka yang mudah digunakan yang memudahkan konversi."
+            },
+            {
+                "question": "Apakah Y2mate platform yang aman untuk mengunduh YouTube MP4?",
+                "answer": "Ya, YouTube to MP4 Converter kami memiliki teknologi canggih untuk memberikan keamanan. Dilengkapi sertifikat SSL untuk memberikan perlindungan ekstra terhadap malware dan virus."
+            },
+            {
+                "question": "Apakah konverter YouTube ke MP4 ini menawarkan kualitas 4K?",
+                "answer": "Ya, Y2meta dapat mengonversi Video YouTube dalam berbagai kualitas termasuk 360p, 480p, 720p, 1080p, 2K, dan 4K."
+            }
+        ]
+    },
+    "notFound": "Tidak ditemukan",
+    "downloadNow": "Unduh Sekarang",
+    "playNow": "Mainkan Sekarang"
+}

@@ -1,8 +1,8 @@
 import React from "react";
-import Home from "./Home";
+import SeachContainer from "./SeachContainer";
 
 const Convert = ({ location }) => {
-  return <Home convertProps={location} />;
+  return <SeachContainer convertLocation={location} />;
 };
 
 export default Convert;

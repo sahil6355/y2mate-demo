@@ -1,0 +1,312 @@
+{
+    "containerTitle": {
+        "/": {
+            "title": "Y2meta - YouTube 视频下载器",
+            "desc": "使用 Y2meta 无缝下载 1080p 的 YouTube 视频",
+            "helmetTitle": "Y2meta - YouTube 下载器 | 下载高清免费 YouTube 视频",
+            "helmetDescription": "Y2meta 是一款快速且免费的 YouTube 下载器，可让您转换和下载高清、超高清、1080p、2K 和 4K 的 YouTube 视频。"
+        },
+        "/search/": {
+            "title": "Y2meta - YouTube 视频下载器",
+            "desc": "使用 Y2meta 无缝下载 1080p 的 YouTube 视频",
+            "helmetTitle": "Y2meta - YouTube 下载器 | 下载高清免费 YouTube 视频",
+            "helmetDescription": "Y2meta 是一款快速且免费的 YouTube 下载器，可让您转换和下载高清、超高清、1080p、2K 和 4K 的 YouTube 视频。"
+        },
+        "/convert/": {
+            "title": "Y2meta - YouTube 视频下载器",
+            "desc": "使用 Y2meta 无缝下载 1080p 的 YouTube 视频",
+            "helmetTitle": "Y2meta - YouTube 下载器 | 下载高清免费 YouTube 视频",
+            "helmetDescription": "Y2meta 是一款快速且免费的 YouTube 下载器，可让您转换和下载高清、超高清、1080p、2K 和 4K 的 YouTube 视频。"
+        },
+        "/youtube-to-mp3/": {
+            "title": "YouTube 转 MP3 转换器",
+            "desc": "使用 y2meta 工具将 YouTube 视频转换为最高质量的 MP3 格式。",
+            "helmetTitle": "免费 YouTube 转 MP3 转换器 - Y2Meta",
+            "helmetDescription": "使用 Y2Meta 免费将 YouTube 视频转换为高品质 MP3 格式。使用 Y2Meta YouTube 转 MP3 转换器工具，无需注册即可快速下载 MP3。"
+        },
+        "/youtube-to-mp4/": {
+            "title": "Y2meta - 免费 YouTube 转 MP4 转换器",
+            "desc": "将 YouTube 视频无缝转换并下载为高达 4K 的高清 MP4 格式。",
+            "helmetTitle": "YouTube 转 MP4 转换器 | Y2Meta",
+            "helmetDescription": "使用 Y2Meta 快速安全地将 YouTube 视频转换并下载为 MP4 格式。多种视频分辨率可供选择，包括 720p、1080p、2K 以及最高 4K。"
+        }
+    },
+    "search": {
+        "description": "将 YouTube 链接粘贴到此处即可开始下载。",
+        "placeholder": "在此处搜索或粘贴 YouTube 链接...",
+        "startButton": "搜索",
+        "terms": "使用我们的服务即表示您接受我们的",
+        "termsLink": "条款和条件",
+        "advertising": "广告",
+        "downloadNow": "立即下载",
+        "playNow": "立即玩"
+    },
+    "suggestions": {
+        "noSuggestions": "没有可用的建议"
+    },
+    "headTitle": "最佳 YouTube 视频下载器",
+    "introParagraph": "Y2meta 是最受欢迎的 YouTube 下载器平台之一，可免费下载高达 4K 的高清 YouTube 视频。使用 Y2meta，您无需下载任何第三方软件即可将视频保存到设备，但您必须拥有可靠的网络浏览器和互联网连接才能开始下载您喜爱的 YouTube 视频。Y2meta 支持从 YouTube、Facebook、优酷、Dailymotion、Vimeo 和其他分享网站等多个平台下载视频，让您尽享高清画质。YouTube 下载器为您提供安全的下载体验，让您下载高质量视频时无需透露个人信息。",
+    "introParagraph2": " 此外，您还可以下载多种格式的视频和音频内容，例如 MP4、MP3、WEBM、M4V、WMV、FLV、MO 和 3GP。它允许您以各种比特率下载 MP3，例如 64kbps、128kbps、192kbps、256kbps 和 320kbps。我们的 Y2meta YouTube 视频下载器采用最新技术，提供快速、优质的用户体验，并且可在电脑、平板电脑和手机等任何设备上流畅运行。Y2meta 是一款非常简单的 YouTube 下载器，因为它提供了一种直接下载您喜爱内容的方式。",
+    "howToDownload": "如何使用 Y2meta 从 YouTube 下载视频？",
+    "step1": "打开 YouTube 并复制您想要下载的视频链接。",
+    "step2": " 转到 Y2meta YouTube 下载器网站并将 URL 粘贴到搜索框中，然后按 Enter 或单击开始按钮。",
+    "step3": "选择格式，视频为 MP4，音频为 MP3。",
+    "step4": "现在按下下载按钮即可将视频或音频保存在您的设备上。",
+    "advantages": "Y2meta YouTube 下载器的优势",
+    "adStep1": "免费转换和下载无限量的 YouTube 视频。",
+    "adStep2": "下载任何视频的最快和最简单的方法。",
+    "adStep3": "适用于计算机、智能手机和平板电脑等所有设备。",
+    "adStep4": "它始终免费，无需注册或提供个人信息",
+    "adStep5": "您可以下载高质量的视频或音频。",
+    "featuresHeading": "Y2meta 的功能",
+    "features": [
+        {
+            "imgClass": "quick-and-simple-conversion",
+            "title": "快速简单的转换",
+            "description": "Y2meta 是一款快速下载器，可快速转换和下载视频和音频。只需输入视频 URL，然后点击下载按钮即可。您转换后的视频或音频文件只需片刻即可下载。"
+        },
+        {
+            "imgClass": "supports-high-quality-downloads",
+            "title": "支持高质量下载",
+            "description": "我们的 YouTube 视频下载器平台提供多种高质量格式，因此您可以将 YouTube 视频转换为 MP3、MP4、3GP、WMA、M4A、FLV、MO 和 WEBM。"
+        },
+        {
+            "imgClass": "secure-and-free",
+            "title": "100%安全且免费",
+            "description": "使用 Y2meta，您可以免费下载音频和视频。此外，它完全安全，不会受到恶意软件和病毒的侵害。"
+        },
+        {
+            "imgClass": "unlimited-download-and-conversion",
+            "title": "无限下载和转换",
+            "description": "使用 Y2meta YouTube 下载器，下载 YouTube 视频和音频没有任何限制。它完全免费，无需注册和登录。"
+        },
+        {
+            "imgClass": "no-software-installation",
+            "title": "无需安装软件",
+            "description": "Y2meta 是一款基于网络的 YouTube 视频下载器，因此无需在您的设备上安装任何软件，您就可以直接从 YouTube 下载视频和音频。"
+        },
+        {
+            "imgClass": "easy-and-user-friendly-interface",
+            "title": "简单易用的界面",
+            "description": "Y2meta 的界面简单易用。只需将 YouTube 视频 URL 复制粘贴到搜索框中即可下载。"
+        }
+    ],
+    "faqHeading": "常见问题解答",
+    "homeFaqs": [
+        {
+            "question": "Y2Meta 是什么？",
+            "answer": "Y2meta 是一款出色的 YouTube 视频转换工具，可快速免费地将 YouTube 视频保存到您的设备。此外，您还可以将 YouTube 视频转换为音频。"
+        },
+        {
+            "question": "YouTube 下载器可以免费使用吗？",
+            "answer": "是的，Y2meta 完全免费使用和下载 YouTube 视频。您无需购买任何高级订阅，只需提供要在设备上下载的 YouTube 视频的 URL 即可。"
+        },
+        {
+            "question": "使用 Y2meta 我一天可以下载多少个视频？",
+            "answer": "您可以使用 Y2meta 转换和下载无限量视频。YouTube 视频的下载没有任何限制。"
+        },
+        {
+            "question": "YouTube 下载器是否支持所有设备？",
+            "answer": "是的，Y2meta 支持所有设备，包括 iOS、Android、Windows 和 Mac。此外，您还可以在 Google Chrome、Safari、Opera、Firefox、Brave 等多种浏览器中使用此工具。"
+        },
+        {
+            "question": "从 Y2meta 下载 YouTube 视频安全吗？",
+            "answer": "使用 Y2meta 下载 YouTube 视频安全可靠。任何用户下载内容时，都应始终遵守版权法。"
+        },
+        {
+            "question": "音频和视频支持哪些格式？",
+            "answer": "Y2meta 支持多种视频格式，包括 360p、720p、1080p、2K 以及最高 4K 画质。音频比特率则支持 64kbps、128kbps、192kbps、256kbps 和 320kbps。"
+        },
+        {
+            "question": "我可以使用 YouTube 下载器下载长视频吗？",
+            "answer": "是的，您可以使用 Y2meta 下载长视频，包括长视频、短视频和纪录片。我们的工具可以处理各种长度的视频，让您可以尽情享受完整的视频。"
+        },
+        {
+            "question": "我需要安装任何软件来下载 YouTube 视频吗？",
+            "answer": "不，您不需要安装任何软件来下载 YouTube 视频，因为 Y2meta 是一项基于网络的服务。"
+        }
+    ],
+    "youtubeToMp3": {
+        "title": "免费 YouTube 转 MP3 转换器和下载器",
+        "description": "Y2meta 是一款快速便捷的 YouTube 转 MP3 转换器。它拥有用户友好的界面，可帮助您轻松将 YouTube 视频转换并下载为 MP3 文件。此外，用户还可以转换和下载多种质量的 MP3 文件，包括 64kbps、128kbps、192kbps、256kbps 和 320kbps。",
+        "description2": "这款 YouTube 转 MP3 转换器拥有良好的用户体验，适用于任何移动设备、电脑或平板电脑。此外，您无需在设备上安装任何软件或应用程序，即可快速将 YouTube 视频转换为 MP3 并轻松下载。您可以无限制地转换和下载无限量的 MP3 文件。只需输入关键字或粘贴 YouTube 网址，点击“开始”按钮，选择音频格式，然后点击“下载”按钮即可将音频文件保存到您的设备。",
+        "steps": {
+            "title": "如何使用 Y2meta 将 YouTube 转换为 MP3？",
+            "step1": "打开 YouTube 并复制视频网址。",
+            "step2": "然后打开 Y2meta，粘贴 YouTube 视频的 URL 或关键字，然后单击开始按钮。",
+            "step3": "选择 MP3 格式和音频质量，然后单击下载按钮。",
+            "step4": "您的下载过程只需几个动作即可开始。"
+        },
+        "advantages": "优势",
+        "adStep1": "以最快的速度转换和下载无限量的 MP3 文件。",
+        "adStep2": "无需支付任何费用即可下载 YouTube MP3。",
+        "adStep3": "YouTube 到 MP3 下载是 100% 免费、安全且有保障的。",
+        "adStep4": "无需分享您的个人信息。",
+        "adStep5": "无需在您的设备上安装任何第三方软件。",
+        "adStep6": "所有设备和浏览器均支持。",
+        "featuresTitle": "Y2meta 的功能",
+        "mp3Features": [
+            {
+                "imageClass": "unlimited-download-and-conversion",
+                "title": "无限量 MP3 下载",
+                "description": "这是一款免费的 YouTube 转 MP3 转换器，没有任何限制。此外，Y2meta 可在浏览器上运行，因此您无需在设备上安装任何软件。"
+            },
+            {
+                "imageClass": "supports-high-quality-downloads",
+                "title": "高品质 MP3（音频）下载",
+                "description": "您可以将各种比特率的视频转换为 MP3，包括 96kbps、128kbps、256kbps 以及最高 320kbps。尽情聆听您喜爱的歌曲。"
+            },
+            {
+                "imageClass": "secure-and-free",
+                "title": "安全可靠",
+                "description": " 我们的 YouTube 转 MP3 转换器不会收集任何用户个人信息，并受高级 SSL 证书保护。此外，无需注册或登录。"
+            },
+            {
+                "imageClass": "quick-and-simple-conversion",
+                "title": "快速简单的转换",
+                "description": "Y2meta 为您提供 10 倍的转换速度，并允许用户将 YouTube 视频下载为 MP3。只需输入 YouTube 网址，然后点击下载按钮即可。"
+            },
+            {
+                "imageClass": "easy-and-user-friendly-interface",
+                "title": "所有设备均受支持",
+                "description": "它支持所有类型的设备，例如 PC、手机、平板电脑和 iPhone。此外，YouTube 视频转 MP3 转换器还支持所有浏览器，例如 Chrome、Brave、Safari、Microsoft Bing 和 Firefox。"
+            },
+            {
+                "imageClass": "no-software-installation",
+                "title": "支持多种文件格式",
+                "description": "使用 Y2meta 时，您可以转换多种类型的音频文件，例如 MP3、MP4、3GP、WEBM、M4A、FLV 和 MOV。"
+            }
+        ],
+        "faqTitle": "常见问题解答 - YouTube 转 MP3 转换器",
+        "mp3Faqs": [
+            {
+                "question": "这个 YouTube MP3 转换器可以免费使用吗？",
+                "answer": "是的，它完全免费，因为使用我们的 YouTube 下载到 MP3 没有任何限制或隐藏费用。从 YouTube 下载 MP3 没有任何限制，而且您无需支付任何费用。"
+            },
+            {
+                "question": "如何使用 Y2meta 将 YouTube 转换为 MP3？",
+                "answer": "MP3 的转换过程非常简单。只需按照以下步骤操作即可。",
+                "steps": [
+                    "步骤 1：复制 YouTube 视频的 URL。",
+                    "第 2 步：粘贴 URL 或在搜索框中输入关键字。",
+                    "步骤3：选择MP3格式。",
+                    "步骤4：单击下载按钮并等待几秒钟。"
+                ],
+                "text": "完成！您的下载过程已开始。"
+            },
+            {
+                "question": "我可以在所有设备上使用 YouTube 到 MP3 转换器吗？",
+                "answer": "是的，我们的工具支持所有设备，例如电脑、智能手机和平板电脑。它还支持不同的浏览器，例如 Chrome、Brave、Firefox 和 Safari。"
+            },
+            {
+                "question": "Y2meta 是否支持多种文件格式？",
+                "answer": "我们的 YouTube 转 MP3 转换器支持多种格式，包括 MP3、MP4、AVI、WEBM 和 M4A。此外，您还可以根据需求选择格式。"
+            },
+            {
+                "question": "从 Y2meta 下载 YouTube MP3 合法吗？",
+                "answer": "YouTube 转 MP3 转换器是一款完全合法的 YouTube MP3 下载工具。我们尊重所有频道所有者的权益，但具体操作取决于您的需求。"
+            },
+            {
+                "question": "使用 Y2meta 从 YouTube 下载 MP3 是否安全可靠？",
+                "answer": "是的，我们的 YouTube 转换器 100% 安全，不会受到恶意软件和病毒的侵害，因为 Y2meta 拥有 SSL 证书，可确保从 YouTube 安全下载 MP3 文件。"
+            },
+            {
+                "question": "我每天可以下载多少个 MP3 文件？",
+                "answer": "您每天可以转换无限量的 MP3 文件，因为从 YouTube 视频转换和下载音频文件没有任何限制或限制。"
+            }
+        ]
+    },
+    "youtubeToMp4": {
+        "title": "免费 YouTube 至 MP4 下载器",
+        "description": "Y2meta 是最受欢迎的在线工具，您可以转换并下载各种 MP4 画质的 YouTube 视频，包括 360p、480p、720p 高清、1080p 全高清、1440p、2K 和 4K。此外，您还可以高速轻松地将 YouTube 视频下载为 MP4 格式。它是一款 100% 安全、快速且免费的工具，因此您可以免费将 YouTube 视频下载为 MP4 格式。",
+        "description1": "这款 YouTube MP4 转换器是一款评价极高的免费在线工具，可以轻松将 YouTube 视频转换为 MP4 格式，并以 MP3 和 MP4 等多种格式下载 YouTube 视频。我们的 Y2meta 拥有用户友好的界面和强大的功能，因此成为用户最喜爱的 YouTube 视频转换工具。无论您是想寻找一款工具，将喜爱的 YouTube 视频保存到您的设备上，并在任何设备上以兼容的格式观看，YouTube 转 MP4 转换器都能为您提供可靠的解决方案。",
+        "steps": {
+            "title": "如何使用 Y2meta 将 YouTube 转换为 MP4？",
+            "step1": "打开 YouTube 并复制您想要下载的视频 URL。",
+            "step2": "现在打开 Y2meta 并粘贴 URL 或在搜索框中输入关键字。",
+            "step3": "选择具有质量的 MP4 格式并单击转换按钮。",
+            "step4": "完成！您的转换过程已开始。",
+            "step5": "转换过程完成后，单击下载按钮。"
+        },
+        "advantages": "YouTube 到 MP4 转换器的优势",
+        "adStep1": "Y2meta 易于使用并提供无限制的视频下载。",
+        "adStep2": "它可以高速下载视频。",
+        "adStep3": "无需登录和注册。",
+        "adStep4": "可在任何设备上的所有浏览器中轻松运行。",
+        "adStep5": "支持多种视频质量和格式。",
+        "adStep6": "不需要在您的设备上安装任何软件。",
+        "featuresTitle": "YouTube MP4 转换器的功能",
+        "mp4Features": [
+            {
+                "iconClass": "unlimited-download-and-conversion",
+                "title": "便于使用",
+                "description": "YouTube 转 MP4 转换器界面简洁友好，转换过程轻松便捷。如果您想将 YouTube 视频转换为 MP4 格式，无需学习任何技术知识。"
+            },
+            {
+                "iconClass": "supports-high-quality-downloads",
+                "title": "无限次转换",
+                "description": "这是 Y2meta 最有用的功能，即无限转换，允许用户根据需要从 YouTube 下载无限量视频，而不受任何限制。"
+            },
+            {
+                "iconClass": "secure-and-free",
+                "title": "高质量下载",
+                "description": "Y2meta 可帮助您下载多种分辨率的视频，包括 360p、720p、1080p、2K 以及高达 4K 的分辨率。这样您就可以享受高品质的喜爱视频。"
+            },
+            {
+                "iconClass": "quick-and-simple-conversion",
+                "title": "兼容所有设备",
+                "description": "您可以在智能手机、平板电脑和电脑等任何设备上下载 MP4 文件。这款 YouTube 转 MP4 转换器可让您从 YouTube 下载与所有设备兼容的视频。"
+            },
+            {
+                "iconClass": "easy-and-user-friendly-interface",
+                "title": "支持多种格式",
+                "description": "Y2meta 可以下载多种格式的视频，包括 MP4、MP3、WAV、3GP、M4A、WEBM 和 AVI 等。"
+            },
+            {
+                "iconClass": "no-software-installation",
+                "title": "无需安装软件",
+                "description": "这款 YouTube 转 MP4 转换器是一款基于网页的工具，可在网页浏览器上运行，因此无需在设备上下载任何软件。此外，Y2meta 是一款安全可靠的 YouTube 视频转换工具。"
+            }
+        ],
+        "faqTitle": "常见问题解答 - YouTube MP4 转换器",
+        "mp4FaqData": [
+            {
+                "question": "YouTube 到 MP4 转换器是什么？",
+                "answer": "Y2meta 是一款基于网络的在线 YouTube 到 MP4 转换器工具，您可以在其中转换 YouTube 视频并以高质量下载它们。"
+            },
+            {
+                "question": "YouTube 到 MP4 转换器可以免费使用吗？",
+                "answer": "是的，此工具 100% 安全且免费使用。它允许您转换和下载 YouTube 视频，而无需分享您的个人信息。"
+            },
+            {
+                "question": "我每天可以从 Y2meta 下载多少个视频？",
+                "answer": "您每天可以使用此工具转换和下载无限量的视频，因为下载 YouTube 视频没有任何限制。"
+            },
+            {
+                "question": "如何使用 Y2meta 下载 YouTube MP4？",
+                "answer": "要转换和下载 YouTube 视频，只需按照以下步骤操作：",
+                "steps": [
+                    "步骤 1：打开 YouTube 并复制视频 URL。",
+                    "第 2 步：将 URL 粘贴到搜索框中，然后单击开始按钮。",
+                    "步骤3：选择视频格式并选择视频质量。",
+                    "步骤4：现在是最后一步，单击“开始”按钮。"
+                ]
+            },
+            {
+                "question": "Y2meta 与其他 YouTube 转换器有何不同？",
+                "answer": "Y2meta 提供快速、高质量的转换和无限下载，无需您共享信息或安装任何软件。此外，它还拥有用户友好的界面，方便您轻松转换。"
+            },
+            {
+                "question": "Y2mate 是一个安全的 YouTube MP4 下载平台吗？",
+                "answer": "是的，我们的 YouTube 转 MP4 转换器采用先进的技术，确保安全可靠。它拥有 SSL 证书，可提供额外的保护，有效防御恶意软件和病毒。"
+            },
+            {
+                "question": "这个 YouTube 到 MP4 转换器是否提供 4K 质量？",
+                "answer": "是的，Y2meta 可以转换各种质量的 YouTube 视频，包括 360p、480p、720p、1080p、2K 和 4K。"
+            }
+        ]
+    },
+    "notFound": "未找到",
+    "downloadNow": "立即下载",
+    "playNow": "立即玩"
+}

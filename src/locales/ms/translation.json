@@ -1,1 +1,312 @@
-{}
+{
+  "containerTitle": {
+    "/": {
+      "title": "Y2meta - Pengunduh Video YouTube",
+      "desc": "Muat turun video YouTube dengan lancar dalam 1080p dengan Y2meta",
+      "helmetTitle":"Y2meta - YouTube Downloader | Muat turun Video YouTube Percuma dalam HD",
+      "helmetDescription":"Y2meta ialah Pengunduh YouTube yang pantas dan percuma yang membolehkan anda menukar dan memuat turun Video daripada YouTube dalam HD, UHD, 1080p, 2K dan 4K."
+    },
+    "/search/": {
+      "title": "Y2meta - Pengunduh Video YouTube",
+      "desc": "Muat turun video YouTube dengan lancar dalam 1080p dengan Y2meta",
+      "helmetTitle":"Y2meta - YouTube Downloader | Muat turun Video YouTube Percuma dalam HD",
+      "helmetDescription":"Y2meta ialah Pengunduh YouTube yang pantas dan percuma yang membolehkan anda menukar dan memuat turun Video daripada YouTube dalam HD, UHD, 1080p, 2K dan 4K."
+    },
+    "/convert/": {
+      "title": "Y2meta - Pengunduh Video YouTube",
+      "desc": "Muat turun video YouTube dengan lancar dalam 1080p dengan Y2meta",
+      "helmetTitle":"Y2meta - YouTube Downloader | Muat turun Video YouTube Percuma dalam HD",
+      "helmetDescription":"Y2meta ialah Pengunduh YouTube yang pantas dan percuma yang membolehkan anda menukar dan memuat turun Video daripada YouTube dalam HD, UHD, 1080p, 2K dan 4K."
+    },
+    "/youtube-to-mp3/": {
+      "title": "Penukar YouTube Kepada MP3",
+      "desc": "Tukar video YouTube dalam format MP3 dalam kualiti tertinggi dengan alat y2meta.",
+      "helmetTitle":"Penukar YouTube Kepada MP3 Percuma - Y2Meta",
+      "helmetDescription":"Tukar video YouTube kepada MP3 secara percuma dan dalam kualiti tinggi dengan Y2Meta. Muat turun MP3 dengan pantas tanpa mendaftar menggunakan alat penukar YouTube Ke MP3 Y2Meta."
+    },
+    "/youtube-to-mp4/": {
+      "title": "Y2meta - Penukar YouTube ke MP4 Percuma",
+      "desc": "Tukar dan muat turun video YouTube kepada format MP4 dengan lancar dalam HD sehingga 4K.",
+      "helmetTitle":"Penukar YouTube ke MP4 | Y2Meta",
+      "helmetDescription":"Tukar dan muat turun video YouTube ke format MP4 dengan cepat dan selamat dengan Y2Meta. Pilih daripada berbilang kualiti video, termasuk 720p, 1080p, 2K dan sehingga 4K."
+    }
+  },
+  "search": {
+    "description": "Tampal pautan YouTube di sini untuk mula memuat turun.",
+    "placeholder": "Cari atau tampal pautan YouTube di sini...",
+    "startButton": "Cari",
+    "terms": "Dengan menggunakan perkhidmatan kami, anda menerima perkhidmatan kami",
+    "termsLink": "Terma dan Syarat",
+    "advertising": "Pengiklanan",
+    "downloadNow": "Muat turun Sekarang",
+    "playNow": "Main Sekarang"
+  },
+  "suggestions": {
+    "noSuggestions": "Tiada cadangan tersedia"
+  },
+  "headTitle": "Pengunduh Video YouTube Terbaik",
+  "introParagraph": "Y2meta ialah salah satu platform YouTube Downloader paling popular yang membolehkan anda memuat turun video YouTube dalam kualiti tinggi sehingga 4K secara percuma. Jika anda ingin menggunakan Y2meta, maka anda tidak perlu memuat turun sebarang perisian pihak ketiga untuk menyimpan video ke peranti anda, tetapi anda mesti mempunyai pelayar web yang boleh dipercayai dan sambungan internet untuk mula memuat turun Video YouTube kegemaran anda. Y2meta menyokong muat turun video daripada berbilang platform termasuk YouTube, Facebook, Youku, Dailymotion, Vimeo dan tapak perkongsian lain untuk menikmati kandungan dalam kualiti HD. YouTube Downloader memberi anda pengalaman muat turun selamat yang menawarkan untuk memuat turun video berkualiti tinggi tanpa berkongsi maklumat peribadi anda.",
+  "introParagraph2": " Selain itu, anda boleh memuat turun kandungan video dan audio dalam pelbagai format seperti MP4, MP3, WEBM, M4V, WMV, FLV, MO dan 3GP. Ia membolehkan anda memuat turun MP3 dalam pelbagai kadar bit, seperti 64kbps, 128kbps, 192kbps, 256kbps dan 320kbps. Y2meta YouTube Video Downloader kami menggunakan teknologi terkini untuk memberikan pengalaman pengguna yang pantas dan lebih baik, dan ia juga berfungsi dengan lancar pada mana-mana peranti seperti komputer, tablet dan mudah alih. Y2meta ialah Pengunduh YouTube yang sangat mudah kerana ia menyediakan cara yang mudah untuk memuat turun kandungan kegemaran anda.",
+  "howToDownload": "Bagaimana untuk Muat Turun Video Dari YouTube Menggunakan Y2meta?",
+  "step1": "Buka YouTube dan salin pautan video yang ingin anda muat turun.",
+  "step2": "Pergi ke laman web Y2meta YouTube Downloader dan tampal URL dalam kotak carian dan tekan Enter atau klik pada butang mula.",
+  "step3": "Pilih format, sama ada MP4 untuk video atau MP3 untuk audio.",
+  "step4": "Sekarang tekan butang muat turun untuk menyimpan video atau audio pada peranti anda.",
+  "advantages": "Kelebihan Y2meta YouTube Downloader",
+  "adStep1": "Tukar dan muat turun video YouTube tanpa had secara percuma.",
+  "adStep2": "Cara terpantas dan termudah untuk memuat turun mana-mana video.",
+  "adStep3": "Berfungsi pada semua peranti seperti komputer, telefon pintar dan tablet.",
+  "adStep4": "Ia sentiasa percuma dan tidak perlu mendaftar atau memberikan maklumat peribadi",
+  "adStep5": "Anda boleh memuat turun video atau audio dalam kualiti yang tinggi.",
+  "featuresHeading": "Ciri-ciri Y2meta",
+  "features": [
+    {
+      "imgClass": "quick-and-simple-conversion",
+      "title": "Penukaran Pantas dan Mudah",
+      "description": "Y2meta ialah Muat turun pantas yang menukar dan memuat turun video dan audio dengan cepat. Hanya masukkan URL video dan klik butang muat turun. Fail video atau audio anda yang ditukar sudah sedia dalam beberapa saat."
+    },
+    {
+      "imgClass": "supports-high-quality-downloads",
+      "title": "Menyokong Muat Turun Berkualiti Tinggi",
+      "description": "Platform Pengunduh Video YouTube kami menawarkan berbilang format berkualiti tinggi, supaya anda boleh menukar Video YouTube kepada MP3, MP4, 3GP, WMA, M4A, FLV, MO dan WEBM."
+    },
+    {
+      "imgClass": "secure-and-free",
+      "title": "100% Selamat dan Percuma",
+      "description": "Menggunakan Y2meta, anda boleh memuat turun audio dan video secara percuma. Selain itu, ini benar-benar selamat daripada Malware dan virus."
+    },
+    {
+      "imgClass": "unlimited-download-and-conversion",
+      "title": "Muat Turun dan Penukaran Tanpa Had",
+      "description": "Apabila anda menggunakan Y2meta YouTube Downloader, tiada had untuk memuat turun video dan audio youtube. Ia adalah percuma dan tiada keperluan untuk mendaftar dan log masuk."
+    },
+    {
+      "imgClass": "no-software-installation",
+      "title": "Tiada Pemasangan Perisian",
+      "description": "Y2meta ialah Pengunduh Video YouTube berasaskan web, itulah sebabnya tiada keperluan untuk memasang sebarang perisian pada peranti anda, anda boleh memuat turun terus video dan audio daripada YouTube."
+    },
+    {
+      "imgClass": "easy-and-user-friendly-interface",
+      "title": "Antara Muka Mudah dan Mesra Pengguna",
+      "description": "Y2meta mempunyai antara muka yang mudah digunakan untuk digunakan. Hanya salin dan tampal URL video YouTube ke dalam kotak carian dan muat turunnya."
+    }
+  ],
+  "faqHeading": "Soalan Lazim",
+  "homeFaqs": [
+    {
+      "question": "Apakah Y2Meta?",
+      "answer": "Y2meta ialah alat terbaik untuk menukar video dan menyimpannya ke peranti anda daripada YouTube dengan pantas dan percuma. Selain itu, anda boleh menukar video kepada audio daripada YouTube."
+    },
+    {
+      "question": "Adakah YouTube Downloader Percuma untuk Digunakan?",
+      "answer": "Ya, Y2meta adalah percuma untuk menggunakan dan memuat turun video YouTube. Anda tidak perlu membeli sebarang langganan premium, anda hanya memerlukan URL video YouTube yang ingin anda muat turun pada peranti anda."
+    },
+    {
+      "question": "Berapa banyak video yang boleh saya muat turun dalam sehari menggunakan Y2meta?",
+      "answer": "Anda boleh menukar dan memuat turun video tanpa had dengan Y2meta. Tiada had untuk memuat turun Video YouTube."
+    },
+    {
+      "question": "Adakah YouTube Downloader disokong pada semua peranti?",
+      "answer": "Ya, Y2meta menyokong semua peranti termasuk iOS, Android, Windows dan Mac. Selain itu, anda boleh menggunakan alat ini dalam berbilang penyemak imbas seperti Google Chrome, Safari, Opera, Firefox, Brave dan banyak lagi."
+    },
+    {
+      "question": "Adakah selamat untuk memuat turun video YouTube daripada Y2meta?",
+      "answer": "Ia adalah selamat dan terjamin untuk memuat turun video YouTube menggunakan Y2meta. Jika mana-mana pengguna memuat turun kandungan, ia hendaklah sentiasa mengikut akta hak cipta."
+    },
+    {
+      "question": "Apakah format yang disokong dalam audio dan video?",
+      "answer": "Y2meta menyokong banyak format dalam video, termasuk kualiti 360p, 720p, 1080p, 2K dan sehingga 4K. Dalam kadar bit audio seperti 64kbps, 128kbps, 192kbps, 256kbps dan 320kbps."
+    },
+    {
+      "question": "Bolehkah saya memuat turun video panjang menggunakan YouTube Downloader?",
+      "answer": "Ya, anda boleh memuat turun video panjang menggunakan Y2meta, termasuk video panjang, video pendek dan dokumentari. Alat kami boleh mengendalikan panjang video dan anda boleh menikmati video penuh anda."
+    },
+    {
+      "question": "Adakah saya perlu memasang sebarang perisian untuk memuat turun Video YouTube?",
+      "answer": "Tidak, anda tidak perlu memasang sebarang perisian untuk Muat Turun Video YouTube kerana Y2meta ialah perkhidmatan berasaskan web."
+    }
+  ],
+  "youtubeToMp3": {
+    "title": "YouTube to MP3 Converter dan Downloader Percuma",
+    "description": "Y2meta ialah YouTube ke MP3 Converter yang pantas dan mudah. Ia mempunyai antara muka mesra pengguna yang membantu anda menukar dan memuat turun Video YouTube kepada MP3 tanpa sebarang usaha. Selain itu, pengguna boleh menukar dan memuat turun fail MP3 dalam pelbagai kualiti, termasuk 64kbps, 128kbps, 192kbps, 256kbps dan 320kbps.",
+    "description2": "Penukar YouTube ke MP3 ini menyediakan pengalaman pengguna yang baik dan berfungsi pada mana-mana peranti mudah alih, komputer atau tablet. Selain itu, anda boleh menukar dan memuat turun YouTube ke MP3 dengan cepat tanpa memasang sebarang perisian atau aplikasi pada peranti anda. Anda boleh menukar dan memuat turun fail MP3 tanpa had tanpa sebarang had. Hanya masukkan kata kunci atau tampal URL YouTube dan klik butang mula kemudian pilih format audio dan klik butang muat turun untuk menyimpan fail audio ke peranti anda.",
+    "steps": {
+      "title": "Bagaimana untuk Menukar YouTube ke MP3 menggunakan Y2meta?",
+      "step1": "Buka YouTube dan salin URL video.",
+      "step2": "Kemudian buka Y2meta, tampal URL atau kata kunci video YouTube, dan klik butang mula.",
+      "step3": "Pilih format MP3 dan kualiti audio, kemudian klik pada butang muat turun.",
+      "step4": "Proses muat turun anda bermula dalam beberapa pergerakan."
+    },
+    "advantages": "Kelebihan",
+    "adStep1": "Tukar dan muat turun fail MP3 tanpa had pada kelajuan tertinggi.",
+    "adStep2": "Tidak perlu membayar sebarang kos untuk Muat Turun MP3 YouTube.",
+    "adStep3": "Muat Turun YouTube ke MP3 adalah 100% percuma, selamat dan terjamin.",
+    "adStep4": "Tidak perlu berkongsi maklumat peribadi anda.",
+    "adStep5": "Tidak perlu memasang sebarang perisian pihak ketiga pada peranti anda.",
+    "adStep6": "Disokong pada semua peranti dan penyemak imbas.",
+    "featuresTitle": "Ciri-ciri Y2meta",
+    "mp3Features": [
+      {
+        "imageClass": "unlimited-download-and-conversion",
+        "title": "Muat Turun MP3 tanpa had",
+        "description": "Ia adalah penukar YouTube ke MP3 percuma tanpa sebarang batasan. Selain itu, Y2meta berfungsi pada penyemak imbas, itulah sebabnya anda tidak perlu memasang sebarang perisian pada peranti anda."
+      },
+      {
+        "imageClass": "supports-high-quality-downloads",
+        "title": "Muat Turun MP3 (Audio) Berkualiti Tinggi",
+        "description": "Anda boleh menukar MP3 daripada video dalam pelbagai kadar bit termasuk 96kbps, 128kbps, 256kbps dan sehingga 320kbps. Selamat mendengar lagu kegemaran anda."
+      },
+      {
+        "imageClass": "secure-and-free",
+        "title": "Selamat dan Selamat",
+        "description": " Penukar YouTube kepada MP3 kami tidak mengumpul sebarang maklumat peribadi tentang pengguna dan dilindungi dengan sijil SSL lanjutan. Juga, tidak perlu mendaftar atau log masuk."
+      },
+      {
+        "imageClass": "quick-and-simple-conversion",
+        "title": "Penukaran Pantas dan Mudah",
+        "description": "Y2meta memberikan anda kelajuan penukaran 10X lebih pantas dan membolehkan pengguna YouTube ke Muat Turun MP3. Hanya masukkan URL YouTube dan klik butang muat turun."
+      },
+      {
+        "imageClass": "easy-and-user-friendly-interface",
+        "title": "Disokong pada Semua Peranti",
+        "description": "Ia menyokong semua jenis peranti seperti PC, Mudah Alih, Tablet dan iPhone. Selain itu, YouTube Video to MP3 Converter menyokong semua penyemak imbas seperti Chrome, Brave, Safari, Microsoft Bing dan Firefox."
+      },
+      {
+        "imageClass": "no-software-installation",
+        "title": "Menyokong Pelbagai Format Fail",
+        "description": "Apabila anda menggunakan Y2meta, anda boleh menukar pelbagai jenis fail audio seperti MP3, MP4, 3GP, WEBM, M4A, FLV dan MOV."
+      }
+    ],
+    "faqTitle": "Soalan Lazim - YouTube to MP3 Converter",
+    "mp3Faqs": [
+      {
+        "question": "Adakah YouTube MP3 Converter ini percuma untuk digunakan?",
+        "answer": "Ya, ia adalah 100% percuma untuk digunakan kerana tiada sekatan atau kos tersembunyi untuk memuat turun menggunakan YouTube kami ke MP3. Tiada had untuk memuat turun MP3 daripada YouTube dan anda tidak perlu membayar sebarang jumlah untuknya."
+      },
+      {
+        "question": "Bagaimana untuk Menukar YouTube ke MP3 dengan Y2meta?",
+        "answer": "Proses penukaran MP3 adalah sangat mudah. Ikuti sahaja langkah di bawah.",
+        "steps": [
+          "Langkah 1: Salin URL Video YouTube.",
+          "Langkah 2: Tampal URL atau masukkan kata kunci dalam kotak carian.",
+          "Langkah 3: Pilih format MP3.",
+          "Langkah 4: Klik pada butang muat turun dan tunggu beberapa saat."
+        ],
+        "text": "Selesai! Proses muat turun anda telah bermula."
+      },
+      {
+        "question": "Bolehkah saya menggunakan YouTube to MP3 Converter pada semua peranti?",
+        "answer": "Ya, alat kami menyokong semua peranti seperti komputer, telefon pintar dan tablet. Ia juga menyokong penyemak imbas yang berbeza seperti Chrome, Brave, Firefox dan Safari."
+      },
+      {
+        "question": "Adakah Y2meta menyokong berbilang format fail?",
+        "answer": "Penukar YouTube kepada MP3 kami menyokong pelbagai format, termasuk MP3, MP4, AVI, WEBM dan M4A. Selain itu, anda boleh memilih format mengikut keperluan anda."
+      },
+      {
+        "question": "Adakah undang-undang memuat turun MP3 YouTube dari Y2meta?",
+        "answer": "Penukar YouTube ke MP3 ialah alat yang sah sepenuhnya untuk memuat turun MP3 daripada YouTube. Kami menghormati semua pemilik saluran, tetapi ia bergantung pada keperluan anda."
+      },
+      {
+        "question": "Adakah Y2meta selamat dan terjamin untuk memuat turun MP3 daripada YouTube?",
+        "answer": "Ya, YouTube Converter kami adalah 100% selamat dan terjamin daripada perisian hasad dan virus kerana Y2meta mempunyai sijil SSL yang memastikan muat turun fail MP3 yang selamat daripada YouTube."
+      },
+      {
+        "question": "Berapa banyak fail MP3 yang boleh saya muat turun setiap hari?",
+        "answer": "Anda boleh menukar fail MP3 tanpa had setiap hari kerana tiada sekatan atau pengehadan untuk menukar dan memuat turun fail audio daripada video YouTube."
+      }
+    ]
+  },
+  "youtubeToMp4": {
+    "title": "Percuma YouTube ke MP4 Downloader",
+    "description": "Y2meta ialah alat dalam talian paling popular di mana anda boleh menukar dan memuat turun video YouTube dalam pelbagai kualiti MP4 termasuk 360p, 480p, 720p HD, 1080p Full HD, 1440p, 2K dan 4K. Juga, anda boleh memuat turun YouTube ke MP4 pada kelajuan tinggi dan tanpa sebarang usaha. Ia adalah alat 100% selamat, pantas dan percuma, itulah sebabnya anda boleh memuat turun Video YouTube ke MP4 tanpa sebarang perbelanjaan.",
+    "description1": "Penukar MP4 YouTube ini ialah alat dalam talian yang dinilai tinggi dan percuma yang boleh menukar YouTube kepada MP4 dengan mudah dan memuat turun Video YouTube dalam pelbagai format seperti MP3 dan MP4. Y2meta kami mempunyai antara muka yang mesra pengguna dan ciri yang berkuasa, itulah sebabnya ia telah menjadi Penukar YouTube yang paling diutamakan kepada pengguna untuk penukaran video. Setiap kali anda mencari alat untuk menyimpan video YouTube kegemaran anda pada peranti anda dan melihatnya dalam format yang serasi pada mana-mana peranti, YouTube to MP4 Converter memberikan anda penyelesaian yang boleh dipercayai.",
+    "steps": {
+      "title": "Bagaimana untuk Menukar YouTube ke MP4 Menggunakan Y2meta?",
+      "step1": "Buka YouTube dan salin URL video yang ingin anda muat turun.",
+      "step2": "Sekarang buka Y2meta dan tampal URL atau masukkan kata kunci dalam kotak carian.",
+      "step3": "Pilih format MP4 dengan kualiti dan klik butang tukar.",
+      "step4": "Selesai! Proses penukaran anda telah bermula.",
+      "step5": "Setelah proses penukaran selesai, klik pada butang muat turun."
+    },
+    "advantages": "Kelebihan YouTube to MP4 Converter",
+    "adStep1": "Y2meta mudah digunakan dan menyediakan muat turun video tanpa had.",
+    "adStep2": "Ia boleh memuat turun video pada kelajuan tinggi.",
+    "adStep3": "Tidak perlu log masuk dan mendaftar.",
+    "adStep4": "Mudah berfungsi dalam semua penyemak imbas pada mana-mana peranti.",
+    "adStep5": "Menyokong pelbagai kualiti dan format video.",
+    "adStep6": "Tidak perlu memasang sebarang perisian pada peranti anda.",
+    "featuresTitle": "Ciri-ciri YouTube MP4 Converter",
+    "mp4Features": [
+      {
+        "iconClass": "unlimited-download-and-conversion",
+        "title": "Mudah Digunakan",
+        "description": "YouTube to MP4 Converter mempunyai antara muka yang mudah dan mesra pengguna dan menjadikan proses penukaran mudah untuk pengguna. Jika anda ingin menukar MP4 daripada video YouTube, maka anda tidak perlu mempelajari pengetahuan teknikal mengenainya."
+      },
+      {
+        "iconClass": "supports-high-quality-downloads",
+        "title": "Penukaran Tanpa Had",
+        "description": "Ini ialah ciri Y2meta yang paling berguna, iaitu penukaran tanpa had yang membolehkan pengguna memuat turun video tanpa had daripada YouTube seperti yang mereka perlukan dan tanpa sebarang sekatan."
+      },
+      {
+        "iconClass": "secure-and-free",
+        "title": "Muat Turun Berkualiti Tinggi",
+        "description": "Y2meta membantu anda memuat turun video dalam pelbagai kualiti termasuk resolusi 360p, 720p, 1080p, 2K dan sehingga 4K. Itulah sebabnya anda boleh menikmati video kegemaran anda dalam kualiti yang tinggi."
+      },
+      {
+        "iconClass": "quick-and-simple-conversion",
+        "title": "Serasi dengan Semua Peranti",
+        "description": "Anda boleh memuat turun fail MP4 pada mana-mana peranti seperti telefon pintar, tablet dan komputer. Penukar YouTube ke MP4 ini membolehkan anda memuat turun video daripada YouTube yang serasi dengan semua peranti."
+      },
+      {
+        "iconClass": "easy-and-user-friendly-interface",
+        "title": "Menyokong Pelbagai Format",
+        "description": "Y2meta boleh memuat turun video dalam pelbagai format iaitu MP4, MP3, WAV, 3GP, M4A, WEBM, dan AVI dll."
+      },
+      {
+        "iconClass": "no-software-installation",
+        "title": "Pemasangan Perisian Tidak Diperlukan",
+        "description": "Penukar YouTube ke MP4 ini ialah salah satu jenis alat berasaskan web yang berjalan pada penyemak imbas web, jadi tidak perlu memuat turun sebarang perisian pada peranti anda. Selain itu, Y2meta ialah alat yang selamat dan selamat untuk menukar video YouTube"
+      }
+    ],
+    "faqTitle": "Soalan Lazim - YouTube MP4 Converter",
+    "mp4FaqData": [
+      {
+        "question": "Apakah YouTube to MP4 Converter?",
+        "answer": "Y2meta ialah alat berasaskan web YouTube ke MP4 Converter yang membolehkan anda menukar Video YouTube dan memuat turunnya dalam kualiti yang tinggi."
+      },
+      {
+        "question": "Adakah YouTube to MP4 Converter percuma untuk digunakan?",
+        "answer": "Ya, alat ini 100% selamat dan percuma untuk digunakan. Ia membolehkan anda menukar dan memuat turun video daripada YouTube tanpa berkongsi maklumat peribadi anda."
+      },
+      {
+        "question": "Berapa banyak video yang boleh saya muat turun dari Y2meta setiap hari?",
+        "answer": "Anda boleh menukar dan memuat turun video tanpa had daripada alat ini setiap hari kerana tiada sekatan untuk memuat turun video YouTube."
+      },
+      {
+        "question": "Bagaimanakah saya boleh memuat turun YouTube MP4 menggunakan Y2meta?",
+        "answer": "Untuk menukar dan memuat turun video YouTube, ikuti langkah di bawah:",
+        "steps": [
+          "Langkah 1: Buka YouTube dan salin URL video.",
+          "Langkah 2: Tampal URL dalam kotak carian dan klik butang mula.",
+          "Langkah 3: Pilih format video dan pilih kualiti video.",
+          "Langkah 4: Sekarang ia adalah langkah terakhir, klik pada butang Mula."
+        ]
+      },
+      {
+        "question": "Bagaimanakah Y2meta berbeza daripada penukar YouTube yang lain?",
+        "answer": "Y2meta menawarkan penukaran yang pantas, berkualiti tinggi dan muat turun tanpa had tanpa memerlukan anda berkongsi maklumat anda atau memasang sebarang perisian. Selain itu, ia mempunyai antara muka mesra pengguna yang memudahkan penukaran mudah."
+      },
+      {
+        "question": "Adakah Y2mate platform selamat untuk Muat Turun MP4 YouTube?",
+        "answer": "Ya, Penukar YouTube ke MP4 kami mempunyai teknologi canggih untuk menyediakan keselamatan. Ia mempunyai sijil SSL untuk memberikan perlindungan tambahan terhadap perisian hasad dan virus."
+      },
+      {
+        "question": "Adakah penukar YouTube ke MP4 ini menawarkan kualiti 4K?",
+        "answer": "Ya, Y2meta boleh menukar Video YouTube dalam pelbagai kualiti termasuk 360p, 480p, 720p, 1080p, 2K dan 4K."
+      }
+    ]
+  },
+  "notFound":"Tidak dijumpai",
+  "downloadNow":"Muat turun Sekarang",
+  "playNow":"Main Sekarang"
+}

@@ -1,6 +1,5 @@
-import { Link, navigate } from "gatsby";
 import React, { useEffect, useRef, useState } from "react";
-import { useLocation } from "@reach/router";
+import { navigate } from "gatsby";
 import { useTranslation } from "react-i18next";
 import {
   blockedIds,
@@ -10,6 +9,8 @@ import {
   mp4Path,
   searchPath,
 } from "../constant";
+import { Link, useI18next } from "gatsby-plugin-react-i18next";
+import Cookies from "js-cookie";
 
 const convertTimeToSeconds = (timeStr) => {
   const timeParts = timeStr?.split?.(":");
@@ -34,33 +35,34 @@ const convertTimeToSeconds = (timeStr) => {
 
 const SeachContainer = ({ convertLocation }) => {
   const { t } = useTranslation();
-  const location = useLocation();
   const [searchText, setSearchText] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
   const suggestionBoxRef = useRef(null);
+  const { originalPath } = useI18next();
+  const hasRunRef = useRef(false);
 
-  const containerTitle = t(`containerTitle.${location?.pathname}`, {
+  const containerTitle = t(`containerTitle.${originalPath}`, {
     returnObjects: true,
   });
 
   const urls = [homePath, mp3Path, mp4Path];
 
-  const useQuery = () => {
-    return new URLSearchParams(useLocation().search);
-  };
-  const query = useQuery();
-  const searchTxt = query?.get?.("q");
+  const savedSuggestion = Cookies.get("search_suggestion");
 
   useEffect(() => {
-    if (!!searchTxt && location?.pathname === `${searchPath}/`) {
-      setSearchText(searchTxt);
-      getSuggestion(searchTxt);
-      window.history.replaceState({}, document.title);
+    if (
+      !!savedSuggestion &&
+      originalPath === `${searchPath}/` &&
+      !hasRunRef.current
+    ) {
+      hasRunRef.current = true;
+      setSearchText(savedSuggestion);
+      getSuggestion(savedSuggestion);
     }
-  }, [searchTxt, location?.pathname]);
+  }, [savedSuggestion, originalPath]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -120,6 +122,7 @@ const SeachContainer = ({ convertLocation }) => {
       const data = await response.json();
       setLoading(false);
       setSearchResults(data?.items || []);
+      Cookies.remove("search_suggestion");
     } catch (error) {
       setLoading(false);
       console.error("Error fetching search results:", error);
@@ -146,24 +149,25 @@ const SeachContainer = ({ convertLocation }) => {
     setSearchText(suggestion);
     setSuggestions([]);
 
-    if (location?.pathname === `${searchPath}/`) {
+    Cookies.set("search_suggestion", suggestion, { expires: 0.01 }); // 15 minutes
+
+    if (originalPath === `${searchPath}/`) {
       getSuggestion(suggestion);
     }
-    if (
-      urls?.includes(location?.pathname) ||
-      location?.pathname === `${convertPath}/`
-    ) {
-      navigate(`${searchPath}/`, {
-        state: { message: suggestion },
-      });
+    if (urls?.includes(originalPath) || originalPath === `${convertPath}/`) {
+      navigate(searchPath);
     }
   };
   const handleConvert = (contentData) => {
-    navigate(`${convertPath}/`, {
-      state: {
-        message: { id: contentData?.id, duration: contentData?.duration },
-      },
-    });
+    Cookies.set(
+      "convert_data",
+      JSON.stringify({
+        id: contentData?.id,
+        duration: contentData?.duration,
+      }),
+      { expires: 0.01 } // 15 minutes
+    );
+    navigate(convertPath);
   };
 
   return (
@@ -174,7 +178,9 @@ const SeachContainer = ({ convertLocation }) => {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              navigate(`${searchPath}/?q=${encodeURIComponent(searchText)}`);
+              Cookies.set("search_suggestion", searchText, { expires: 0.01 });
+              hasRunRef.current = false;
+              navigate(searchPath);
               setSuggestions([]);
             }}
           >
@@ -221,8 +227,12 @@ const SeachContainer = ({ convertLocation }) => {
                         }}
                         onClick={() => {
                           setSearchText(term);
+                          Cookies.set("search_suggestion", term, {
+                            expires: 0.01,
+                          });
+                          navigate(searchPath);
                           setSuggestions([]);
-                          document.getElementById("form_submit").click();
+                          // document.getElementById("form_submit").click();
                         }}
                       >
                         {term}
@@ -240,7 +250,7 @@ const SeachContainer = ({ convertLocation }) => {
         </div>
       </div>
 
-      {location?.pathname === `${searchPath}/` ? (
+      {originalPath === `${searchPath}/` ? (
         <div className="result">
           {loading ? (
             <div className="spinner" id="loader">
@@ -324,17 +334,17 @@ const SeachContainer = ({ convertLocation }) => {
         </div>
       ) : null}
 
-      {location?.pathname === `${convertPath}/` ? (
+      {originalPath === `${convertPath}/` ? (
         <div className="result mt-48">
-          {!convertLocation?.state?.message?.id ? (
+          {!convertLocation?.id ? (
             <div className="spinner" id="loader">
-              {Array.from({ length: 4 })?.map((_, index) => {
+              {Array.from({ length: 4 })?.map?.((_, index) => {
                 return <div className={`box-${index + 1}`} key={index}></div>;
               })}
             </div>
           ) : (
             <div className="data_results mt-48">
-              {blockedIds?.includes?.(convertLocation?.state?.message?.id) ? (
+              {blockedIds?.includes?.(convertLocation?.id) ? (
                 <div className="blocked_error bloacked_id_error warning">
                   <h3>Sorry</h3>
                   <h3>
@@ -342,18 +352,14 @@ const SeachContainer = ({ convertLocation }) => {
                     downloaded.
                   </h3>
                 </div>
-              ) : !blockedIds?.includes?.(
-                  convertLocation?.state?.message?.id
-                ) ? (
+              ) : !blockedIds?.includes?.(convertLocation?.id) ? (
                 <div className="down_wrap">
                   <iframe
                     title="yt-meta"
                     id="widgetPlusApi"
                     src={`https://ac.insvid.com/widget?url=https://www.youtube.com/watch?v=${
-                      convertLocation?.state?.message?.id
-                    }&el=${convertTimeToSeconds(
-                      convertLocation?.state?.message?.duration
-                    )}`}
+                      convertLocation?.id
+                    }&el=${convertTimeToSeconds(convertLocation?.duration)}`}
                     width="100%"
                     height="100%"
                     allowtransparency="true"

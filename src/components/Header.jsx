@@ -1,29 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import headerLogo from "../../static/images/logo.webp";
-import { Link } from "gatsby";
-import { useTranslation } from "react-i18next";
 import { homePath, languageDD, mp3Path, mp4Path } from "../constant";
-import { useLocation } from "@reach/router";
+import { Link, useI18next } from "gatsby-plugin-react-i18next";
 
 const Header = React.memo(() => {
   const [anchorEl, setAnchorEl] = useState(false);
   const [toggleNav, setToggleNav] = useState(false);
-  const { i18n } = useTranslation();
-  const location = useLocation();
-  const pathname = location?.pathname;
+  const { languages, language, originalPath, changeLanguage } = useI18next();
   const navbarRef = useRef(null);
-
-  useEffect(() => {
-    setTimeout(() => {
-      const storedLanguage = localStorage.getItem("language");
-      if (storedLanguage) {
-        const getLang = languageDD?.[storedLanguage];
-        if (getLang) {
-          i18n.changeLanguage(storedLanguage);
-        }
-      }
-    }, 0);
-  }, [i18n]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -48,8 +32,7 @@ const Header = React.memo(() => {
   };
 
   const changeLang = (code) => {
-    i18n.changeLanguage(code);
-    localStorage.setItem("language", code);
+    changeLanguage(code);
     handleClose();
   };
 
@@ -66,7 +49,7 @@ const Header = React.memo(() => {
               <li>
                 <Link
                   to={homePath}
-                  className={`${pathname === homePath && "active"}`}
+                  className={`${originalPath === homePath && "active"}`}
                 >
                   YouTube Downloader
                 </Link>
@@ -74,7 +57,7 @@ const Header = React.memo(() => {
               <li>
                 <Link
                   to={mp3Path}
-                  className={`${pathname === `${mp3Path}/` && "active"}`}
+                  className={`${originalPath === `${mp3Path}/` && "active"}`}
                 >
                   YouTube to MP3
                 </Link>
@@ -82,7 +65,7 @@ const Header = React.memo(() => {
               <li>
                 <Link
                   to={mp4Path}
-                  className={`${pathname === `${mp4Path}/` && "active"}`}
+                  className={`${originalPath === `${mp4Path}/` && "active"}`}
                 >
                   YouTube to MP4
                 </Link>
@@ -90,7 +73,7 @@ const Header = React.memo(() => {
               <li className="language">
                 <div className="lang-wrap">
                   <button id="language-btn" onClick={handleToggleMenu}>
-                    {languageDD?.[i18n?.language]}
+                    {languageDD?.[language]}
                   </button>
                 </div>
                 {anchorEl && (
@@ -98,9 +81,18 @@ const Header = React.memo(() => {
                     id="language-dropdown"
                     className={`sub-language ${anchorEl ? "lang_menu" : ""}`}
                   >
-                    {Object.entries(languageDD)?.map?.(([k, v], index) => (
+                    {languages?.map?.((lng, index) => (
                       <li key={index}>
-                        <p onClick={() => changeLang(k)}>{v}</p>
+                        <p
+                          onClick={() => changeLang(lng)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') changeLang(lng);
+                          }}
+                          tabIndex={0}
+                          className="lang-option"
+                        >
+                          {languageDD?.[lng]}
+                        </p>
                       </li>
                     ))}
                   </ul>

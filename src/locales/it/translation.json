@@ -1,1 +1,312 @@
-{}
+{
+    "containerTitle": {
+        "/": {
+            "title": "Y2meta - Scaricatore di video da YouTube",
+            "desc": "Scarica video di YouTube senza problemi in 1080p con Y2meta",
+            "helmetTitle": "Y2meta - YouTube Downloader | Scarica video di YouTube gratis in HD",
+            "helmetDescription": "Y2meta è uno YouTube Downloader veloce e gratuito che ti consente di convertire e scaricare video da YouTube in HD, UHD, 1080p, 2K e 4K."
+        },
+        "/search/": {
+            "title": "Y2meta - Scaricatore di video da YouTube",
+            "desc": "Scarica video di YouTube senza problemi in 1080p con Y2meta",
+            "helmetTitle": "Y2meta - YouTube Downloader | Scarica video di YouTube gratis in HD",
+            "helmetDescription": "Y2meta è uno YouTube Downloader veloce e gratuito che ti consente di convertire e scaricare video da YouTube in HD, UHD, 1080p, 2K e 4K."
+        },
+        "/convert/": {
+            "title": "Y2meta - Scaricatore di video da YouTube",
+            "desc": "Download YouTube videos seamlessly in 1080p with Y2meta",
+            "helmetTitle": "Y2meta - YouTube Downloader | Scarica video di YouTube gratis in HD",
+            "helmetDescription": "Y2meta è uno YouTube Downloader veloce e gratuito che ti consente di convertire e scaricare video da YouTube in HD, UHD, 1080p, 2K e 4K."
+        },
+        "/youtube-to-mp3/": {
+            "title": "Convertitore da YouTube a MP3",
+            "desc": "Converti i video di YouTube in formato MP3 nella massima qualità con lo strumento y2meta.",
+            "helmetTitle": "Convertitore gratuito da YouTube a MP3 - Y2Meta",
+            "helmetDescription": "Converti i video di YouTube in MP3 gratuitamente e in alta qualità con Y2Meta. Scarica MP3 velocemente senza registrarti utilizzando lo strumento di conversione da YouTube a MP3 di Y2Meta."
+        },
+        "/youtube-to-mp4/": {
+            "title": "Y2meta - Convertitore gratuito da YouTube a MP4",
+            "desc": "Converti e scarica senza problemi i video di YouTube nel formato MP4 in HD fino a 4K.",
+            "helmetTitle": "Convertitore da YouTube a MP4 | Y2Meta",
+            "helmetDescription": "Converti e scarica video di YouTube in formato MP4 in modo rapido e sicuro con Y2Meta. Scegli tra diverse qualità video, tra cui 720p, 1080p, 2K e fino a 4K."
+        }
+    },
+    "search": {
+        "description": "Incolla qui un collegamento YouTube per iniziare il download.",
+        "placeholder": "Cerca o incolla qui il link di YouTube...",
+        "startButton": "Ricerca",
+        "terms": "Utilizzando il nostro servizio accetti i nostri",
+        "termsLink": "Termini e condizioni",
+        "advertising": "Pubblicità",
+        "downloadNow": "Scarica ora",
+        "playNow": "Gioca ora"
+    },
+    "suggestions": {
+        "noSuggestions": "Nessun suggerimento disponibile"
+    },
+    "headTitle": "Il miglior downloader di video di YouTube",
+    "introParagraph": "Y2meta è una delle piattaforme più popolari per scaricare video da YouTube, che ti permette di scaricare gratuitamente video da YouTube in alta qualità fino a 4K. Se desideri utilizzare Y2meta, non è necessario scaricare alcun software di terze parti per salvare i video sul tuo dispositivo, ma è necessario disporre di un browser web affidabile e di una connessione internet per iniziare a scaricare i tuoi video YouTube preferiti. Y2meta supporta il download di video da diverse piattaforme, tra cui YouTube, Facebook, Youku, Dailymotion, Vimeo e altri siti di condivisione, per goderti i contenuti in qualità HD. YouTube Downloader offre un'esperienza di download sicura, consentendo di scaricare video di alta qualità senza condividere le tue informazioni personali.",
+    "introParagraph2": "Puoi anche scaricare contenuti video e audio in diversi formati come MP4, MP3, WEBM, M4V, WMV, FLV, MO e 3GP. Puoi scaricare MP3 in diversi bit rate, come 64 kbps, 128 kbps, 192 kbps, 256 kbps e 320 kbps. Il nostro downloader di video da YouTube Y2meta utilizza le tecnologie più recenti per offrire un'esperienza utente veloce e migliore, e funziona perfettamente su qualsiasi dispositivo come computer, tablet e cellulari. Y2meta è un downloader di video da YouTube molto semplice da usare perché offre un modo semplice per scaricare i tuoi contenuti preferiti.",
+    "howToDownload": "Come scaricare video da YouTube utilizzando Y2meta?",
+    "step1": "Apri YouTube e copia il link del video che vuoi scaricare.",
+    "step2": "Vai al sito web di Y2meta YouTube Downloader e incolla l'URL nella casella di ricerca, quindi premi Invio o clicca sul pulsante di avvio.",
+    "step3": "Seleziona il formato: MP4 per il video o MP3 per l'audio.",
+    "step4": "Ora premi il pulsante di download per salvare il video o l'audio sul tuo dispositivo.",
+    "advantages": "Vantaggi di Y2meta YouTube Downloader",
+    "adStep1": "Converti e scarica gratuitamente un numero illimitato di video di YouTube.",
+    "adStep2": "Il modo più veloce e semplice per scaricare qualsiasi video.",
+    "adStep3": "Funziona su tutti i dispositivi, come computer, smartphone e tablet.",
+    "adStep4": "È sempre gratuito e non è necessario registrarsi o fornire informazioni personali",
+    "adStep5": "Puoi scaricare video o audio in alta qualità.",
+    "featuresHeading": "Caratteristiche di Y2meta",
+    "features": [
+        {
+            "imgClass": "quick-and-simple-conversion",
+            "title": "Conversione rapida e semplice",
+            "description": "Y2meta è un downloader veloce che converte e scarica video e audio rapidamente. Basta inserire l'URL del video e cliccare sul pulsante di download. Il file video o audio convertito sarà pronto in pochi istanti."
+        },
+        {
+            "imgClass": "supports-high-quality-downloads",
+            "title": "Supporta download di alta qualità",
+            "description": "La nostra piattaforma YouTube Video Downloader offre numerosi formati di alta qualità, così puoi convertire i video di YouTube in MP3, MP4, 3GP, WMA, M4A, FLV, MO e WEBM."
+        },
+        {
+            "imgClass": "secure-and-free",
+            "title": "100% sicuro e gratuito",
+            "description": "Utilizzando Y2meta, puoi scaricare audio e video gratuitamente. Inoltre, è completamente sicuro da malware e virus."
+        },
+        {
+            "imgClass": "unlimited-download-and-conversion",
+            "title": "Download e conversione illimitati",
+            "description": "Utilizzando Y2meta YouTube Downloader, non ci sono limiti al download di video e audio da YouTube. È completamente gratuito e non richiede registrazione o accesso."
+        },
+        {
+            "imgClass": "no-software-installation",
+            "title": "Nessuna installazione di software",
+            "description": "Y2meta è uno scaricatore di video YouTube basato sul Web: non è necessario installare alcun software sul dispositivo e puoi scaricare direttamente video e audio da YouTube."
+        },
+        {
+            "imgClass": "easy-and-user-friendly-interface",
+            "title": "Interfaccia semplice e intuitiva",
+            "description": "Y2meta ha un'interfaccia intuitiva. Basta copiare e incollare l'URL del video di YouTube nella casella di ricerca e scaricarlo."
+        }
+    ],
+    "faqHeading": "Domande frequenti",
+    "homeFaqs": [
+        {
+            "question": "Che cosa è Y2Meta?",
+            "answer": "Y2meta è lo strumento migliore per convertire video da YouTube e salvarli sul tuo dispositivo in modo rapido e gratuito. Puoi anche convertire un video da YouTube in audio."
+        },
+        {
+            "question": "YouTube Downloader è gratuito?",
+            "answer": "Sì, Y2meta è completamente gratuito da usare e da scaricare video da YouTube. Non è necessario acquistare alcun abbonamento premium, è sufficiente l'URL del video di YouTube che si desidera scaricare sul proprio dispositivo."
+        },
+        {
+            "question": "Quanti video posso scaricare in un giorno utilizzando Y2meta?",
+            "answer": "Con Y2meta puoi convertire e scaricare un numero illimitato di video. Non ci sono limiti per il download dei video di YouTube."
+        },
+        {
+            "question": "YouTube Downloader è supportato su tutti i dispositivi?",
+            "answer": "Sì, Y2meta supporta tutti i dispositivi, inclusi iOS, Android, Windows e Mac. Inoltre, puoi utilizzare questo strumento su diversi browser, come Google Chrome, Safari, Opera, Firefox, Brave e altri."
+        },
+        {
+            "question": "È sicuro scaricare video di YouTube da Y2meta?",
+            "answer": "Scaricare video di YouTube tramite Y2meta è sicuro e protetto. Ogni utente che scarica contenuti, deve sempre rispettare la legge sul copyright."
+        },
+        {
+            "question": "Quali formati audio e video sono supportati?",
+            "answer": "Y2meta supporta molti formati video, tra cui 360p, 720p, 1080p, 2K e fino alla qualità 4K. Per quanto riguarda l'audio, supporta bit rate di 64 kbps, 128 kbps, 192 kbps, 256 kbps e 320 kbps."
+        },
+        {
+            "question": "Posso scaricare video lunghi tramite YouTube Downloader?",
+            "answer": "Sì, puoi scaricare video lunghi con Y2meta, inclusi video lunghi, brevi e documentari. Il nostro strumento gestisce la lunghezza dei video e puoi goderti il ​​video intero."
+        },
+        {
+            "question": "Devo installare qualche software per scaricare i video di YouTube?",
+            "answer": "No, non è necessario installare alcun software per scaricare video da YouTube perché Y2meta è un servizio basato sul Web."
+        }
+    ],
+    "youtubeToMp3": {
+        "title": "Convertitore e downloader gratuito da YouTube a MP3",
+        "description": "Y2meta è un convertitore da YouTube a MP3 veloce e intuitivo. Ha un'interfaccia intuitiva che ti aiuta a convertire e scaricare video di YouTube in MP3 senza alcuno sforzo. Inoltre, gli utenti possono convertire e scaricare file MP3 in diverse qualità, tra cui 64 kbps, 128 kbps, 192 kbps, 256 kbps e 320 kbps.",
+        "description2": "Questo convertitore da YouTube a MP3 offre un'esperienza utente ottimale e funziona su qualsiasi dispositivo mobile, computer o tablet. Inoltre, puoi convertire rapidamente e scaricare facilmente YouTube in MP3 senza installare alcun software o applicazione sui tuoi dispositivi. Puoi convertire e scaricare un numero illimitato di file MP3 senza alcuna limitazione. Basta inserire parole chiave o incollare un URL di YouTube e cliccare sul pulsante di avvio, quindi selezionare un formato audio e cliccare sul pulsante di download per salvare i file audio sul tuo dispositivo.",
+        "steps": {
+            "title": "Come convertire YouTube in MP3 usando Y2meta?",
+            "step1": "Apri YouTube e copia l'URL del video.",
+            "step2": "Quindi apri Y2meta, incolla l'URL o la parola chiave di un video di YouTube e clicca sul pulsante di avvio.",
+            "step3": "Seleziona il formato MP3 e la qualità dell'audio, quindi clicca sul pulsante di download.",
+            "step4": "Il processo di download inizia con pochi passaggi."
+        },
+        "advantages": "Vantaggi",
+        "adStep1": "Converti e scarica file MP3 illimitati alla massima velocità.",
+        "adStep2": "Non è necessario pagare alcun costo per scaricare MP3 da YouTube.",
+        "adStep3": "Scaricare da YouTube a MP3 è un'operazione gratuita, sicura e protetta al 100%.",
+        "adStep4": "Non è obbligatorio condividere le tue informazioni personali.",
+        "adStep5": "Non è necessario installare alcun software di terze parti sul tuo dispositivo.",
+        "adStep6": "Supportato su tutti i dispositivi e browser.",
+        "featuresTitle": "Caratteristiche di Y2meta",
+        "mp3Features": [
+            {
+                "imageClass": "unlimited-download-and-conversion",
+                "title": "Download MP3 illimitato",
+                "description": "È un convertitore da YouTube a MP3 gratuito e senza limitazioni. Inoltre, Y2meta funziona su browser, quindi non è necessario installare alcun software sul dispositivo."
+            },
+            {
+                "imageClass": "supports-high-quality-downloads",
+                "title": "Scarica MP3 (audio) di alta qualità",
+                "description": "Puoi convertire i video in formato MP3 in vari bit rate, tra cui 96 kbps, 128 kbps, 256 kbps e fino a 320 kbps. Goditi l'ascolto delle tue canzoni preferite."
+            },
+            {
+                "imageClass": "secure-and-free",
+                "title": "Sicuro e protetto",
+                "description": " Il nostro convertitore da YouTube a MP3 non raccoglie informazioni personali sugli utenti ed è protetto da un certificato SSL avanzato. Inoltre, non è necessario registrarsi o accedere."
+            },
+            {
+                "imageClass": "quick-and-simple-conversion",
+                "title": "Conversione rapida e semplice",
+                "description": "Y2meta offre una velocità di conversione 10 volte superiore e permette agli utenti di scaricare video da YouTube in MP3. Basta inserire l'URL di YouTube e cliccare sul pulsante di download."
+            },
+            {
+                "imageClass": "easy-and-user-friendly-interface",
+                "title": "Supportato su tutti i dispositivi",
+                "description": "Supporta tutti i tipi di dispositivi, come PC, cellulari, tablet e iPhone. Inoltre, YouTube Video to MP3 Converter supporta tutti i browser, come Chrome, Brave, Safari, Microsoft Bing e Firefox."
+            },
+            {
+                "imageClass": "no-software-installation",
+                "title": "Supporta più formati di file",
+                "description": "Utilizzando Y2meta è possibile convertire molti tipi di file audio, tra cui MP3, MP4, 3GP, WEBM, M4A, FLV e MOV."
+            }
+        ],
+        "faqTitle": "Domande frequenti - Convertitore da YouTube a MP3",
+        "mp3Faqs": [
+            {
+                "question": "Questo convertitore YouTube MP3 è gratuito?",
+                "answer": "Sì, è completamente gratuito perché non ci sono restrizioni o costi nascosti per il download tramite il nostro convertitore da YouTube a MP3. Non ci sono limiti per scaricare MP3 da YouTube e non è necessario pagare alcun importo."
+            },
+            {
+                "question": "Come convertire YouTube in MP3 con Y2meta?",
+                "answer": "Il processo di conversione MP3 è molto semplice. Basta seguire i passaggi seguenti.",
+                "steps": [
+                    "Passaggio 1: copia l'URL del video di YouTube.",
+                    "Passaggio 2: incolla l'URL o inserisci una parola chiave nella casella di ricerca.",
+                    "Passaggio 3: seleziona il formato MP3.",
+                    "Passaggio 4: fare clic sul pulsante di download e attendere qualche secondo."
+                ],
+                "text": "Fatto! Il download è iniziato."
+            },
+            {
+                "question": "Posso usare YouTube to MP3 Converter su tutti i dispositivi?",
+                "answer": "Sì, il nostro strumento supporta tutti i dispositivi, come computer, smartphone e tablet. Supporta anche diversi browser come Chrome, Brave, Firefox e Safari."
+            },
+            {
+                "question": "Y2meta supporta più formati di file?",
+                "answer": "Il nostro convertitore da YouTube a MP3 supporta un'ampia gamma di formati, tra cui MP3, MP4, AVI, WEBM e M4A. Puoi anche selezionare i formati in base alle tue esigenze."
+            },
+            {
+                "question": "È legale scaricare YouTube MP3 da Y2meta?",
+                "answer": "Il convertitore da YouTube a MP3 è uno strumento completamente legale per scaricare MP3 da YouTube. Rispettiamo tutti i proprietari dei canali, ma dipende dalle tue esigenze."
+            },
+            {
+                "question": "Y2meta è un servizio sicuro per scaricare MP3 da YouTube?",
+                "answer": "Sì, il nostro YouTube Converter è sicuro al 100% e protetto da malware e virus perché Y2meta ha un certificato SSL che garantisce il download sicuro dei file MP3 da YouTube."
+            },
+            {
+                "question": "Quanti file MP3 posso scaricare al giorno?",
+                "answer": "Puoi convertire un numero illimitato di file MP3 al giorno perché non ci sono restrizioni o limitazioni per la conversione e il download di file audio dai video di YouTube."
+            }
+        ]
+    },
+    "youtubeToMp4": {
+        "title": "Scaricatore gratuito da YouTube a MP4",
+        "description": "Y2meta è lo strumento online più popolare per convertire e scaricare video di YouTube in diverse qualità MP4, tra cui 360p, 480p, 720p HD, 1080p Full HD, 1440p, 2K e 4K. Inoltre, puoi scaricare YouTube in MP4 ad alta velocità e senza alcuno sforzo. È uno strumento sicuro, veloce e gratuito al 100%, che ti permette di scaricare video di YouTube in MP4 senza alcuna spesa.",
+        "description1": "Questo convertitore YouTube MP4 è uno strumento online gratuito e di alta qualità che può convertire facilmente YouTube in MP4 e scaricare video di YouTube in diversi formati, come MP3 e MP4. Il nostro Y2meta ha un'interfaccia intuitiva e funzionalità avanzate, che lo hanno reso il convertitore YouTube preferito dagli utenti per la conversione video. Se stai cercando uno strumento per salvare i tuoi video YouTube preferiti sul tuo dispositivo e visualizzarli in un formato compatibile su qualsiasi dispositivo, YouTube to MP4 Converter ti offre una soluzione affidabile.",
+        "steps": {
+            "title": "Come convertire YouTube in MP4 usando Y2meta?",
+            "step1": "Apri YouTube e copia l'URL del video che vuoi scaricare.",
+            "step2": "Ora apri Y2meta e incolla l'URL o inserisci la parola chiave nella casella di ricerca.",
+            "step3": "Seleziona il formato MP4 con la qualità desiderata e clicca sul pulsante Converti.",
+            "step4": "Fatto! Il processo di conversione è iniziato.",
+            "step5": "Una volta completato il processo di conversione, fare clic sul pulsante di download."
+        },
+        "advantages": "Vantaggi del convertitore da YouTube a MP4",
+        "adStep1": "Y2meta è facile da usare e offre download video illimitati.",
+        "adStep2": "Può scaricare video ad alta velocità.",
+        "adStep3": "Non è necessario effettuare l'accesso o registrarsi.",
+        "adStep4": "Funziona facilmente su tutti i browser e su qualsiasi dispositivo.",
+        "adStep5": "Supporta diverse qualità e formati video.",
+        "adStep6": "Non è necessario installare alcun software sul dispositivo.",
+        "featuresTitle": "Caratteristiche di YouTube MP4 Converter",
+        "mp4Features": [
+            {
+                "iconClass": "unlimited-download-and-conversion",
+                "title": "Facile da usare",
+                "description": "YouTube to MP4 Converter ha un'interfaccia semplice e intuitiva e semplifica il processo di conversione per gli utenti. Se desideri convertire i video di YouTube in MP4, non hai bisogno di particolari conoscenze tecniche."
+            },
+            {
+                "iconClass": "supports-high-quality-downloads",
+                "title": "Conversioni illimitate",
+                "description": "Questa è la caratteristica più utile di Y2meta: conversioni illimitate che consentono agli utenti di scaricare video illimitati da YouTube in base alle loro esigenze e senza alcuna restrizione."
+            },
+            {
+                "iconClass": "secure-and-free",
+                "title": "Download di alta qualità",
+                "description": "Y2meta ti aiuta a scaricare video in diverse qualità, tra cui 360p, 720p, 1080p, 2K e fino a 4K. Ecco perché puoi goderti i tuoi video preferiti in alta qualità."
+            },
+            {
+                "iconClass": "quick-and-simple-conversion",
+                "title": "Compatibile con tutti i dispositivi",
+                "description": "Puoi scaricare file MP4 su qualsiasi dispositivo, come smartphone, tablet e computer. Questo convertitore da YouTube a MP4 ti permette di scaricare video da YouTube compatibili con tutti i dispositivi."
+            },
+            {
+                "iconClass": "easy-and-user-friendly-interface",
+                "title": "Supporta più formati",
+                "description": "Y2meta può scaricare video in molti formati, tra cui MP4, MP3, WAV, 3GP, M4A, WEBM e AVI ecc."
+            },
+            {
+                "iconClass": "no-software-installation",
+                "title": "Installazione software non richiesta",
+                "description": "Questo convertitore da YouTube a MP4 è un tipo di strumento web che funziona tramite browser, quindi non è necessario scaricare alcun software sul dispositivo. Inoltre, Y2meta è uno strumento sicuro e affidabile per convertire i video di YouTube."
+            }
+        ],
+        "faqTitle": "Domande frequenti - Convertitore YouTube MP4",
+        "mp4FaqData": [
+            {
+                "question": "Che cos'è YouTube to MP4 Converter?",
+                "answer": "Y2meta è uno strumento online basato sul Web che consente di convertire i video di YouTube e scaricarli in alta qualità."
+            },
+            {
+                "question": "Il convertitore da YouTube a MP4 è gratuito?",
+                "answer": "Sì, questo strumento è sicuro al 100% e gratuito. Ti permette di convertire e scaricare video da YouTube senza condividere i tuoi dati personali."
+            },
+            {
+                "question": "Quanti video posso scaricare da Y2meta al giorno?",
+                "answer": "Con questo strumento puoi convertire e scaricare un numero illimitato di video al giorno, perché non ci sono restrizioni per il download dei video di YouTube."
+            },
+            {
+                "question": "Come posso scaricare YouTube MP4 utilizzando Y2meta?",
+                "answer": "Per convertire e scaricare i video di YouTube, basta seguire i passaggi qui sotto:",
+                "steps": [
+                    "Passaggio 1: apri YouTube e copia l'URL del video.",
+                    "Passaggio 2: incolla l'URL nella casella di ricerca e fai clic sul pulsante Avvia.",
+                    "Passaggio 3: scegli un formato video e seleziona la qualità video.",
+                    "Passaggio 4: Ora è il passaggio finale, fare clic sul pulsante Avvia."
+                ]
+            },
+            {
+                "question": "In che cosa Y2meta si differenzia dagli altri convertitori YouTube?",
+                "answer": "Y2meta offre una conversione rapida e di alta qualità e download illimitati, senza dover condividere le proprie informazioni o installare alcun software. Inoltre, presenta un'interfaccia intuitiva che semplifica la conversione."
+            },
+            {
+                "question": "Y2mate è una piattaforma sicura per il download di file MP4 da YouTube?",
+                "answer": "Sì, il nostro convertitore da YouTube a MP4 si avvale di una tecnologia avanzata per garantire la sicurezza. È dotato di un certificato SSL per una protezione extra contro malware e virus."
+            },
+            {
+                "question": "Questo convertitore da YouTube a MP4 offre qualità 4K?",
+                "answer": "Sì, Y2meta può convertire i video di YouTube in varie qualità, tra cui 360p, 480p, 720p, 1080p, 2K e 4K."
+            }
+        ]
+    },
+    "notFound": "Non trovato",
+    "downloadNow": "Scarica ora",
+    "playNow": "Gioca ora"
+}

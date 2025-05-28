@@ -12,5 +12,37 @@ module.exports = {
       },
     },
     "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locales`,
+        languages: ['en', 'de', 'es', 'fr', 'hi', 'id', 'it', 'pt', 'ru', 'th', 'tr', 'vi', 'ja', 'ko', 'ms', 'ph', 'zhcn', 'zhtw', 'ar', 'bn', 'sh-cn',],
+        defaultLanguage: 'en',
+        siteUrl: `https://www.yourdomain.tld`,
+        redirect: true,
+        getLanguageFromPath: true,
+        prefixDefaultLanguage: true,
+        i18nextOptions: {
+          interpolation: { escapeValue: false },
+        },
+        pages: [
+          {
+            matchPath: '/search',
+            languages: ['en']
+          },
+          {
+            matchPath: '/convert',
+            languages: ['en']
+          },
+        ]
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `locales`,
+        path: `${__dirname}/src/locales`,
+      },
+    },
   ],
 };

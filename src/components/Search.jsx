@@ -1,8 +1,8 @@
 import React from "react";
-import Home from "./Home";
+import SeachContainer from "./SeachContainer";
 
-const Search = ({ location }) => {
-  return <Home searchProps={location} />;
+const Search = () => {
+  return <SeachContainer />;
 };
 
 export default Search;
