@@ -41,8 +41,7 @@ const Header = React.memo(() => {
             <header className="header" ref={navbarRef}>
                 <div className="header-box">
                     <div className="header-left">
-
-                        <Link to={homePath}><img src={headerLogo} width="50" height="50" alt="y2meta logo" />y2meta</Link>
+                        <Link to={homePath}><img src={headerLogo} width="50" height="50" alt="y2meta logo" /></Link>
                     </div>
                     <div className="header-right">
                         <ul className={`navbar ${toggleNav ? "open_menu" : ""}`}>
