@@ -16,10 +16,11 @@ export const languageDD = {
   ms: "Malay",
   ph: "Filipino",
   "zh-cn": "简体中文",
-  zhtw: "繁體中文",
+  "zh-tw": "繁體中文",
   ar: "العربية",
   bn: "বাঙালি"
 };
+
 
 export const homePath = "/";
 export const mp3Path = "/youtube-to-mp3";

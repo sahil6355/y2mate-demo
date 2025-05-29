@@ -16,7 +16,7 @@ module.exports = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locales`,
-        languages: ['en', 'hi', 'zh-cn'],
+        languages: ['en', 'de', 'es', 'fr', 'hi', 'id', 'it', 'pt', 'ru', 'th', 'tr', 'vi', 'ja', 'ko', 'ms', 'ph', 'zh-cn', 'zh-tw', 'ar', 'bn'],
         defaultLanguage: 'en',
         siteUrl: `https://www.yourdomain.tld`,
         redirect: true,
