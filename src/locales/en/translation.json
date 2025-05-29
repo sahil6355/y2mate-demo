@@ -29,6 +29,30 @@
             "desc": "Convert and download YouTube videos to MP4 format seamlessly in HD up to 4K.",
             "helmetTitle": "YouTube to MP4 Converter | Y2Meta",
             "helmetDescription": "Convert and download YouTube videos to MP4 format quickly and securely with Y2Meta. Choose from multiple video qualities, including 720p, 1080p, 2K, and up to 4K."
+        },
+        "/about/": {
+            "title": "About Us - Y2meta",
+            "desc": "Y2meta is a simple YouTube video downloader where you can convert and download YouTube videos on your device.",
+            "helmetTitle": "About Us - Y2meta",
+            "helmetDescription": "Y2meta is a simple YouTube video downloader where you can convert and download YouTube videos on your device."
+        },
+        "/contact/": {
+            "title": "Contact Us - Y2meta",
+            "desc": "If you face any technical issue, please contact us immediately, and we will resolve it within 24 to 48 hours. We are happy to help you!",
+            "helmetTitle": "Contact Us - Y2meta",
+            "helmetDescription": "If you face any technical issue, please contact us immediately, and we will resolve it within 24 to 48 hours. We are happy to help you!"
+        },
+        "/privacy-policy/": {
+            "title": "Privacy Policy - Y2meta",
+            "desc": "Y2meta has defined a Privacy Policy that explains what and how your information is collected by us.",
+            "helmetTitle": "Privacy Policy - Y2meta",
+            "helmetDescription": "Y2meta has defined a Privacy Policy that explains what and how your information is collected by us."
+        },
+        "/terms-condition/": {
+            "title": "Terms of Service - Y2meta",
+            "desc": "In the legal document released by Y2meta, we provide some guidelines and rules for YouTube Downloader. If you want to use it, you must agree to our terms and conditions.",
+            "helmetTitle": "Terms of Service - Y2meta",
+            "helmetDescription": "In the legal document released by Y2meta, we provide some guidelines and rules for YouTube Downloader. If you want to use it, you must agree to our terms and conditions."
         }
     },
     "search": {
