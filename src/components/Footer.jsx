@@ -1,23 +1,25 @@
-import { Link } from "gatsby-plugin-react-i18next";
+import { Link } from "gatsby";
 import React from "react";
 
 const Footer = () => {
+  // const { t } = useTranslation();
+
   return (
     <div className="container">
       <div className="footer">
         <p className="text-center">@2025 y2meta</p>
         <ul>
           <li>
-            <Link to="#">About</Link>
+            <Link to="/about">About </Link>
           </li>
           <li>
-            <Link to="#">Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <Link to="#">Terms of Service</Link>
+            <Link to="/terms-condition">Terms and Condition </Link>
           </li>
           <li>
-            <Link to="#">Privacy Policy</Link>
+            <Link to="/privacy-policy">Privacy Policy</Link>
           </li>
         </ul>
       </div>
