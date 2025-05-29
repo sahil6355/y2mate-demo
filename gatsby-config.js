@@ -28,7 +28,11 @@ module.exports = {
           interpolation: { escapeValue: false },
           ns: ["translation"],
           defaultNS: "translation",
-          fallbackLng: false
+          fallbackLng: false,
+          lowerCaseLng: true,
+          saveMissing: false,
+          keySeparator: false,
+          nsSeparator: false
         },
         pages: [
           {
