@@ -8,7 +8,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "static/images/favicon.webp",
+        icon: "static/images/logo.webp",
       },
     },
     "gatsby-plugin-react-helmet",
@@ -16,9 +16,7 @@ module.exports = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locales`,
-        languages: ['en', 'de', 'es', 'fr', 'hi', 'id', 'it', 'pt', 'ru', 'th', 'tr', 'vi', 'ja', 'ko', 'ms', 'ph', 'zh-cn', 'zhtw', 'ar', 'bn'],
-
-
+        languages: ['en', 'hi', 'zh-cn'],
         defaultLanguage: 'en',
         siteUrl: `https://www.yourdomain.tld`,
         redirect: true,
@@ -30,9 +28,7 @@ module.exports = {
           defaultNS: "translation",
           fallbackLng: false,
           lowerCaseLng: true,
-          saveMissing: false,
-          keySeparator: false,
-          nsSeparator: false
+          saveMissing: false
         },
         pages: [
           {
@@ -41,6 +37,22 @@ module.exports = {
           },
           {
             matchPath: '/convert',
+            languages: ['en']
+          },
+          {
+            matchPath: '/about',
+            languages: ['en']
+          },
+          {
+            matchPath: '/contact',
+            languages: ['en']
+          },
+          {
+            matchPath: '/privacy-policy',
+            languages: ['en']
+          },
+          {
+            matchPath: '/terms-condition',
             languages: ['en']
           },
         ]

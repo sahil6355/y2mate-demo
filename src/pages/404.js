@@ -1,20 +1,20 @@
-import * as React from "react"
-import { Link } from "gatsby-plugin-react-i18next"
+import * as React from "react";
+import { Link } from "gatsby-plugin-react-i18next";
 
 const pageStyles = {
   color: "#232129",
   padding: "96px",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
+};
 const headingStyles = {
   marginTop: 0,
   marginBottom: 64,
   maxWidth: 320,
-}
+};
 
 const paragraphStyles = {
   marginBottom: 48,
-}
+};
 
 const NotFoundPage = () => {
   return (
@@ -27,9 +27,9 @@ const NotFoundPage = () => {
         <Link to="/">Go home</Link>.
       </p>
     </main>
-  )
-}
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;
 
-export const Head = () => <title>Not found</title>
+export const Head = () => <title>Not found</title>;

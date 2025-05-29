@@ -15,7 +15,7 @@ export const languageDD = {
   ko: "한국어",
   ms: "Malay",
   ph: "Filipino",
-  zhcn: "简体中文",
+  "zh-cn": "简体中文",
   zhtw: "繁體中文",
   ar: "العربية",
   bn: "বাঙালি"

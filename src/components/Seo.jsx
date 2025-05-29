@@ -23,18 +23,18 @@ const Seo = () => {
             <title>{containerTitle?.helmetTitle}</title>
             <meta name="description" content={containerTitle?.helmetDescription} data-gatsby-head="true" />
             <meta property="og:title" content={containerTitle?.helmetTitle} data-gatsby-head="true" />
-            <meta property="og:description" content={containerTitle?.helmetDescription} data-gatsby-head="true"/>
+            <meta property="og:description" content={containerTitle?.helmetDescription} data-gatsby-head="true" />
             <meta property="og:type" content="website" data-gatsby-head="true" />
-            <meta property="og:url" content={`https://yt1s-psi.vercel.app${currentPath}`} data-gatsby-head="true"/>
+            <meta property="og:url" content={`https://yt1s-psi.vercel.app${currentPath}`} data-gatsby-head="true" />
             <meta property="og:site_name" content="Y2Meta" data-gatsby-head="true" />
 
             {/* Favicon */}
-            <link rel="preload" fetchpriority="high" as="image" href="../images/logo.webp" type="image/webp"/>
+            <link rel="preload" fetchpriority="high" as="image" href="../images/logo.webp" type="image/webp" />
             <link rel="icon" href="../images/favicon.webp" />
 
-            <link rel="canonical" href={`https://yt1s-psi.vercel.app/${currentLang}`}/>
+            <link rel="canonical" href={`https://yt1s-psi.vercel.app/${currentLang}`} />
             {languages?.map?.((k) => (
-                <link key={k} rel="alternate" hrefLang={k} href={`/${k}${currentPath}`} data-gatsby-head="true"/>
+                <link key={k} rel="alternate" hrefLang={k} href={`/${k}${currentPath}`} data-gatsby-head="true" />
             ))}
         </Helmet>
     );
