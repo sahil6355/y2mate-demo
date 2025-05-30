@@ -246,47 +246,50 @@ const SeachContainer = ({ convertLocation }) => {
             {t("search.terms")}
             <GatsbyLink to="/terms-condition"> {t("search.termsLink")}</GatsbyLink>
           </span>
-        </div>
-      </div>
 
-      {originalPath === `${searchPath}/` ? (
-        <div className="result">
-          {loading ? (
-            <div className="spinner" id="loader">
-              {Array.from({ length: 4 })?.map((_, index) => {
-                return <div className={`box-${index + 1}`} key={index}></div>;
-              })}
-            </div>
-          ) : (
-            <div className="data_results data_results_search">
-              {searchResults?.length ? (
-                searchResults?.map?.((result, index) => (
-                  <div
-                    key={index}
-                    className="result-item"
-                    onClick={() => {
-                      handleConvert(result);
-                    }}
-                  >
-                    <img
-                      src={result?.thumbMedium || result?.thumbDefault}
-                      alt={result.title}
-                    />
-                    <h3>
-                      {result?.title}
-                    </h3>
-                    <div className="btn-submit" id="btn-submit">Download</div>
-                  </div>
-                ))
+          {originalPath === `${searchPath}/` ? (
+            <div className="result">
+              {loading ? (
+                <div className="spinner" id="loader">
+                  {Array.from({ length: 4 })?.map((_, index) => {
+                    return <div className={`box-${index + 1}`} key={index}></div>;
+                  })}
+                </div>
               ) : (
-                <div className="not-found" >
-                  {t("notFound")}
+                <div className="data_results data_results_search">
+                  {searchResults?.length ? (
+                    searchResults?.map?.((result, index) => (
+                      <div
+                        key={index}
+                        className="result-item"
+                        onClick={() => {
+                          handleConvert(result);
+                        }}
+                      >
+                        <img
+                          src={result?.thumbMedium || result?.thumbDefault}
+                          alt={result.title}
+                        />
+                        <h3>
+                          {result?.title}
+                        </h3>
+                        <div className="btn-submit" id="btn-submit">Download</div>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="not-found" >
+                      {t("notFound")}
+                    </div>
+                  )}
                 </div>
               )}
             </div>
-          )}
+          ) : null}
+
         </div>
-      ) : null}
+      </div>
+
+
 
       {originalPath === `${convertPath}/` ? (
         <div className="result mt-48">

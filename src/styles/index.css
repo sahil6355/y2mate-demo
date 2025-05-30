@@ -733,6 +733,11 @@ form.contact-form button {
   text-overflow: ellipsis;
 }
 
+.result-item img {
+  max-width: 100%;
+  height: auto;
+}
+
 @media screen and (max-width: 991px) {
   .navbar {
     position: absolute;
