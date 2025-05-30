@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { navigate } from "gatsby";
-// import { useTranslation } from "react-i18next";
-import { Link, useTranslation } from "gatsby-plugin-react-i18next";
+import { useTranslation } from "react-i18next";
 import {
   blockedIds,
   convertPath,
@@ -245,7 +244,7 @@ const SeachContainer = ({ convertLocation }) => {
           </form>
           <span>
             {t("search.terms")}
-            <Link to="/terms-condition"> {t("search.termsLink")}</Link>
+            <Link to="#"> {t("search.termsLink")}</Link>
           </span>
         </div>
       </div>
