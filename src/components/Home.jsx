@@ -13,11 +13,8 @@ const Home = ({ searchProps, convertProps }) => {
   const location = useLocation();
   const currentPath = location.pathname;
 
-  const rawParagraph = t("introParagraph");
-const dynamicParagraph = rawParagraph.replace("{{link}}", currentPath);
-
-const adStep1Raw = t("adStep1");
-const adStep1HTML = adStep1Raw.replace("{{link}}", currentPath);
+  const introParagraphHTML = t("introParagraph").replace("{{link}}", currentPath);
+  const adStep1HTML = t("adStep1").replace("{{link}}", currentPath);
 
   return (
     <>
@@ -29,7 +26,7 @@ const adStep1HTML = adStep1Raw.replace("{{link}}", currentPath);
       <h2 className="text-center mt-48">{t("headTitle")}</h2>
       <p
         className="text-justify"
-        dangerouslySetInnerHTML={{ __html: dynamicParagraph }}
+        dangerouslySetInnerHTML={{ __html: introParagraphHTML  }}
       ></p>
       <p>{t("introParagraph2")}</p>
       <div className="border-line2 mt-48"></div>
@@ -46,7 +43,7 @@ const adStep1HTML = adStep1Raw.replace("{{link}}", currentPath);
         <div className="y2meta-advantages">
           <h2>{t("advantages")}</h2>
           <ul>
-            <li dangerouslySetInnerHTML={{ __html: adStep1HTML }}></li>            
+            <li dangerouslySetInnerHTML={{ __html: adStep1HTML  }}></li>
             <li>{t("adStep2")}</li>
             <li>{t("adStep3")}</li>
             <li>{t("adStep4")}</li>
