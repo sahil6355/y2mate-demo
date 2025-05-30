@@ -126,7 +126,7 @@ a {
 }
 
 header {
-  padding: 10px 0;
+  padding: 0;
 }
 
 .header-box {
@@ -157,7 +157,7 @@ header {
 
 .navbar {
   display: flex;
-  gap: 30px;
+  gap: 0;
 }
 
 .navbar li {
@@ -170,6 +170,13 @@ header {
   font-size: 14px;
   line-height: 18.4px;
   color: var(--black-color);
+  padding: 26px 15px;
+  display: block;
+}
+
+.navbar a:hover {
+  background-color: #eee;
+  color: #c10841;
 }
 
 .language {
@@ -218,6 +225,12 @@ header {
   border: none;
   font-size: 14px;
   cursor: pointer;
+  padding: 26px 15px;
+}
+
+#language-btn:hover {
+  background-color: #eee;
+  color: #c10841;
 }
 
 .sub-language li p {
@@ -303,7 +316,7 @@ li.search_result {
   width: 100%;
   max-width: 894px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0;
 }
 
 .banner-box p {
