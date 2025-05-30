@@ -35,7 +35,10 @@ const Home = ({ searchProps, convertProps }) => {
         <div className="y2meta-advantages">
           <h2>{t("advantages")}</h2>
           <ul>
-            <li>{t("adStep1")}</li>
+            <li 
+            dangerouslySetInnerHTML={{ __html: t("adStep1") }}
+            ></li>
+            
             <li>{t("adStep2")}</li>
             <li>{t("adStep3")}</li>
             <li>{t("adStep4")}</li>
