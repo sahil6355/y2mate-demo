@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { navigate } from "gatsby";
+import { navigate , Link as GatsbyLink } from "gatsby";
 import { useTranslation } from "react-i18next";
 import {
   blockedIds,
@@ -244,7 +244,7 @@ const SeachContainer = ({ convertLocation }) => {
           </form>
           <span>
             {t("search.terms")}
-            <Link to="#"> {t("search.termsLink")}</Link>
+            <GatsbyLink to="#"> {t("search.termsLink")}</GatsbyLink>
           </span>
         </div>
       </div>
