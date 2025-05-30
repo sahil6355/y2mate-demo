@@ -14,17 +14,15 @@ const YoutubeToMp3 = () => {
   const location = useLocation();
   const currentPath = location.pathname; // e.g. "/youtube-to-mp3"
 
-  const descriptionHTML = t("youtubeToMp3.description").replace("{{link}}", currentPath);
+  const step2 = t("youtubeToMp3.steps.step2").replace("{{link}}", currentPath);
+
 
   return (
     <>
       <SeachContainer />
       <div className="container">
         <h2 className="text-center mt-48">{t("youtubeToMp3.title")}</h2>
-        <p
-          className="text-justify"
-          dangerouslySetInnerHTML={{ __html: descriptionHTML }}
-        ></p>
+        <p className="text-justify">{t("youtubeToMp3.description")}</p>
         <p>{t("youtubeToMp3.description2")}</p>
         <div className="border-line2 mt-48"></div>
         <div className="y2meta-guide">
@@ -32,7 +30,7 @@ const YoutubeToMp3 = () => {
             <h2>{t("youtubeToMp3.steps.title")}</h2>
             <ol>
               <li>{t("youtubeToMp3.steps.step1")}</li>
-              <li>{t("youtubeToMp3.steps.step2")}</li>
+              <li dangerouslySetInnerHTML={{ __html: step2 }}></li>
               <li>{t("youtubeToMp3.steps.step3")}</li>
               <li>{t("youtubeToMp3.steps.step4")}</li>
             </ol>

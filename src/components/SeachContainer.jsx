@@ -275,6 +275,7 @@ const SeachContainer = ({ convertLocation }) => {
                     <h3>
                       {result?.title}
                     </h3>
+                    <div className="btn-submit" id="btn-submit"><div className="img down-arrow"></div><span>Download</span></div>
                   </div>
                 ))
               ) : (
