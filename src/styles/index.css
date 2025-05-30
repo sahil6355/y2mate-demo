@@ -738,6 +738,12 @@ form.contact-form button {
   height: auto;
 }
 
+.not-found {
+  grid-column: 1 / -1;
+  width: 100%;
+  text-align: center;
+}
+
 @media screen and (max-width: 991px) {
   .navbar {
     position: absolute;
