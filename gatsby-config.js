@@ -8,7 +8,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "static/images/logo.webp",
+        icon: "static/images/favicon.webp",
       },
     },
     "gatsby-plugin-react-helmet",

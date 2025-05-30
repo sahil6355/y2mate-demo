@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { navigate } from "gatsby";
 // import { useTranslation } from "react-i18next";
-import { useTranslation } from "gatsby-plugin-react-i18next";
+import {Link, useTranslation } from "gatsby-plugin-react-i18next";
 import {
   blockedIds,
   convertPath,
@@ -218,9 +218,8 @@ const SeachContainer = ({ convertLocation }) => {
                     {suggestions?.map?.((term, index) => (
                       <li
                         key={index}
-                        className={`search_result ${
-                          index === activeIndex ? "active" : ""
-                        }`}
+                        className={`search_result ${index === activeIndex ? "active" : ""
+                          }`}
                         style={{
                           cursor: "pointer",
                           backgroundColor:
@@ -358,9 +357,8 @@ const SeachContainer = ({ convertLocation }) => {
                   <iframe
                     title="yt-meta"
                     id="widgetPlusApi"
-                    src={`https://ac.insvid.com/widget?url=https://www.youtube.com/watch?v=${
-                      convertLocation?.id
-                    }&el=${convertTimeToSeconds(convertLocation?.duration)}`}
+                    src={`https://ac.insvid.com/widget?url=https://www.youtube.com/watch?v=${convertLocation?.id
+                      }&el=${convertTimeToSeconds(convertLocation?.duration)}`}
                     width="100%"
                     height="100%"
                     allowtransparency="true"
