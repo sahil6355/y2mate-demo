@@ -244,7 +244,7 @@ const SeachContainer = ({ convertLocation }) => {
           </form>
           <span>
             {t("search.terms")}
-            <GatsbyLink to="#"> {t("search.termsLink")}</GatsbyLink>
+            <GatsbyLink to="/terms-condition"> {t("search.termsLink")}</GatsbyLink>
           </span>
         </div>
       </div>
