@@ -237,7 +237,8 @@ header {
 .sub-language li p {
   display: block;
   font-size: 16px;
-  padding: 3px 20px;
+  padding: 5px 20px;
+  margin: 0;
   clear: both;
   font-weight: normal;
   line-height: 24px;
@@ -373,13 +374,15 @@ li.search_result {
 .primary-btn {
   background: #e2084a;
   color: #fff;
-  padding: 13px 40px;
   border-radius: 0;
   border: none;
   font-size: 18px;
   line-height: 20px;
   height: 100%;
   cursor: pointer;
+  padding: 12px 12px;
+  max-width: 140px;
+  width: 100%;
 }
 
 .feature-list {
@@ -801,6 +804,10 @@ form.contact-form button {
 
   .y2meta-guide {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .primary-btn {
+    
   }
 }
 
