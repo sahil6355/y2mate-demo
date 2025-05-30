@@ -258,7 +258,7 @@ const SeachContainer = ({ convertLocation }) => {
               })}
             </div>
           ) : (
-            <div className="data_results">
+            <div className="data_results data_results_search">
               {searchResults?.length ? (
                 searchResults?.map?.((result, index) => (
                   <div
@@ -275,7 +275,7 @@ const SeachContainer = ({ convertLocation }) => {
                     <h3>
                       {result?.title}
                     </h3>
-                    <div className="btn-submit" id="btn-submit"><div className="img down-arrow"></div><span>Download</span></div>
+                    <div className="btn-submit" id="btn-submit">Download</div>
                   </div>
                 ))
               ) : (
