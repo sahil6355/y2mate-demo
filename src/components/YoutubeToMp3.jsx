@@ -12,9 +12,9 @@ const YoutubeToMp3 = () => {
 
 
   const location = useLocation();
-const currentPath = location.pathname; // e.g. "/youtube-to-mp4"
+  const currentPath = location.pathname; // e.g. "/youtube-to-mp3"
 
-const descriptionHTML = t("youtubeToMp3.description").replace("{{link}}", currentPath);
+  const descriptionHTML = t("youtubeToMp3.description").replace("{{link}}", currentPath);
 
   return (
     <>

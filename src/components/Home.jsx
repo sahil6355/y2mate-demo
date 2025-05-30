@@ -2,12 +2,20 @@ import React from "react";
 // import { useTranslation } from "react-i18next";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import SeachContainer from "./SeachContainer";
+import { useLocation } from "@reach/router";
 
 const Home = ({ searchProps, convertProps }) => {
   const { t } = useTranslation();
 
   const features = t("features", { returnObjects: true });
   const homeFaqs = t("homeFaqs", { returnObjects: true });
+
+  const location = useLocation();
+  const currentPath = location.pathname; // e.g. "/"
+
+  const introParagraph = t("introParagraph").replace("{{link}}", currentPath);
+
+
   return (
     <>
       <SeachContainer
@@ -18,7 +26,7 @@ const Home = ({ searchProps, convertProps }) => {
       <h2 className="text-center mt-48">{t("headTitle")}</h2>
       <p
         className="text-justify"
-        dangerouslySetInnerHTML={{ __html: t("introParagraph") }}
+        dangerouslySetInnerHTML={{ __html: introParagraph }}
       ></p>
       <p>{t("introParagraph2")}</p>
       <div className="border-line2 mt-48"></div>

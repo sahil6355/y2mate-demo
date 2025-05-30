@@ -2,12 +2,18 @@ import React from "react";
 // import { useTranslation } from "react-i18next";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import SeachContainer from "./SeachContainer";
+import { useLocation } from "@reach/router";
 
 const YoutubeToMp4 = () => {
   const { t } = useTranslation();
 
   const mp4Features = t("youtubeToMp4.mp4Features", { returnObjects: true });
   const mp4FaqData = t("youtubeToMp4.mp4FaqData", { returnObjects: true });
+
+  const location = useLocation();
+  const currentPath = location.pathname; // e.g. "/youtube-to-mp4"
+
+  const adStep1 = t("youtubeToMp4.adStep1").replace("{{link}}", currentPath);
 
   return (
     <>
@@ -31,7 +37,7 @@ const YoutubeToMp4 = () => {
           <div className="y2meta-advantages">
             <h2>{t("youtubeToMp4.advantages")}</h2>
             <ul>
-              <li dangerouslySetInnerHTML={{ __html: t("youtubeToMp4.adStep1") }}></li>
+              <li dangerouslySetInnerHTML={{ __html: adStep1 }}></li>
               <li>{t("youtubeToMp4.adStep2")}</li>
               <li>{t("youtubeToMp4.adStep3")}</li>
               <li>{t("youtubeToMp4.adStep4")}</li>
