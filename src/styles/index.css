@@ -776,6 +776,10 @@ form.contact-form button {
   .navbar a:hover {
     background-color: transparent;
   }
+
+  ul.sub-language.lang_menu li {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
