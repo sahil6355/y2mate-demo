@@ -278,7 +278,7 @@ const SeachContainer = ({ convertLocation }) => {
                                             </div>
                                         ))
                                     ) : (
-                                        <div className="not-found" >
+                                        <div className="not-found warning" >
                                             {t("notFound")}
                                         </div>
                                     )}
