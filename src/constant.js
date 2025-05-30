@@ -21,31 +21,6 @@ export const languageDD = {
   bn: "বাঙালি"
 };
 
-
-export const termstext = {
-  en: "Term and Conditions",
-  de: "Geschäftsbedingungen",
-  es: "Términos y condiciones",
-  fr: "Conditions générales",
-  hi: "नियम और शर्तें",
-  id: "Syarat dan Ketentuan",
-  it: "Termini e condizioni",
-  pt: "Termos e Condições",
-  ru: "Условия и положения",
-  th: "ข้อกำหนดและเงื่อนไข",
-  tr: "Şartlar ve Koşullar",
-  vi: "Điều khoản và điều kiện",
-  ja: "利用規約",
-  ko: "이용 약관",
-  ms: "Terma dan Syarat",
-  ph: "Mga Tuntunin at Kundisyon",
-  "zh-cn": "条款和条件",
-  "zh-tw": "條款與條件",
-  ar: "الشروط والأحكام",
-  bn: "শর্তাবলী"
-};
-
-
 export const homePath = "/";
 export const mp3Path = "/youtube-to-mp3";
 export const mp4Path = "/youtube-to-mp4";
