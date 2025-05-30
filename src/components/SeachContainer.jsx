@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { navigate , Link as GatsbyLink } from "gatsby";
+import { navigate, Link as GatsbyLink } from "gatsby";
 import { useTranslation } from "react-i18next";
 import {
   blockedIds,
