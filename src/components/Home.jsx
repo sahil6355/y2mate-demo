@@ -16,7 +16,10 @@ const Home = ({ searchProps, convertProps }) => {
       />
 
       <h2 className="text-center mt-48">{t("headTitle")}</h2>
-      <p className="text-justify" dangerouslySetInnerHTML={{ __html: t("introParagraph") }}></p>
+      <p
+        className="text-justify"
+        dangerouslySetInnerHTML={{ __html: t("introParagraph") }}
+      ></p>
       <p>{t("introParagraph2")}</p>
       <div className="border-line2 mt-48"></div>
       <div className="y2meta-guide">
