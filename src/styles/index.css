@@ -865,7 +865,7 @@ form.contact-form button {
     max-width: 100%;
   }
   .data_results_search {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
