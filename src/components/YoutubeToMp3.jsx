@@ -2,12 +2,19 @@ import React from "react";
 // import { useTranslation } from "react-i18next";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import SeachContainer from "./SeachContainer";
+import { useLocation } from "@reach/router";
 
 const YoutubeToMp3 = () => {
   const { t } = useTranslation();
 
   const mp3Features = t("youtubeToMp3.mp3Features", { returnObjects: true });
   const mp3Faqs = t("youtubeToMp3.mp3Faqs", { returnObjects: true });
+
+
+  const location = useLocation();
+const currentPath = location.pathname; // e.g. "/youtube-to-mp4"
+
+const descriptionHTML = t("youtubeToMp3.description").replace("{{link}}", currentPath);
 
   return (
     <>
@@ -16,7 +23,7 @@ const YoutubeToMp3 = () => {
         <h2 className="text-center mt-48">{t("youtubeToMp3.title")}</h2>
         <p
           className="text-justify"
-          dangerouslySetInnerHTML={{ __html: t("youtubeToMp3.description") }}
+          dangerouslySetInnerHTML={{ __html: descriptionHTML }}
         ></p>
         <p>{t("youtubeToMp3.description2")}</p>
         <div className="border-line2 mt-48"></div>
