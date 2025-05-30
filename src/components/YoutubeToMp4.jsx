@@ -31,7 +31,7 @@ const YoutubeToMp4 = () => {
           <div className="y2meta-advantages">
             <h2>{t("youtubeToMp4.advantages")}</h2>
             <ul>
-              <li>{t("youtubeToMp4.adStep1")}</li>
+              <li dangerouslySetInnerHTML={{ __html: t("youtubeToMp4.adStep1") }}></li>
               <li>{t("youtubeToMp4.adStep2")}</li>
               <li>{t("youtubeToMp4.adStep3")}</li>
               <li>{t("youtubeToMp4.adStep4")}</li>

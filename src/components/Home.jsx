@@ -1,6 +1,5 @@
 import React from "react";
 // import { useTranslation } from "react-i18next";
-import { useLocation } from "@reach/router";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import SeachContainer from "./SeachContainer";
 
@@ -9,13 +8,6 @@ const Home = ({ searchProps, convertProps }) => {
 
   const features = t("features", { returnObjects: true });
   const homeFaqs = t("homeFaqs", { returnObjects: true });
-
-  const location = useLocation();
-  const currentPath = location.pathname;
-
-  const introParagraphHTML = t("introParagraph").replace("{{link}}", currentPath);
-  const adStep1HTML = t("adStep1").replace("{{link}}", currentPath);
-
   return (
     <>
       <SeachContainer
@@ -26,7 +18,7 @@ const Home = ({ searchProps, convertProps }) => {
       <h2 className="text-center mt-48">{t("headTitle")}</h2>
       <p
         className="text-justify"
-        dangerouslySetInnerHTML={{ __html: introParagraphHTML  }}
+        dangerouslySetInnerHTML={{ __html: t("introParagraph") }}
       ></p>
       <p>{t("introParagraph2")}</p>
       <div className="border-line2 mt-48"></div>
@@ -43,7 +35,7 @@ const Home = ({ searchProps, convertProps }) => {
         <div className="y2meta-advantages">
           <h2>{t("advantages")}</h2>
           <ul>
-            <li dangerouslySetInnerHTML={{ __html: adStep1HTML  }}></li>
+            <li>{t("adStep1")}</li>
             <li>{t("adStep2")}</li>
             <li>{t("adStep3")}</li>
             <li>{t("adStep4")}</li>
