@@ -172,6 +172,7 @@ header {
   color: var(--black-color);
   padding: 26px 15px;
   display: block;
+  margin: 0;
 }
 
 .navbar a:hover {
@@ -475,6 +476,10 @@ li.search_result {
 
 .footer a {
   color: #293a46;
+}
+
+.footer a:hover {
+  color: #c10841;
 }
 
 .y2meta-guide {
