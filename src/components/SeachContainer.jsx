@@ -258,35 +258,12 @@ const SeachContainer = ({ convertLocation }) => {
               })}
             </div>
           ) : (
-            <div
-              className="data_results"
-              style={{
-                display: "grid",
-                gridTemplateColumns: searchResults?.length
-                  ? "repeat(3, 1fr)"
-                  : "none",
-                gap: "16px",
-                paddingTop: "16px",
-                justifyContent: searchResults?.length ? "start" : "center",
-                alignItems: searchResults?.length ? "start" : "center",
-                minHeight: "150px",
-              }}
-            >
+            <div className="data_results">
               {searchResults?.length ? (
                 searchResults?.map?.((result, index) => (
                   <div
                     key={index}
                     className="result-item"
-                    style={{
-                      backgroundColor: "#fff",
-                      border: "1px solid #ddd",
-                      borderRadius: "8px",
-                      overflow: "hidden",
-                      textAlign: "center",
-                      boxShadow: "0 2px 4px rgba(172, 43, 43, 0.1)",
-                      transition: "transform 0.2s ease, box-shadow 0.2s ease",
-                      cursor: "pointer",
-                    }}
                     onClick={() => {
                       handleConvert(result);
                     }}
@@ -294,37 +271,14 @@ const SeachContainer = ({ convertLocation }) => {
                     <img
                       src={result?.thumbMedium || result?.thumbDefault}
                       alt={result.title}
-                      style={{
-                        width: "100%",
-                        height: "auto",
-                        borderBottom: "1px solid #ddd",
-                      }}
                     />
-                    <h3
-                      style={{
-                        padding: "8px",
-                        fontSize: "16px",
-                        color: "#333",
-                      }}
-                    >
+                    <h3>
                       {result?.title}
                     </h3>
                   </div>
                 ))
               ) : (
-                <div
-                  className="not-found"
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "100%",
-                    width: "100%",
-                    textAlign: "center",
-                    color: "#999",
-                    fontSize: "18px",
-                  }}
-                >
+                <div className="not-found" >
                   {t("notFound")}
                 </div>
               )}
