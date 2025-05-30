@@ -29,8 +29,8 @@ const Seo = () => {
             <meta property="og:site_name" content="Y2Meta" data-gatsby-head="true" />
 
             {/* Favicon */}
-            <link rel="preload" fetchpriority="high" as="image" href="../images/logo.webp" type="image/webp" />
-            <link rel="icon" href="../images/favicon.webp" />
+            <link rel="preload" fetchpriority="high" as="image" href="/images/logo.webp" type="image/webp" />
+            <link rel="icon" href="/images/favicon.webp" />
 
             <link rel="canonical" href={`https://yt1s-psi.vercel.app/${currentLang}`} />
             {languages?.map?.((k) => (
