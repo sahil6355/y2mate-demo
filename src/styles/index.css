@@ -462,7 +462,7 @@ li.search_result {
 .footer ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 5px 30px;
   justify-content: center;
   align-items: center;
 }
@@ -847,7 +847,7 @@ form.contact-form button {
   }
 
   .footer ul {
-    gap: 10px;
+    gap: 5px 10px;
   }
 
   .banner-box-content {
@@ -899,6 +899,11 @@ form.contact-form button {
     font-size: 14px;
     padding: 10px;
     width: 124px;
+  }
+
+  .footer {
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
 }
 
