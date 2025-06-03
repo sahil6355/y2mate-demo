@@ -3,7 +3,7 @@ import React from "react";
 
 const Terms = () => {
     return (
-        <>
+        <div className="container">
             <h1 className="mt-48">Terms and Conditions</h1>
             <p>Please read these terms and conditions carefully before using Our Service.</p>
             <h2>Interpretation and Definitions</h2>
@@ -90,7 +90,7 @@ const Terms = () => {
                     <p>By visiting this page on our website: <a href="https://y2meta.lol" rel="external nofollow noopener" target="_blank">https://y2meta.lol</a></p>
                 </li>
             </ul>
-        </>
+        </div>
     );
 };
 

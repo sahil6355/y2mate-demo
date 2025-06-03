@@ -3,7 +3,7 @@ import React from "react";
 
 const Privacy = () => {
     return (
-        <>
+        <div className="container">
             <h1 className="mt-48">Privacy Policy</h1>
             <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
             <h2>Interpretation and Definitions</h2>
@@ -182,7 +182,7 @@ const Privacy = () => {
                     <p>By visiting this page on our website: <a href="https://y2meta.lol" rel="external nofollow noopener" target="_blank">https://y2meta.lol</a></p>
                 </li>
             </ul>
-        </>
+        </div>
     );
 };
 

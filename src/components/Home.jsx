@@ -24,10 +24,9 @@ const Home = ({ searchProps, convertProps }) => {
             />
 
             <div className="container">
+
                 <h2 className="text-center mt-48">{t("headTitle")}</h2>
-                <p
-                    className="text-justify"
-                    dangerouslySetInnerHTML={{ __html: introParagraph }}
+                <p className="text-justify" dangerouslySetInnerHTML={{ __html: introParagraph }}
                 ></p>
                 <p>{t("introParagraph2")}</p>
                 <div className="border-line2 mt-48"></div>

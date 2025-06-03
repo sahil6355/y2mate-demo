@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `yt1`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://y2meta.lol`,
   },
   plugins: [
     "gatsby-plugin-sitemap",
@@ -18,7 +18,7 @@ module.exports = {
         localeJsonSourceName: `locales`,
         languages: ['en', 'de', 'es', 'fr', 'hi', 'id', 'it', 'pt', 'ru', 'th', 'tr', 'vi', 'ja', 'ko', 'ms', 'ph', 'zh-cn', 'zh-tw', 'ar', 'bn'],
         defaultLanguage: 'en',
-        siteUrl: `https://www.yourdomain.tld`,
+        siteUrl: `https://y2meta.lol`,
         redirect: true,
         getLanguageFromPath: true,
         prefixDefaultLanguage: true,
