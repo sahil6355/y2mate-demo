@@ -2,7 +2,7 @@ import React from "react";
 // import { useTranslation } from "react-i18next";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import SeachContainer from "./SeachContainer";
-import { useLocation } from "@reach/router";
+// import { useLocation } from "@reach/router";
 
 const YoutubeToMp3 = () => {
   const { t } = useTranslation();
@@ -11,11 +11,8 @@ const YoutubeToMp3 = () => {
   const mp3Faqs = t("youtubeToMp3.mp3Faqs", { returnObjects: true });
 
 
-  const location = useLocation();
-  const currentPath = location.pathname; // e.g. "/youtube-to-mp3"
-
-  const step2 = t("youtubeToMp3.steps.step2").replace("{{link}}", currentPath);
-
+  // const location = useLocation();
+  // const currentPath = location.pathname; // e.g. "/youtube-to-mp3"
 
   return (
     <>
@@ -30,7 +27,7 @@ const YoutubeToMp3 = () => {
             <h2>{t("youtubeToMp3.steps.title")}</h2>
             <ol>
               <li>{t("youtubeToMp3.steps.step1")}</li>
-              <li dangerouslySetInnerHTML={{ __html: step2 }}></li>
+              {/* <li dangerouslySetInnerHTML={{ __html: step2 }}></li> */}
               <li>{t("youtubeToMp3.steps.step3")}</li>
               <li>{t("youtubeToMp3.steps.step4")}</li>
             </ol>
