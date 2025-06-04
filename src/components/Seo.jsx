@@ -15,12 +15,14 @@ const Seo = () => {
         returnObjects: true,
     });
 
-    const isNoIndexPage = ["/search", "/convert"].includes(currentPath);
-    const robotsTag = isNoIndexPage ? "noindex, nofollow" : "index, follow";
+    
     return (
         <Helmet htmlAttributes={{ lang: currentLang }}>
 
-            ${console.log(currentPath)}
+            ${
+            const isNoIndexPage = ["/search", "/convert"].includes(currentPath);
+            const robotsTag = isNoIndexPage ? "noindex, nofollow" : "index, follow";
+            }
             <meta name="robots" content={robotsTag} data-gatsby-head="true" />
             <meta charSet="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
