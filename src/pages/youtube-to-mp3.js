@@ -5,7 +5,7 @@ import YoutubeToMp3 from "../components/YoutubeToMp3";
 import Seo from "../components/Seo";
 import { graphql } from "gatsby";
 
-const Index = () => {
+const YoutubeToMp3Index = () => {
   return (
     <>
       <Seo />
@@ -16,7 +16,7 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default YoutubeToMp3Index;
 
 export const query = graphql`
   query ($language: String!) {
