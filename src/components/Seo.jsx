@@ -19,27 +19,27 @@ const Seo = () => {
 
     return (
         <Helmet htmlAttributes={{ lang: currentLang }}>
-            <meta name="robots" content={["/search", "/convert"].includes(currentPath.replace(/\/$/, "")) ? "noindex, nofollow" : "noindex, nofollow"} />
+            <meta name="robots" content={["/search", "/convert"].includes(currentPath.replace(/\/$/, "")) ? "noindex, nofollow" : "noindex, nofollow"} data-gatsby-head="true" />
 
             <meta charSet="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <title>{containerTitle?.helmetTitle}</title>
-            <meta name="description" content={containerTitle?.helmetDescription} />
-            <meta property="og:title" content={containerTitle?.helmetTitle} />
-            <meta property="og:description" content={containerTitle?.helmetDescription} />
-            <meta property="og:type" content="website" />
-            <meta property="og:url" content={`https://y2meta.lol${currentPath}`} />
-            <meta property="og:site_name" content="Y2Meta" />
+            <meta name="description" content={containerTitle?.helmetDescription} data-gatsby-head="true" />
+            <meta property="og:title" content={containerTitle?.helmetTitle} data-gatsby-head="true" />
+            <meta property="og:description" content={containerTitle?.helmetDescription} data-gatsby-head="true" />
+            <meta property="og:type" content="website" data-gatsby-head="true" />
+            <meta property="og:url" content={`https://y2meta.lol${currentPath}`} data-gatsby-head="true" />
+            <meta property="og:site_name" content="Y2Meta" data-gatsby-head="true" />
 
             {/* Favicon */}
             <link rel="preload" fetchpriority="high" as="image" href="/images/logo.webp" type="image/webp" />
             <link rel="icon" href="/images/favicon.webp" />
 
-            <link rel="canonical" href={currentLang === "en" ? `https://y2meta.lol${currentPath}` : `https://y2meta.lol/${currentLang}${currentPath}`} />
+            <link rel="canonical" href={currentLang === "en" ? `https://y2meta.lol${currentPath}` : `https://y2meta.lol/${currentLang}${currentPath}`} data-gatsby-head="true"/>
             
             {languages?.map?.((k) => (
 
-                <link rel="alternate" hrefLang={k} href={k === "en" ? `https://y2meta.lol${currentPath}` : `https://y2meta.lol/${k}${currentPath}`} />
+                <link rel="alternate" hrefLang={k} href={k === "en" ? `https://y2meta.lol${currentPath}` : `https://y2meta.lol/${k}${currentPath}`} data-gatsby-head="true" />
                 
             ))}
         </Helmet>
