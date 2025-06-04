@@ -35,12 +35,25 @@ const Seo = () => {
             <link rel="preload" fetchpriority="high" as="image" href="/images/logo.webp" type="image/webp" />
             <link rel="icon" href="/images/favicon.webp" />
 
-            <link rel="canonical" href={`https://y2meta.lol/${currentLang === "en" ? "" : `${currentLang}/`}`} />
-            {languages?.map?.((k) => (
-
-                <link rel="alternate" hrefLang={k} href={currentPath === "/" ? "https://y2meta.lol" : `https://y2meta.lol/${k}${currentPath}`} data-gatsby-head="true" />
-
-            ))}
+            {languages?.map((k) => {
+        const isCurrent = k === currentLang;
+        return (
+          <React.Fragment key={k}>
+            {isCurrent && (
+              <link
+                rel="canonical"
+                href={k === "en" ? `https://y2meta.lol${currentPath}` : `https://y2meta.lol/${k}${currentPath}`}
+              />
+            )}
+            <link
+              rel="alternate"
+              hrefLang={k}
+              href={k === "en" ? `https://y2meta.lol${currentPath}` : `https://y2meta.lol/${k}${currentPath}`}
+              data-gatsby-head="true"
+            />
+          </React.Fragment>
+        );
+      })}
         </Helmet>
     );
 };
