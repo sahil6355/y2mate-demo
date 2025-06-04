@@ -17,7 +17,8 @@ const Seo = () => {
 
     const isNoIndexPage = ["/search", "/convert"].includes(currentPath);
     const robotsTag = isNoIndexPage ? "noindex, nofollow" : "index, follow";
-
+    console.log(isNoIndexPage);
+    console.log(robotsTag);
     return (
         <Helmet htmlAttributes={{ lang: currentLang }}>
             <meta name="robots" content={robotsTag} data-gatsby-head="true" />
