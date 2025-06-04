@@ -23,7 +23,6 @@ const NotFoundPage = () => {
       <p style={paragraphStyles}>
         Sorry 😔, we couldn’t find what you were looking for.
         <br />
-
         <Link to="/">Go home</Link>.
       </p>
     </main>
