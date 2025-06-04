@@ -38,7 +38,7 @@ const Seo = () => {
             <link rel="canonical" href={`https://y2meta.lol/${currentLang === "en" ? "" : `${currentLang}/`}`} />
             {languages?.map?.((k) => (
 
-                <link rel="alternate" hrefLang={k} href={k === "en" ? `https://y2meta.lol/${currentPath}` : `/${k}${currentPath}`} data-gatsby-head="true" />
+                <link rel="alternate" hrefLang={k} href={k === "en" ? `https://y2meta.lol${currentPath}` : `https://y2meta.lol/${k}${currentPath}`} data-gatsby-head="true" />
                 
             ))}
         </Helmet>
