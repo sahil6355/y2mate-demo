@@ -70,12 +70,8 @@ const Header = React.memo(() => {
                                     <ul id="language-dropdown" className={`sub-language ${anchorEl ? "lang_menu" : ""}`}>
                                         {languages?.map?.((lng, index) => (
                                             <li key={index}>
-                                                <Link
-          to={originalPath}
-          language={lng}
-          onClick={handleClose}
-        >
-            {languageDD?.[lng]}
+                                                <Link to={originalPath} language={lng} onClick={handleClose}> </Link>
+                                                {languageDD?.[lng]}
                                             </li>
                                         ))}
                                     </ul>
