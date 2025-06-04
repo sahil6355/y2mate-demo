@@ -19,7 +19,7 @@ const Seo = () => {
 
     return (
         <Helmet htmlAttributes={{ lang: currentLang }}>
-            <meta name="robots" content={["/search", "/convert"].includes(currentPath.replace(/\/$/, "")) ? "noindex, nofollow" : "noindex, nofollow"} data-gatsby-head="true" />
+            <meta name="robots" content={["/search", "/convert"].includes(currentPath.replace(/\/$/, "")) ? "noindex, nofollow" : "index, follow"} data-gatsby-head="true" />
 
             <meta charSet="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -38,7 +38,7 @@ const Seo = () => {
             <link rel="canonical" href={`https://y2meta.lol/${currentLang === "en" ? "" : `${currentLang}/`}`} />
             {languages?.map?.((k) => (
 
-                <link rel="alternate" hrefLang={k} href={k === "en" ? "https://y2meta.lol" : `https://y2meta.lol/${k}`} data-gatsby-head="true" />
+                <link rel="alternate" hrefLang={k} href={k === "en" ? "https://y2meta.lol" : `https://y2meta.lol/${k}${currentPath}`} data-gatsby-head="true" />
 
             ))}
         </Helmet>
