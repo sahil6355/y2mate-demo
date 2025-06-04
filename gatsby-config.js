@@ -1,14 +1,16 @@
+const { languages, defaultLanguage } = require('./src/constant');
+
 module.exports = {
   siteMetadata: {
     title: `yt1`,
-    siteUrl: `https://y2meta.lol`,
+    siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "static/images/favicon.webp",
+        icon: "static/images/logo.webp",
       },
     },
     "gatsby-plugin-react-helmet",
@@ -16,44 +18,39 @@ module.exports = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locales`,
-        languages: ['en', 'de', 'es', 'fr', 'hi', 'id', 'it', 'pt', 'ru', 'th', 'tr', 'vi', 'ja', 'ko', 'ms', 'ph', 'zh-cn', 'zh-tw', 'ar', 'bn'],
-        defaultLanguage: 'en',
-        siteUrl: `https://y2meta.lol`,
+        languages,
+        defaultLanguage,
+        siteUrl: `https://www.yourdomain.tld`,
         redirect: true,
         getLanguageFromPath: true,
         prefixDefaultLanguage: true,
         i18nextOptions: {
-          interpolation: { escapeValue: false },
-          ns: ["translation"],
-          defaultNS: "translation",
-          fallbackLng: false,
+          defaultNS: 'translation',
+          //debug: true,
           lowerCaseLng: true,
-          saveMissing: false
+          saveMissing: false,
+          interpolation: {
+            escapeValue: false // not needed for react as it escapes by default
+          },
+          // keySeparator: false,
+          // nsSeparator: false
         },
         pages: [
           {
             matchPath: '/search',
-            languages: ['en']
+            languages: [defaultLanguage]
           },
           {
             matchPath: '/convert',
-            languages: ['en']
+            languages: [defaultLanguage]
           },
           {
             matchPath: '/about',
-            languages: ['en']
+            languages: [defaultLanguage]
           },
           {
             matchPath: '/contact',
-            languages: ['en']
-          },
-          {
-            matchPath: '/privacy-policy',
-            languages: ['en']
-          },
-          {
-            matchPath: '/terms-condition',
-            languages: ['en']
+            languages: [defaultLanguage]
           },
         ]
       },

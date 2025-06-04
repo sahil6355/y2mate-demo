@@ -1,4 +1,4 @@
-export const languageDD = {
+const languageDD = {
   en: "English",
   de: "Deutsch",
   es: "Español",
@@ -21,13 +21,13 @@ export const languageDD = {
   bn: "বাঙালি"
 };
 
-export const homePath = "/";
-export const mp3Path = "/youtube-to-mp3";
-export const mp4Path = "/youtube-to-mp4";
-export const searchPath = "/search";
-export const convertPath = "/convert";
+const homePath = "/";
+const mp3Path = "/youtube-to-mp3";
+const mp4Path = "/youtube-to-mp4";
+const searchPath = "/search";
+const convertPath = "/convert";
 
-export const blockedIds = [
+const blockedIds = [
   "YVnTGDRXctA",
   "Rk2MW6L89mY",
   "LL0Njfd4oCk",
@@ -104,3 +104,15 @@ export const blockedIds = [
   "SuGWKuXYU0g",
   "f0aYZXsvdBQ",
 ];
+
+module.exports = {
+  languageDD,
+  languages: Object.keys?.(languageDD || {}),
+  defaultLanguage: Object.keys?.(languageDD || {})?.[0],
+  homePath,
+  mp3Path,
+  mp4Path,
+  searchPath,
+  convertPath,
+  blockedIds,
+};
