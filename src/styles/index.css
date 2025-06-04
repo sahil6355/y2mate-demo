@@ -257,6 +257,10 @@ ul.sub-language.lang_menu {
   background: #f1f1f1;
 }
 
+.sub-language li a {
+  padding: 5px 15px;
+}
+
 .mobile-menu {
   color: #293a46;
   padding: 9px 10px;
