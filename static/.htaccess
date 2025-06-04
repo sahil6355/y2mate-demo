@@ -1,4 +1,13 @@
-RewriteEngine On
+RewriteEngine on
 
-# Redirect all paths starting with /en/ to /
-RewriteRule ^en(/.*)?$ / [R=301,L]
+# Support clean URLs like /about → /about.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Fallback redirect non-existing URLs to home
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . / [R=301,L]
+
+RewriteRule ^en(?:/(.*))?$ /$1 [R=301,NC,L]
