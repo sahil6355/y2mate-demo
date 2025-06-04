@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Redirect /en or /en/ to homepage
+RewriteCond %{REQUEST_URI} ^/en/?$
+RewriteRule ^en/?$ / [R=301,L]
