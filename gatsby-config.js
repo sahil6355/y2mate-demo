@@ -3,7 +3,7 @@ const { languages, defaultLanguage } = require('./src/constant');
 module.exports = {
   siteMetadata: {
     title: `yt1`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://y2meta.lol`,
   },
   plugins: [
     "gatsby-plugin-sitemap",
@@ -20,7 +20,7 @@ module.exports = {
         localeJsonSourceName: `locales`,
         languages,
         defaultLanguage,
-        siteUrl: `https://www.yourdomain.tld`,
+        siteUrl: `https://y2meta.lol`,
         redirect: true,
         getLanguageFromPath: true,
         prefixDefaultLanguage: true,
