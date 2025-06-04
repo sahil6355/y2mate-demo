@@ -15,7 +15,7 @@ const Seo = () => {
         returnObjects: true,
     });
 
-    console.log(currentLang);
+    console.log(t);
 
     const isNoIndexPage = ["/search", "/convert"].includes(currentPath);
     const robotsTag = isNoIndexPage ? "noindex, nofollow" : "index, follow";
