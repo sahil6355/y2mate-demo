@@ -1,8 +1,4 @@
 RewriteEngine On
 
-# Redirect /en or /en/ to homepage
-RewriteCond %{REQUEST_URI} ^/en/?$
-RewriteRule ^en/?$ / [R=301,L]
-
-# Optional: Redirect all /en/* to /
+# Redirect all paths starting with /en/ to /
 RewriteRule ^en(/.*)?$ / [R=301,L]
