@@ -38,7 +38,11 @@ const Seo = () => {
             <link rel="preload" fetchpriority="high" as="image" href="/images/logo.webp" type="image/webp" />
             <link rel="icon" href="/images/favicon.webp" />
 
-            <link rel="canonical" href={`https://y2meta.lol/${currentLang}`} />
+            <link
+                rel="canonical"
+                href={`https://y2meta.lol/${currentLang === "en" ? "" : `${currentLang}/`
+                    }`}
+            />
             {languages?.map?.((k) => (
                 <link key={k} rel="alternate" hrefLang={k} href={`/${k}${currentPath}`} data-gatsby-head="true" />
             ))}
