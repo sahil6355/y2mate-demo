@@ -2,8 +2,6 @@ import { Link } from "gatsby";
 import React from "react";
 
 const Footer = () => {
-  // const { t } = useTranslation();
-
   return (
     <div className="container">
       <div className="footer">

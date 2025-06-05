@@ -10,10 +10,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "static/images/logo.webp",
+        icon: "static/images/favicon.webp",
       },
     },
-    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
@@ -50,6 +49,14 @@ module.exports = {
           },
           {
             matchPath: '/contact',
+            languages: [defaultLanguage]
+          },
+          {
+            matchPath: '/terms-condition',
+            languages: [defaultLanguage]
+          },
+          {
+            matchPath: '/privacy-policy',
             languages: [defaultLanguage]
           },
         ]

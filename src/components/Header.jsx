@@ -51,6 +51,7 @@ const Header = React.memo(() => {
                                 </Link>
                             </li>
                             <li>
+                                
                                 <Link to={mp3Path} className={`${originalPath === `${mp3Path}/` && "active"}`}>
                                     YouTube to MP3
                                 </Link>
@@ -70,9 +71,7 @@ const Header = React.memo(() => {
                                     <ul id="language-dropdown" className={`sub-language ${anchorEl ? "lang_menu" : ""}`}>
                                         {languages?.map?.((lng, index) => (
                                             <li key={index}>
-                                                <p onClick={() => changeLang(lng)}>
-                                                    {languageDD?.[lng]}
-                                                </p>
+                                                <Link to={originalPath} language={lng} onClick={handleClose}> {languageDD?.[lng]} </Link>
                                             </li>
                                         ))}
                                     </ul>
