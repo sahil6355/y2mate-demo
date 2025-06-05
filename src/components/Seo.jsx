@@ -12,7 +12,7 @@ const Seo = ({ containerTitlee, currentPath, currentLang, languages }) => {
 
     return (
         <>
-            <meta name="robots" content={["/search", "/convert"].includes(currentPath.replace(/\/$/, "")) ? "noindex, nofollow" : "noindex, follow"} data-gatsby-head="true" />
+            <meta name="robots" content={["/search", "/convert"].includes(currentPath.replace(/\/$/, "")) ? "noindex, nofollow" : "noindex, nofollow"} data-gatsby-head="true" />
 
             <meta charSet="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,7 +26,7 @@ const Seo = ({ containerTitlee, currentPath, currentLang, languages }) => {
             <meta property="og:type" content="website" />
             <meta
                 property="og:url"
-                content={`https://yt1s-psi.vercel.app${currentPath}`}
+                content={`https://y2meta.lol${currentPath}`}
             />
             <meta property="og:site_name" content="Y2Meta" />
 
