@@ -5,8 +5,7 @@ import SeachContainer from "./SeachContainer";
 import { useLocation } from "@reach/router";
 
 const YoutubeToMp4 = () => {
-  // const { t } = useTranslation();
-  const { t } = useTranslation('youtube-to-mp4');
+  const { t } = useTranslation();
 
   const mp4Features = t("youtubeToMp4.mp4Features", { returnObjects: true });
   const mp4FaqData = t("youtubeToMp4.mp4FaqData", { returnObjects: true });

@@ -5,8 +5,7 @@ import SeachContainer from "./SeachContainer";
 import { useLocation } from "@reach/router";
 
 const YoutubeToMp3 = () => {
-//   const { t } = useTranslation();
-  const { t } = useTranslation('youtube-to-mp3');
+  const { t } = useTranslation();
 
   const mp3Features = t("youtubeToMp3.mp3Features", { returnObjects: true });
   const mp3Faqs = t("youtubeToMp3.mp3Faqs", { returnObjects: true });
