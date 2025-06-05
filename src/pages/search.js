@@ -8,15 +8,27 @@ import { graphql } from "gatsby";
 const Index = ({ location }) => {
   return (
     <>
-      <Seo />
       <Layout>
-        <Search location={location} />
+      <Search location={location} />
       </Layout>
     </>
   );
 };
 
 export default Index;
+
+export function Head({ data, pageContext }) {
+  const currentPath = pageContext?.i18n?.originalPath || "/";
+  const currentLang = pageContext?.i18n?.language || "en";
+  const languages = pageContext?.i18n?.languages || "en";
+
+  const dataLanguage = data?.locales?.edges?.find?.(
+    (e) => e?.node?.ns === 'translation'
+  )?.node?.data;
+
+  const t = JSON.parse?.(dataLanguage || {});
+  return <Seo containerTitlee={t.containerTitle} currentPath={currentPath} currentLang={currentLang} languages={languages} />
+}
 
 export const query = graphql`
   query ($language: String!) {

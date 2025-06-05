@@ -13,7 +13,6 @@ module.exports = {
         icon: "static/images/favicon.webp",
       },
     },
-    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
