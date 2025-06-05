@@ -35,7 +35,7 @@ const Seo = ({ containerTitlee, currentPath, currentLang, languages }) => {
                 rel="preload"
                 fetchpriority="high"
                 as="image"
-                href="../images/logo.webp"
+                href="/images/logo.webp"
                 type="image/webp"
             />
 
@@ -53,7 +53,6 @@ const Seo = ({ containerTitlee, currentPath, currentLang, languages }) => {
                 <link key={k} rel="alternate" hrefLang={k} href={k === "en" ? `https://y2meta.lol${currentPath}` : `https://y2meta.lol/${k}${currentPath}`} />
 
             ))}
-
 
         </>
     );
