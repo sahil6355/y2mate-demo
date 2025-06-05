@@ -51,6 +51,14 @@ module.exports = {
             matchPath: '/contact',
             languages: [defaultLanguage]
           },
+          {
+            matchPath: '/terms-condition',
+            languages: [defaultLanguage]
+          },
+          {
+            matchPath: '/privacy-policy',
+            languages: [defaultLanguage]
+          },
         ]
       },
     },
