@@ -4,13 +4,17 @@ import React, { useEffect } from "react";
 const Footer = () => {
 
   useEffect(() => {
-    // Inject Google Analytics script
+    // prevent duplicate GA script injection
+    if (document.getElementById("ga-script")) return;
+
     const script1 = document.createElement("script");
+    script1.id = "ga-script";
     script1.src = "https://www.googletagmanager.com/gtag/js?id=G-R1QQF1FWWS";
     script1.async = true;
     document.head.appendChild(script1);
 
     const script2 = document.createElement("script");
+    script2.id = "ga-init";
     script2.innerHTML = `
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -19,7 +23,6 @@ const Footer = () => {
     `;
     document.head.appendChild(script2);
   }, []);
-
 
   return (
     <div className="container">
