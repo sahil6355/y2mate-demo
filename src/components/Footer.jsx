@@ -1,5 +1,5 @@
 import { Link } from "gatsby";
-import React from "react";
+import React, { useEffect } from "react";
 
 const Footer = () => {
 
