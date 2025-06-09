@@ -22,6 +22,8 @@ const Header = React.memo(() => {
         };
     }, []);
 
+
+
     const handleToggleMenu = (e) => {
         e.stopPropagation();
         setAnchorEl((prev) => !prev);
