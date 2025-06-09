@@ -6,13 +6,6 @@ module.exports = {
     siteUrl: `https://y2meta.lol`,
   },
   plugins: [
-    "gatsby-plugin-sitemap",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "static/images/favicon.webp",
-      },
-    },
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
