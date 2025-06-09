@@ -6,7 +6,6 @@ module.exports = {
     siteUrl: `https://y2meta.lol`,
   },
   plugins: [
-   
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
