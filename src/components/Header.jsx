@@ -22,7 +22,11 @@ const Header = React.memo(() => {
         };
     }, []);
 
-
+    useEffect(() => {
+        if (typeof document !== "undefined") {
+            document.documentElement.lang = language || "en";
+        }
+    }, [language]);
 
     const handleToggleMenu = (e) => {
         e.stopPropagation();
