@@ -31,6 +31,8 @@ const Seo = ({ containerTitlee, currentPath, currentLang, languages }) => {
             <meta property="og:site_name" content="Y2Meta" />
 
             {/* Favicon */}
+
+            <link rel="icon" href="static/images/favicon.webp"></link>
             <link
                 rel="preload"
                 fetchpriority="high"
