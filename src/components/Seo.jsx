@@ -32,7 +32,7 @@ const Seo = ({ containerTitlee, currentPath, currentLang, languages }) => {
 
             {/* Favicon */}
 
-            <link rel="icon" href="static/images/favicon.webp"></link>
+            <link rel="icon" href="images/favicon.webp"></link>
             <link
                 rel="preload"
                 fetchpriority="high"
