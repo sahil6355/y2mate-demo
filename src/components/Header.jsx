@@ -22,6 +22,12 @@ const Header = React.memo(() => {
         };
     }, []);
 
+    useEffect(() => {
+        if (typeof document !== "undefined") {
+            document.documentElement.lang = language || "en";
+        }
+    }, [language]);
+
     const handleToggleMenu = (e) => {
         e.stopPropagation();
         setAnchorEl((prev) => !prev);
@@ -51,7 +57,7 @@ const Header = React.memo(() => {
                                 </Link>
                             </li>
                             <li>
-                                
+
                                 <Link to={mp3Path} className={`${originalPath === `${mp3Path}/` && "active"}`}>
                                     YouTube to MP3
                                 </Link>
