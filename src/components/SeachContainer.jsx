@@ -290,7 +290,7 @@ const SeachContainer = ({ convertLocation }) => {
                 </div>
             </div>
             {originalPath === `${convertPath}/` ? (
-                <div className="result mt-48">
+                <div className="result mt-48 container">
                     {!convertLocation?.id ? (
                         <div className="spinner" id="loader">
                             {Array.from({ length: 4 })?.map?.((_, index) => {
