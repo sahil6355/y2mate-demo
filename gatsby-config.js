@@ -1,10 +1,6 @@
 const { languages, defaultLanguage } = require('./src/constant');
 
 
-console.log('LANGUAGES:', languages);
-console.log('DEFAULT LANGUAGE:', defaultLanguage);
-
-
 module.exports = {
   siteMetadata: {
     title: `yt1`,
