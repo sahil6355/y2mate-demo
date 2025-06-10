@@ -13,7 +13,7 @@ module.exports = {
         languages,
         defaultLanguage,
         siteUrl: `https://y2meta.lol`,
-        redirect: true,
+        redirect: false,
         getLanguageFromPath: true,
         prefixDefaultLanguage: true,
         i18nextOptions: {
