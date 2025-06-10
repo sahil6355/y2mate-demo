@@ -42,6 +42,12 @@ const Header = React.memo(() => {
         handleClose();
     };
 
+        // ✅ Replace /tl/ path with /tl-ph/
+    const getLocalizedPath = (basePath) => {
+        const langPrefix = language === "tl" ? "/tl-ph" : `/${language}`;
+        return `${langPrefix}${basePath}`;
+    };
+
     return (
         <div className="container">
             <header className="header" ref={navbarRef}>
