@@ -12,7 +12,7 @@ const Seo = ({ containerTitlee, currentPath, currentLang, languages }) => {
 
     return (
         <>
-            <meta name="robots" content={["/search", "/convert"].includes(currentPath.replace(/\/$/, "")) ? "noindex, nofollow" : "noindex, nofollow"} data-gatsby-head="true" />
+            <meta name="robots" content={["/search", "/convert"].includes(currentPath.replace(/\/$/, "")) ? "noindex, nofollow" : "index, follow"} data-gatsby-head="true" />
 
             <meta charSet="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
