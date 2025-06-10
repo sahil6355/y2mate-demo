@@ -21,7 +21,7 @@ module.exports = {
           defaultNS: 'translation',
           //debug: true,
           lowerCaseLng: true,
-          saveMissing: false,
+          saveMissing: true,
           interpolation: {
             escapeValue: false // not needed for react as it escapes by default
           },
