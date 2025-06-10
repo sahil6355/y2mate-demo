@@ -48,7 +48,7 @@ const Header = React.memo(() => {
         return `${langPrefix}${basePath}`;
     };
 
-return (
+    return (
         <div className="container">
             <header className="header" ref={navbarRef}>
                 <div className="header-box">
