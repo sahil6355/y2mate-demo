@@ -42,35 +42,28 @@ const Header = React.memo(() => {
         handleClose();
     };
 
-    // ✅ Replace /tl/ path with /tl-ph/
-    const getLocalizedPath = (basePath) => {
-        const langPrefix = language === "tl" ? "/tl-ph" : `/${language}`;
-        return `${langPrefix}${basePath}`;
-    };
-
     return (
         <div className="container">
             <header className="header" ref={navbarRef}>
                 <div className="header-box">
                     <div className="header-left">
-                        <Link to={getLocalizedPath("")}>
-                            <img src={headerLogo} width="140" height="50" alt="y2meta logo" />
-                        </Link>
+                        <Link to={homePath}><img src={headerLogo} width="140" height="50" alt="y2meta logo" /></Link>
                     </div>
                     <div className="header-right">
                         <ul className={`navbar ${toggleNav ? "open_menu" : ""}`}>
                             <li>
-                                <Link to={getLocalizedPath("")} className={`${originalPath === getLocalizedPath("") && "active"}`}>
+                                <Link to={homePath} className={`${originalPath === homePath && "active"}`}>
                                     YouTube Downloader
                                 </Link>
                             </li>
                             <li>
-                                <Link to={getLocalizedPath(mp3Path)} className={`${originalPath === `${getLocalizedPath(mp3Path)}/` && "active"}`}>
+
+                                <Link to={mp3Path} className={`${originalPath === `${mp3Path}/` && "active"}`}>
                                     YouTube to MP3
                                 </Link>
                             </li>
                             <li>
-                                <Link to={getLocalizedPath(mp4Path)} className={`${originalPath === `${getLocalizedPath(mp4Path)}/` && "active"}`}>
+                                <Link to={mp4Path} className={`${originalPath === `${mp4Path}/` && "active"}`}>
                                     YouTube to MP4
                                 </Link>
                             </li>
@@ -82,30 +75,16 @@ const Header = React.memo(() => {
                                 </div>
                                 {anchorEl && (
                                     <ul id="language-dropdown" className={`sub-language ${anchorEl ? "lang_menu" : ""}`}>
-                                        {languages?.map?.((lng, index) => {
-                                            const path = originalPath.replace(/^\/tl\//, "/tl-ph/").replace(/^\/[^/]+/, lng === "tl" ? "/tl-ph" : `/${lng}`);
-                                            return (
-                                                <li key={index}>
-                                                    <Link to={path} language={lng} onClick={handleClose}>
-                                                        {languageDD?.[lng]}
-                                                    </Link>
-                                                </li>
-                                            );
-                                        })}
+                                        {languages?.map?.((lng, index) => (
+                                            <li key={index}>
+                                                <Link to={originalPath} language={lng} onClick={handleClose}> {languageDD?.[lng]} </Link>
+                                            </li>
+                                        ))}
                                     </ul>
                                 )}
                             </li>
                         </ul>
-                        <button
-                            type="button"
-                            className="mobile-menu"
-                            id="navbarToggle"
-                            aria-label="navbar toggle"
-                            onClick={() => {
-                                setToggleNav(!toggleNav);
-                                setAnchorEl(false);
-                            }}
-                        >
+                        <button type="button" className="mobile-menu" id="navbarToggle" aria-label="navbar toggle" onClick={() => { setToggleNav(!toggleNav); setAnchorEl(false); }}>
                             <span></span>
                             <span></span>
                             <span></span>
