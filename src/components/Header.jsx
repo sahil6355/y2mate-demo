@@ -42,7 +42,7 @@ const Header = React.memo(() => {
         handleClose();
     };
 
-        // ✅ Replace /tl/ path with /tl-ph/
+    // ✅ Replace /tl/ path with /tl-ph/
     const getLocalizedPath = (basePath) => {
         const langPrefix = language === "tl" ? "/tl-ph" : `/${language}`;
         return `${langPrefix}${basePath}`;
