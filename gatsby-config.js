@@ -26,7 +26,7 @@ module.exports = {
             escapeValue: false // not needed for react as it escapes by default
           },
           // keySeparator: false,
-          // nsSeparator: false
+          nsSeparator: false
         },
         pages: [
           {
