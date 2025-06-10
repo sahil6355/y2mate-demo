@@ -14,7 +14,7 @@ const languageDD = {
   ja: "日本語",
   ko: "한국어",
   ms: "Malay",
-  ph: "Filipino",
+  'tl-ph': "Filipino",
   "zh-cn": "简体中文",
   "zh-tw": "繁體中文",
   ar: "العربية",
