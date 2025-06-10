@@ -5,7 +5,7 @@ const languageDD = {
   fr: "Français",
   hi: "हिन्दी / Hindī",
   id: "Indonesian",
-  "tl-ph": "Filipino",
+  tl: "Filipino",
   it: "Italiano",
   pt: "Português",
   ru: "Русский",
@@ -16,7 +16,7 @@ const languageDD = {
   ko: "한국어",
   ms: "Malay",
   "zh-cn": "简体中文",
-  // "zh-tw": "繁體中文",
+  "zh-tw": "繁體中文",
   ar: "العربية",
   bn: "বাঙালি"
 };
