@@ -1,11 +1,11 @@
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage, deletePage } = actions;
 
-  // Only process i18n-generated pages
-  if (page.context && page.context.language === "tl") {
+  // Ensure the page is for the 'tl' language and path starts with /tl/
+  if (page.context && page.context.language === "tl" && page.path.startsWith("/tl/")) {
     const oldPage = { ...page };
 
-    // Replace /tl/ with /tl-ph/ in the path
+    // Update the path from /tl/ to /tl-ph/
     page.path = page.path.replace(/^\/tl\//, "/tl-ph/");
 
     deletePage(oldPage);
