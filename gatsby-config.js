@@ -1,5 +1,10 @@
 const { languages, defaultLanguage } = require('./src/constant');
 
+
+console.log('LANGUAGES:', languages);
+console.log('DEFAULT LANGUAGE:', defaultLanguage);
+
+
 module.exports = {
   siteMetadata: {
     title: `yt1`,
@@ -13,6 +18,7 @@ module.exports = {
         localeJsonSourceName: `locales`,
         languages,
         defaultLanguage,
+        
         siteUrl: `https://y2meta.lol`,
         redirect: true,
         getLanguageFromPath: true,
@@ -26,7 +32,7 @@ module.exports = {
             escapeValue: false // not needed for react as it escapes by default
           },
           // keySeparator: false,
-          nsSeparator: false
+          // nsSeparator: false
         },
         pages: [
           {
