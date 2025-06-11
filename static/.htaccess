@@ -1,9 +1,8 @@
 RewriteEngine on
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
-
+ 
+RewriteCond %{HTTP_HOST} ^www.y2meta.lol [NC]
+RewriteRule ^(.*)$ https://y2meta.lol/$1 [L,R=301,NC]
+ 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . / [L,R=301]
