@@ -9,7 +9,6 @@ const Footer = () => {
         script1.src = "https://www.googletagmanager.com/gtag/js?id=G-R1QQF1FWWS";
         script1.async = true;
         document.head.appendChild(script1);
-
         const script2 = document.createElement("script");
         script2.innerHTML = `
             window.dataLayer = window.dataLayer || [];
@@ -22,7 +21,6 @@ const Footer = () => {
     
     return (
         <>
-
             <div className="container">
                 <div className="footer">
                     <p className="text-center">@2025 y2meta</p>
@@ -42,12 +40,10 @@ const Footer = () => {
                         <li>
                             <Link to="/sitemap.xml">Sitemap</Link>
                         </li>
-
                     </ul>
                 </div>
             </div>
         </>
-
     );
 };
 
