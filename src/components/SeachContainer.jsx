@@ -151,6 +151,8 @@ const SeachContainer = ({ convertLocation }) => {
 
         Cookies.set("search_suggestion", suggestion, { expires: 0.01 }); // 15 minutes
 
+        console.log(suggestion);
+
         if (originalPath === `${searchPath}/`) {
             getSuggestion(suggestion);
         }
