@@ -115,6 +115,13 @@ const SeachContainer = ({ convertLocation }) => {
         console.log(suggestion);
         try {
             setLoading(true);
+
+            const exactMatch = suggestion.match(/^https:\/\/www\.youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})$/);
+            suggestion = exactMatch ? exactMatch[1] : suggestion;
+
+            console.log("Query sent to API:", suggestion);
+
+
             const response = await fetch(
                 `https://api.flvto.site/@api/search/YouTube/${encodeURIComponent(
                     suggestion
