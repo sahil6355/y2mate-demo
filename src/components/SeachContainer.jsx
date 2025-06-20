@@ -112,6 +112,7 @@ const SeachContainer = ({ convertLocation }) => {
     };
 
     const getSuggestion = async (suggestion) => {
+        console.log(suggestion);
         try {
             setLoading(true);
             const response = await fetch(
@@ -150,8 +151,6 @@ const SeachContainer = ({ convertLocation }) => {
         setSuggestions([]);
 
         Cookies.set("search_suggestion", suggestion, { expires: 0.01 }); // 15 minutes
-
-        console.log(suggestion);
 
         if (originalPath === `${searchPath}/`) {
             getSuggestion(suggestion);
