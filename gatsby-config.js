@@ -62,11 +62,5 @@ module.exports = {
         path: `${__dirname}/src/locales`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-no-javascript',
-      options: {
-        removeGeneratorTag: true,
-      },
-    },
   ],
 };
