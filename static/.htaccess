@@ -3,6 +3,8 @@ RewriteEngine on
 RewriteCond %{HTTP_HOST} ^www.y2meta.lol [NC]
 RewriteRule ^(.*)$ https://y2meta.lol/$1 [L,R=301,NC]
  
+ModPagespeed off
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.html [L]
+RewriteRule . / [L,R=301]
