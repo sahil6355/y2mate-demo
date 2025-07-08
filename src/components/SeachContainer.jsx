@@ -183,7 +183,7 @@ const SeachContainer = ({ convertLocation }) => {
             <div className="banner-box-content">
                 <div className="banner-box">
                     <h1>{containerTitle?.title}</h1>
-                    <p>{containerTitle?.subtitle}</p>
+                    {containerTitle?.subtitle && <p>{containerTitle.subtitle}</p>}
                     <form
                         onSubmit={(e) => {
                             e.preventDefault();
