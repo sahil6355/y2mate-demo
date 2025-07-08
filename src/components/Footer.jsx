@@ -1,7 +1,13 @@
 import { Link } from "gatsby";
 import React, { useEffect } from "react";
+import { useLocation } from "@reach/router";
 
 const Footer = () => {
+
+    const location = useLocation();
+    const currentPath = location.pathname;
+    const schemaPages = ["/", "/youtube-to-mp3/", "/youtube-to-mp4/"];
+    const shouldAddSchema = schemaPages.includes(currentPath);
 
     // useEffect(() => {
     //     // Inject Google Analytics script
@@ -43,6 +49,22 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
+
+            {shouldAddSchema && (
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "WebSite",
+                        "url": "https://y2meta.lol" + currentPath,
+                        "name": "Y2meta - YouTube Downloader",
+                        "potentialAction": {
+                            "@type": "SearchAction",
+                            "target": "https://y2meta.lol/search?q={search_term_string}",
+                            "query-input": "required name=search_term_string"
+                        }
+                    })}
+                </script>
+            )}
         </>
     );
 };
