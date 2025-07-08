@@ -1,5 +1,5 @@
 import { Link } from "gatsby";
-import React from "react";
+import React, {useEffect } from "react";
 import { useLocation } from "@reach/router";
 
 const Footer = () => {
