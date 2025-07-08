@@ -271,9 +271,13 @@ const Footer = () => {
             </div>
 
             {webPageSchema && (
-                <script type="application/ld+json">
-                    {JSON.stringify(webPageSchema)}
-                </script>
+
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(webPageSchema),
+                    }}
+                ></script>
             )}
 
             {faqSchema && (
