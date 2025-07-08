@@ -2,30 +2,35 @@
     "containerTitle": {
         "/": {
             "title": "Y2meta - YouTube Video Downloader",
+            "subtitle": "Download free YouTube videos in MP3 and MP4 format in high quality",
             "desc": "Download YouTube videos seamlessly in 1080p with Y2meta",
             "helmetTitle": "Y2meta: YouTube Downloader | Free Download YouTube Videos",
             "helmetDescription": "Y2meta is a fast and free YouTube Downloader that allows you to convert and download Videos from YouTube in HD, UHD, 1080p, 2K, and 4K."
         },
         "/search/": {
             "title": "Y2meta - YouTube Video Downloader",
+            "subtitle": "YouTube To MP3 Converter",
             "desc": "Download YouTube videos seamlessly in 1080p with Y2meta",
             "helmetTitle": "Y2meta: YouTube Downloader | Free Download YouTube Videos",
             "helmetDescription": "Y2meta is a fast and free YouTube Downloader that allows you to convert and download Videos from YouTube in HD, UHD, 1080p, 2K, and 4K."
         },
         "/convert/": {
             "title": "Y2meta - YouTube Video Downloader",
+            "subtitle": "YouTube To MP3 Converter",
             "desc": "Download YouTube videos seamlessly in 1080p with Y2meta",
             "helmetTitle": "Y2meta: YouTube Downloader | Free Download YouTube Videos",
             "helmetDescription": "Y2meta is a fast and free YouTube Downloader that allows you to convert and download Videos from YouTube in HD, UHD, 1080p, 2K, and 4K."
         },
         "/youtube-to-mp3/": {
             "title": "YouTube To MP3 Converter",
+            "subtitle": "Fast convert YouTube Videos to MP3 and easy download",
             "desc": "Convert YouTube video in MP3 format in the highest quality with the y2meta tool.",
             "helmetTitle": "Free YouTube To MP3 Converter - Y2Meta",
             "helmetDescription": "Convert YouTube videos to MP3 for free and in high quality with Y2Meta. Download MP3s quickly without signup using the Y2Meta YouTube To MP3 converter tool."
         },
         "/youtube-to-mp4/": {
             "title": "Y2meta - Free YouTube to MP4 Converter",
+            "subtitle": "Convert and download YouTube videos in up to 4K",
             "desc": "Convert and download YouTube videos to MP4 format seamlessly in HD up to 4K.",
             "helmetTitle": "YouTube to MP4 Converter | Y2Meta",
             "helmetDescription": "Convert and download YouTube videos to MP4 format quickly and securely with Y2Meta. Choose from multiple video qualities, including 720p, 1080p, 2K, and up to 4K."
