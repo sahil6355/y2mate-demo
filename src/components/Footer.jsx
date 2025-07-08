@@ -6,25 +6,44 @@ const Footer = () => {
 
     const location = useLocation();
     const currentPath = location.pathname;
-    const schemaPages = ["/", "/youtube-to-mp3/", "/youtube-to-mp4/"];
-    const shouldAddSchema = schemaPages.includes(currentPath);
 
-    // useEffect(() => {
-    //     // Inject Google Analytics script
-    //     const script1 = document.createElement("script");
-    //     script1.src = "https://www.googletagmanager.com/gtag/js?id=G-R1QQF1FWWS";
-    //     script1.async = true;
-    //     document.head.appendChild(script1);
-    //     const script2 = document.createElement("script");
-    //     script2.innerHTML = `
-    //         window.dataLayer = window.dataLayer || [];
-    //         function gtag(){dataLayer.push(arguments);}
-    //         gtag('js', new Date());
-    //         gtag('config', 'G-R1QQF1FWWS');
-    //     `;
-    //     document.head.appendChild(script2);
-    // }, []);
-    
+    const schemaForPage = () => {
+        switch (currentPath) {
+            case "/":
+                return {
+                    "@context": "https://schema.org",
+                    "@type": "WebSite",
+                    "url": "https://y2meta.lol/",
+                    "name": "Y2meta - YouTube Downloader",
+                    "potentialAction": {
+                        "@type": "SearchAction",
+                        "target": "https://y2meta.lol/search?q={search_term_string}",
+                        "query-input": "required name=search_term_string"
+                    }
+                };
+            case "/youtube-to-mp3/":
+                return {
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    "name": "Y2meta - YouTube to MP3 Converter",
+                    "description": "Convert and download YouTube videos to MP3 format quickly and securely with Y2Meta.",
+                    "url": "https://y2meta.lol/youtube-to-mp3/"
+                };
+            case "/youtube-to-mp4/":
+                return {
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    "name": "Y2meta - YouTube to MP4 Converter",
+                    "description": "Convert and download YouTube videos to MP4 format in high quality up to 4K using Y2Meta.",
+                    "url": "https://y2meta.lol/youtube-to-mp4/"
+                };
+            default:
+                return null;
+        }
+    };
+
+    const schemaObject = schemaForPage();
+
     return (
         <>
             <div className="container">
@@ -50,19 +69,9 @@ const Footer = () => {
                 </div>
             </div>
 
-            {shouldAddSchema && (
+            {schemaObject && (
                 <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "WebSite",
-                        "url": "https://y2meta.lol" + currentPath,
-                        "name": "Y2meta - YouTube Downloader",
-                        "potentialAction": {
-                            "@type": "SearchAction",
-                            "target": "https://y2meta.lol/search?q={search_term_string}",
-                            "query-input": "required name=search_term_string"
-                        }
-                    })}
+                    {JSON.stringify(schemaObject)}
                 </script>
             )}
         </>
