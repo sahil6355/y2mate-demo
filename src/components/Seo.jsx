@@ -11,7 +11,7 @@ const Seo = ({ containerTitlee, currentPath, currentLang, languages }) => {
     };
 
     return (
-        <>
+        <Helmet htmlAttributes={{ lang: currentLang || "en" }}>
             <meta name="robots" content={["/search", "/convert"].includes(currentPath.replace(/\/$/, "")) ? "noindex, nofollow" : "index, follow"} data-gatsby-head="true" />
 
             <meta charSet="utf-8" />
@@ -56,7 +56,7 @@ const Seo = ({ containerTitlee, currentPath, currentLang, languages }) => {
 
             ))}
 
-        </>
+        </Helmet>
     );
 };
 
