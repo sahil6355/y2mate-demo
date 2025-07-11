@@ -57,6 +57,25 @@ const Seo = ({ containerTitlee, currentPath, currentLang, languages }) => {
 
             ))}
 
+                        {languages?.map?.((k) => (
+                <link
+                    key={k}
+                    rel="alternate"
+                    hrefLang={k}
+                    href={
+                        k === "en"
+                            ? `https://y2meta.lol${currentPath}`
+                            : `https://y2meta.lol/${k}${currentPath}`
+                    }
+                />
+            ))}
+
+            <link
+                rel="alternate"
+                hrefLang="x-default"
+                href="https://y2meta.lol/"
+            />
+
         </>
     );
 };
