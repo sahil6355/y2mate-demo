@@ -10,6 +10,8 @@ const Seo = ({ containerTitlee, currentPath, currentLang, languages }) => {
         helmetDescription:
             "Y2meta is a fast and free YouTube Downloader that allows you to convert and download Videos from YouTube in HD, UHD, 1080p, 2K, and 4K.",
     };
+    
+     const purePath = currentPath.replace(/^\/[a-z]{2}(\/|$)/, "/");
 
     return (
         <>
@@ -57,24 +59,25 @@ const Seo = ({ containerTitlee, currentPath, currentLang, languages }) => {
 
             ))}
 
-                        {languages?.map?.((k) => (
-                <link
-                    key={k}
-                    rel="alternate"
-                    hrefLang={k}
-                    href={
-                        k === "en"
-                            ? `https://y2meta.lol${currentPath}`
-                            : `https://y2meta.lol/${k}${currentPath}`
-                    }
-                />
-            ))}
+      {/* Alternate hreflang links */}
+      {languages?.map?.((k) => (
+        <link
+          key={k}
+          rel="alternate"
+          hrefLang={k}
+          href={
+            k === "en"
+              ? `https://y2meta.lol${purePath}`
+              : `https://y2meta.lol/${k}${purePath}`
+          }
+        />
+      ))}
 
-            <link
-                rel="alternate"
-                hrefLang="x-default"
-                href="https://y2meta.lol/"
-            />
+      <link
+        rel="alternate"
+        hrefLang="x-default"
+        href={`https://y2meta.lol${purePath}`}
+      />
 
         </>
     );
