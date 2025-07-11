@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 
-
-useEffect(() => {
-  if (typeof document !== "undefined") {
-    document.documentElement.lang = language || "en";
-  }
-}, [language]);
-
+// gatsby-ssr.js
+exports.onRenderBody = ({ setHtmlAttributes, pathname }) => {
+  const langCode = pathname.split("/")[1] || "en";
+  setHtmlAttributes({ lang: langCode });
+};
